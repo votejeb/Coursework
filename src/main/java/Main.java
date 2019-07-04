@@ -36,7 +36,7 @@ public class Main {
         }
     }
 
-    //SQL SELECT
+    //SQL SELECT//
     public static void ShowUserInfo() {
         try {
             PreparedStatement ps = db.prepareStatement("SELECT UserID, UserName, TimeTo FROM Users");
