@@ -37,16 +37,15 @@ public class Main {
     }
 
     //SQL SELECT
-    public static void ShowTimeFrames() {
+    public static void ShowUserInfo() {
         try {
-            PreparedStatement ps = db.prepareStatement("SELECT TimeFrameID, TimeFrom, TimeTo FROM TimeFrames");
+            PreparedStatement ps = db.prepareStatement("SELECT UserID, UserName, TimeTo FROM Users");
 
             ResultSet results  = ps.executeQuery();
             while (results.next()) {
-                int TimeFrameID = results.getInt(1);
-                Date TimeFrom = results.getDate(2);
-                Date TimeTo = results.getDate(3);
-                System.out.println(TimeFrameID + " " + TimeFrom + " " + TimeTo);
+                int UserID = results.getInt(1);
+                String UserName = results.getString(2);
+                System.out.println(UserID + " " + UserName);
             }
 
         } catch (Exception exception) {
