@@ -15,6 +15,7 @@ public class Main {
         ShowUserInfo();
         InsertUser(2,"test2","test2");
         updateUser(2,"test3","test3");
+        deleteUser(2);
         closeDatabase();
     }
 //This subroutine opens the database connection, outputs any errors with try catch statement
@@ -69,7 +70,7 @@ public class Main {
             System.out.println("User Added");
 
         } catch (Exception exception) {
-            System.out.println("Database error"+exception.getMessage());
+            System.out.println("Database error "+exception.getMessage());
         }
     }
 
@@ -77,15 +78,31 @@ public class Main {
     public static void updateUser (int UserID, String UserName, String Password){
         try {
 
-            PreparedStatement ps = db.prepareStatement("UPDATE Users SET UserName = ?, String Password = ? WHERE UserID = ?");
+            PreparedStatement ps = db.prepareStatement("UPDATE Users SET UserName = ?, Password = ? WHERE UserID = ?");
             ps.setInt(1, UserID);
             ps.setString(2, UserName);
             ps.setString(3, Password);
             ps.executeUpdate();
+            System.out.println("User Updated")
 
         } catch (Exception exception) {
 
-            System.out.println("Database Error"+exception.getMessage());
+            System.out.println("Database Error "+exception.getMessage());
+
+        }
+
+    }
+
+    public static void deleteUser (int UserID){
+        try {
+
+            PreparedStatement ps = db.prepareStatement("DELETE FROM Users WHERE UserID= ?");
+            ps.setInt(1, UserID);
+            ps.executeUpdate();
+            System.out.println("User Deleted")
+
+        } catch (Exception e) {
+            System.out.println("Database error "+e.getMessage());
 
         }
 
