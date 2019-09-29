@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a22b734-f559-46c1-bf71-d6c3b513c7ad" name="Default" comment="Continued work on database">
+    <list default="true" id="0a22b734-f559-46c1-bf71-d6c3b513c7ad" name="Default" comment="sql statement tests complete having trouble with classes">
+      <change afterPath="$PROJECT_DIR$/TwitterTestData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +31,11 @@
     </option>
   </component>
   <component name="ProjectId" id="1R3fvOtofOCBNsWSHDoMCHUm5o2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
@@ -115,7 +117,9 @@
       <workItem from="1562227542204" duration="2491000" />
       <workItem from="1562232589199" duration="124000" />
       <workItem from="1568900931985" duration="2459000" />
-      <workItem from="1569776236468" duration="7717000" />
+      <workItem from="1569776236468" duration="7803000" />
+      <workItem from="1569784986159" duration="511000" />
+      <workItem from="1569785667005" duration="1217000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -159,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569778939377</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="sql statement tests complete having trouble with classes">
+      <created>1569784204733</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569784204733</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,9 +190,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="epic commit" />
     <MESSAGE value="Database access begun" />
     <MESSAGE value="Continued work on database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continued work on database" />
+    <MESSAGE value="sql statement tests complete having trouble with classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="sql statement tests complete having trouble with classes" />
   </component>
 </project>
