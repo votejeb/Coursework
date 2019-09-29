@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a22b734-f559-46c1-bf71-d6c3b513c7ad" name="Default" comment="sql statement tests complete having trouble with classes">
-      <change afterPath="$PROJECT_DIR$/TwitterTestData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +117,7 @@
       <workItem from="1568900931985" duration="2459000" />
       <workItem from="1569776236468" duration="7803000" />
       <workItem from="1569784986159" duration="511000" />
-      <workItem from="1569785667005" duration="1217000" />
+      <workItem from="1569785667005" duration="2321000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -170,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569784204733</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="sql statement tests complete having trouble with classes">
+      <created>1569787648986</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569787648986</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
