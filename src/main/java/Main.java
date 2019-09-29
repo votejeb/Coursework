@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+
 public class Main {
 
     public static Connection db = null;
@@ -12,10 +13,10 @@ public class Main {
     public static void main(String[] args) {
         openDatabase("Database1.db");
 // code to get data from, write to the database etc goes here!
-        ShowUserInfo();
-        InsertUser(2,"test2","test2");
-        updateUser(2,"test3","test3");
-        deleteUser(2);
+        UsersController.ShowUserInfo();;
+        UsersController.InsertUser(2,"test2","test2");
+        UsersController.updateUser(2,"test3","test3");
+        UsersController.deleteUser(2);
         closeDatabase();
     }
 //This subroutine opens the database connection, outputs any errors with try catch statement
@@ -83,7 +84,7 @@ public class Main {
             ps.setString(2, UserName);
             ps.setString(3, Password);
             ps.executeUpdate();
-            System.out.println("User Updated")
+            System.out.println("User Updated");
 
         } catch (Exception exception) {
 
@@ -99,7 +100,7 @@ public class Main {
             PreparedStatement ps = db.prepareStatement("DELETE FROM Users WHERE UserID= ?");
             ps.setInt(1, UserID);
             ps.executeUpdate();
-            System.out.println("User Deleted")
+            System.out.println("User Deleted");
 
         } catch (Exception e) {
             System.out.println("Database error "+e.getMessage());
