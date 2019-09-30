@@ -117,7 +117,8 @@
       <workItem from="1568900931985" duration="2459000" />
       <workItem from="1569776236468" duration="7803000" />
       <workItem from="1569784986159" duration="511000" />
-      <workItem from="1569785667005" duration="3152000" />
+      <workItem from="1569785667005" duration="3182000" />
+      <workItem from="1569790737386" duration="1218000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -182,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569788564508</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="sql statement tests complete having trouble with classes">
+      <created>1569789391729</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569789391729</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
