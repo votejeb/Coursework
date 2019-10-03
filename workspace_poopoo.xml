@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07b959f0-3d1c-4cad-86d7-8ae19955eded" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/workspace_poopoo.xml" afterDir="false" />
+    <list default="true" id="0a22b734-f559-46c1-bf71-d6c3b513c7ad" name="Default" comment="gang weed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataFiltersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProcessedDatasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +22,12 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="U:\.m2\repository" />
+        <option name="userSettingsFile" value="U:\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -34,20 +35,17 @@
     </option>
   </component>
   <component name="ProjectId" id="1R3fvOtofOCBNsWSHDoMCHUm5o2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -107,7 +105,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="07b959f0-3d1c-4cad-86d7-8ae19955eded" name="Default Changelist" comment="" />
+      <changelist id="0a22b734-f559-46c1-bf71-d6c3b513c7ad" name="Default" comment="" />
       <created>1560413996278</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -119,12 +117,9 @@
       <workItem from="1562162716798" duration="925000" />
       <workItem from="1562227542204" duration="2491000" />
       <workItem from="1562232589199" duration="124000" />
-      <workItem from="1568900931985" duration="2459000" />
-      <workItem from="1569776236468" duration="7803000" />
-      <workItem from="1569784986159" duration="511000" />
-      <workItem from="1569785667005" duration="3182000" />
-      <workItem from="1569790737386" duration="1218000" />
-      <workItem from="1570109998643" duration="276000" />
+      <workItem from="1568900931985" duration="3260000" />
+      <workItem from="1569506766979" duration="605000" />
+      <workItem from="1569836818572" duration="263000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -161,42 +156,35 @@
       <option name="project" value="LOCAL" />
       <updated>1562232694340</updated>
     </task>
-    <task id="LOCAL-00006" summary="Continued work on database">
-      <created>1569778939377</created>
+    <task id="LOCAL-00006" summary="gang weed">
+      <created>1568904225741</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1569778939377</updated>
+      <updated>1568904225741</updated>
     </task>
-    <task id="LOCAL-00007" summary="sql statement tests complete having trouble with classes">
-      <created>1569784204733</created>
+    <task id="LOCAL-00007" summary="gang weed">
+      <created>1568904300991</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1569784204733</updated>
+      <updated>1568904300991</updated>
     </task>
-    <task id="LOCAL-00008" summary="sql statement tests complete having trouble with classes">
-      <created>1569787648986</created>
+    <task id="LOCAL-00008" summary="gang weed">
+      <created>1568904379155</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1569787648986</updated>
+      <updated>1568904379155</updated>
     </task>
-    <task id="LOCAL-00009" summary="sql statement tests complete having trouble with classes">
-      <created>1569788564508</created>
+    <task id="LOCAL-00009" summary="gang weed">
+      <created>1568904395051</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1569788564508</updated>
+      <updated>1568904395051</updated>
     </task>
-    <task id="LOCAL-00010" summary="sql statement tests complete having trouble with classes">
-      <created>1569789391729</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1569789391729</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,11 +204,86 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="epic commit" />
     <MESSAGE value="Database access begun" />
     <MESSAGE value="Continued work on database" />
-    <MESSAGE value="sql statement tests complete having trouble with classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="sql statement tests complete having trouble with classes" />
+    <MESSAGE value="gang weed" />
+    <option name="LAST_COMMIT_MESSAGE" value="gang weed" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Project</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.xerial:sqlite-jdbc:3.27.2.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

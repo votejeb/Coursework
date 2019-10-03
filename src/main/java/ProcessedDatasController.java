@@ -5,7 +5,7 @@ public class ProcessedDatasController {
     //SQL SELECT//
     public static void ShowProcessedDatas() {
         try {
-            PreparedStatement ps = db.prepareStatement("SELECT KeywordID, Keyword, TimeFrom, TimeTo FROM ProcessedDatas");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT KeywordID, Keyword, TimeFrom, TimeTo FROM ProcessedDatas");
             ResultSet results  = ps.executeQuery();
             while (results.next()) {
                 int KeywordID = results.getInt(1);
@@ -19,13 +19,13 @@ public class ProcessedDatasController {
     }
 //insert//
 
-    public static void InsertData(int KeywordID, String Keyword, TIME TimeFrom, TIME TimeTo){
+    public static void InsertData(int KeywordID, String Keyword, int TimeFrom, int TimeTo){
         try {
-            PreparedStatement ps = db.prepareStatement("INSERT INTO ProcessedDatas(KeywordID, Keyword, TimeFrom, TimeTo)VALUES(?,?,?,?)");
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO ProcessedDatas(KeywordID, Keyword, TimeFrom, TimeTo)VALUES(?,?,?,?)");
             ps.setInt(1, KeywordID);
             ps.setString(2, Keyword);
-            ps.setTIME(3, TimeFrom);
-            ps.setTIME(4,TimeTo);
+            ps.setInt(3, TimeFrom);
+            ps.setInt(4,TimeTo);
             ps.executeUpdate();
             System.out.println("Keyword Entry Added");
 
@@ -37,7 +37,7 @@ public class ProcessedDatasController {
     public static void deleteUser (int KeywordID){
         try {
 
-            PreparedStatement ps = db.prepareStatement("DELETE FROM ProcessedDatas WHERE KeywordID= ?");
+            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM ProcessedDatas WHERE KeywordID= ?");
             ps.setInt(1, KeywordID);
             ps.executeUpdate();
             System.out.println("Keyword Entry Removed");
@@ -48,6 +48,4 @@ public class ProcessedDatasController {
         }
 
     }
-}
-
 }

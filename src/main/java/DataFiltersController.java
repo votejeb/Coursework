@@ -6,7 +6,7 @@ public class DataFiltersController {
     //SQL SELECT//
     public static void ShowFilters() {
         try {
-            PreparedStatement ps = db.prepareStatement("SELECT DataFilterName FROM DataFilters");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT DataFilterName FROM DataFilters");
             ResultSet results  = ps.executeQuery();
             while (results.next()) {
                 String DataFilterName = results.getString(1);
@@ -21,7 +21,7 @@ public class DataFiltersController {
 
     public static void InsertFilter(int DataFilterID, String DataFilterName, boolean WhitelistBlacklist){
         try {
-            PreparedStatement ps = db.prepareStatement("INSERT INTO Users(DataFilterID, DataFilterName, WhitelistBlacklist)VALUES(?,?,?)");
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO Users(DataFilterID, DataFilterName, WhitelistBlacklist)VALUES(?,?,?)");
             ps.setInt(1, DataFilterID);
             ps.setString(2, DataFilterName);
             ps.setBoolean(3,WhitelistBlacklist);
@@ -36,7 +36,7 @@ public class DataFiltersController {
     public static void DeleteFilter (int DataFilterID){
         try {
 
-            PreparedStatement ps = db.prepareStatement("DELETE FROM DataFilters WHERE DataFilterID= ?");
+            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM DataFilters WHERE DataFilterID= ?");
             ps.setInt(1, DataFilterID);
             ps.executeUpdate();
             System.out.println("Filter Deleted");
@@ -49,4 +49,3 @@ public class DataFiltersController {
     }
 }
 
-}

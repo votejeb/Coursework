@@ -6,7 +6,7 @@ public class UsersController {
     //SQL SELECT//
     public static void ShowUserInfo() {
         try {
-            PreparedStatement ps = db.prepareStatement("SELECT UserID, UserName, Password FROM Users");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT UserID, UserName, Password FROM Users");
             ResultSet results  = ps.executeQuery();
             while (results.next()) {
                 int UserID = results.getInt(1);
@@ -22,7 +22,7 @@ public class UsersController {
 
     public static void InsertUser(int UserID, String UserName, String Password){
         try {
-            PreparedStatement ps = db.prepareStatement("INSERT INTO Users(UserID, UserName, Password)VALUES(?,?,?)");
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO Users(UserID, UserName, Password)VALUES(?,?,?)");
             ps.setInt(1, UserID);
             ps.setString(2, UserName);
             ps.setString(3, Password);
@@ -38,7 +38,7 @@ public class UsersController {
     public static void updateUser (int UserID, String UserName, String Password){
         try {
 
-            PreparedStatement ps = db.prepareStatement("UPDATE Users SET UserName = ?, Password = ? WHERE UserID = ?");
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE Users SET UserName = ?, Password = ? WHERE UserID = ?");
             ps.setInt(1, UserID);
             ps.setString(2, UserName);
             ps.setString(3, Password);
@@ -56,7 +56,7 @@ public class UsersController {
     public static void deleteUser (int UserID){
         try {
 
-            PreparedStatement ps = db.prepareStatement("DELETE FROM Users WHERE UserID= ?");
+            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM Users WHERE UserID= ?");
             ps.setInt(1, UserID);
             ps.executeUpdate();
             System.out.println("User Deleted");
