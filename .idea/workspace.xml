@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07b959f0-3d1c-4cad-86d7-8ae19955eded" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/workspace_poopoo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/things.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataFiltersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProcessedDatasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataFiltersController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ProcessedDatasController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace_poopoo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/workspace_poopoo.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +35,12 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="U:\.m2\repository" />
+        <option name="userSettingsFile" value="U:\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -39,9 +53,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project Phase 1 - Copy" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -68,7 +83,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="Server.Main" />
       <module name="Coursework" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,7 +139,7 @@
       <workItem from="1569784986159" duration="511000" />
       <workItem from="1569785667005" duration="3182000" />
       <workItem from="1569790737386" duration="1218000" />
-      <workItem from="1570109998643" duration="276000" />
+      <workItem from="1570109998643" duration="4809000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -196,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569789391729</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="kermit and push">
+      <created>1570110334575</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570110334575</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +243,7 @@
     <MESSAGE value="Database access begun" />
     <MESSAGE value="Continued work on database" />
     <MESSAGE value="sql statement tests complete having trouble with classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="sql statement tests complete having trouble with classes" />
+    <MESSAGE value="kermit and push" />
+    <option name="LAST_COMMIT_MESSAGE" value="kermit and push" />
   </component>
 </project>
