@@ -1,14 +1,9 @@
 package Controllers;
 
-import Server.Main;
 import twitter4j.FilterQuery;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 import twitter4j.conf.ConfigurationBuilder;
-
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Arrays;
 
 public class Twitter4jController {
 

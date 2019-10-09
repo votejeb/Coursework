@@ -1,15 +1,8 @@
 package Server;
 
 import Controllers.Twitter4jController;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
-import org.glassfish.jersey.media.multipart.MultiPartFeature;
-import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.servlet.ServletContainer;
 import org.sqlite.SQLiteConfig;
 import twitter4j.*;
-import twitter4j.conf.ConfigurationBuilder;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -24,12 +17,12 @@ public class Main {
 // code to get data from, write to the database etc goes here!
         TwitterStream twitterStream = Twitter4jController.configAuth("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs");
         FilterQuery tweetFilterQuery=Twitter4jController.setFilter();
-        twitterStream.addListener(new StatusListener () {
-            public void onStatus(Status status) {
-                System.out.println(status.getText())
-            }
-            twitterStream.filter(tweetFilterQuery);
-
+        twitterStream.addListener(new StatusAdapter() {
+                                      public void onStatus(Status status) {
+                                          System.out.println(status.getText());
+                                      }
+                                  });
+        twitterStream.filter(tweetFilterQuery);
             closeDatabase();
     }
 

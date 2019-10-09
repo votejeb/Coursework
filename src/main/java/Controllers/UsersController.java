@@ -6,10 +6,8 @@ import org.json.simple.JSONObject;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -48,7 +46,7 @@ public class UsersController {
         System.out.println("thing/list");
         JSONArray list = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT UserName, Password FROM Users WHERE USERID=?");
+            PreparedStatement ps = Server.Main.db.prepareStatement("SELECT UserName, Password FROM Users WHERE USERID=?");
             ResultSet results  = ps.executeQuery();
             while (results.next()) {
                 JSONObject item = new JSONObject();
