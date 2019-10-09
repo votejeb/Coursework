@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07b959f0-3d1c-4cad-86d7-8ae19955eded" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/things.db" afterDir="false" />
+    <list default="true" id="21008e26-92d2-433a-b782-ffef4e1ff52e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataFiltersController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ProcessedDatasController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UsersController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace_poopoo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/workspace_poopoo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +49,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project Phase 1 - Copy" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/New folder/storm-twitter-workshop-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -122,7 +115,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="07b959f0-3d1c-4cad-86d7-8ae19955eded" name="Default Changelist" comment="" />
+      <changelist id="21008e26-92d2-433a-b782-ffef4e1ff52e" name="Default Changelist" comment="" />
       <created>1560413996278</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -140,6 +133,7 @@
       <workItem from="1569785667005" duration="3182000" />
       <workItem from="1569790737386" duration="1218000" />
       <workItem from="1570109998643" duration="4809000" />
+      <workItem from="1570649427493" duration="3329000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>

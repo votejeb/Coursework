@@ -10,7 +10,7 @@ public class DataFiltersController {
     //SQL SELECT//
     public static void ShowFilters() {
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT DataFilterName FROM DataFilters");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT DataFilterName FROM DataFilters ");
             ResultSet results  = ps.executeQuery();
             while (results.next()) {
                 String DataFilterName = results.getString(1);

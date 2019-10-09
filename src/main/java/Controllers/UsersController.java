@@ -6,6 +6,7 @@ import org.json.simple.JSONObject;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.sql.Connection;
@@ -15,7 +16,7 @@ import java.sql.ResultSet;
 @Path("users/")
 public class UsersController {
 
-    //SQL SELECT//
+    //SQL SELECTALL//
     @GET
     @Path("list")
     @Produces(MediaType.APPLICATION_JSON)
@@ -39,11 +40,36 @@ public class UsersController {
 
         }
     }
+    //SQL SELECT//
+/*    @GET
+    @Path("listone")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String ShowUserInfo(@PathParam("id")int UserID) {
+        System.out.println("thing/list");
+        JSONArray list = new JSONArray();
+        try {
+            PreparedStatement ps = Main.db.prepareStatement("SELECT UserName, Password FROM Users WHERE USERID=?");
+            ResultSet results  = ps.executeQuery();
+            while (results.next()) {
+                JSONObject item = new JSONObject();
+                item.put("UserID", results.getInt(1));
+                item.put("UserName", results.getString(2));
+                item.put("Password", results.getString(3));
+                list.add(item);
+            }
+            return list.toString();
+        } catch (Exception exception) {
+            System.out.println("Database error: " + exception.getMessage());
+            return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
+
+        }
+    }
+*/
 //insert//
 
     public static void InsertUser(int UserID, String UserName, String Password){
         try {
-            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO Users(UserID, UserName, Password)VALUES(?,?,?)");
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO Users(UserID, UserName, Password, ConsumerKey, ConsumerSecret, AccessToken, AccessSecret, DownloadRestriction, ProcessRestriction)VALUES(?,?,?)");
             ps.setInt(1, UserID);
             ps.setString(2, UserName);
             ps.setString(3, Password);

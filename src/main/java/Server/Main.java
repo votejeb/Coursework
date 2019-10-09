@@ -1,5 +1,6 @@
 package Server;
 
+import Controllers.Twitter4jController;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -7,6 +8,8 @@ import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
 import org.sqlite.SQLiteConfig;
+import twitter4j.*;
+import twitter4j.conf.ConfigurationBuilder;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,23 +18,27 @@ import java.sql.DriverManager;
 public class Main {
 
     public static Connection db = null;
-/*
+
     public static void main(String[] args) {
         openDatabase("Database1.db");
 // code to get data from, write to the database etc goes here!
-        UsersController.ShowUserInfo();;
-        UsersController.InsertUser(2,"test2","test2");
-        UsersController.updateUser(2,"test3","test3");
-        UsersController.deleteUser(2);
-        closeDatabase();
+        TwitterStream twitterStream = Twitter4jController.configAuth("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs");
+        FilterQuery tweetFilterQuery=Twitter4jController.setFilter();
+        twitterStream.addListener(new StatusListener () {
+            public void onStatus(Status status) {
+                System.out.println(status.getText())
+            }
+            twitterStream.filter(tweetFilterQuery);
+
+            closeDatabase();
     }
 
- */
 
+/*
     public static void main(String[] args) {
 
         openDatabase("Database1.db");
-
+        Twitter4jController.configAuth("aNH2A2u6c1Hu4Q9VLo8tZhcdP","MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by","942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG","U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs");
         ResourceConfig config = new ResourceConfig();
         config.packages("Controllers");
         config.register(MultiPartFeature.class);
@@ -45,11 +52,15 @@ public class Main {
             server.start();
             System.out.println("Server successfully started.");
             server.join();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
 
+
+
+    }
+*/
 //This subroutine opens the database connection, outputs any errors with try catch statement
     private static void openDatabase(String dbFile) {
         try  {
