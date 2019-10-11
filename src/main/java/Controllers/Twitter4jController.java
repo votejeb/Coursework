@@ -1,8 +1,6 @@
 package Controllers;
 
-import twitter4j.FilterQuery;
-import twitter4j.TwitterStream;
-import twitter4j.TwitterStreamFactory;
+import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
 public class Twitter4jController {
@@ -21,11 +19,22 @@ public class Twitter4jController {
         }
         return null;
     }
-    public static FilterQuery setFilter(){
+    public static FilterQuery setFilter(String filterCond, String filterLang){
         FilterQuery tweetFilterQuery = new FilterQuery();
-        tweetFilterQuery.track(new String[]{"Trump", "Teletubbies"});
-
-        tweetFilterQuery.language(new String[]{"en"});
+        tweetFilterQuery.track(filterCond);
+        tweetFilterQuery.language(filterLang);
         return tweetFilterQuery;
     }
+
+    public static void runStream(String ConsumerKey, String ConsumerSecret, String AccessKey, String AccessSecret, String filterCond, String filterLang){
+        TwitterStream twitterStream = configAuth(ConsumerKey,ConsumerSecret,AccessKey,AccessSecret);
+        FilterQuery tweetFilterQuery=setFilter(filterCond,filterLang);
+        twitterStream.addListener(new StatusAdapter() {
+            public void onStatus(Status status) {
+                System.out.println(status.getText());
+            }
+        });
+        twitterStream.filter(tweetFilterQuery);
+    }
+
 }
