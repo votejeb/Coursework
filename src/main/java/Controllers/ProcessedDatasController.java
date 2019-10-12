@@ -1,12 +1,19 @@
 package Controllers;
 
 import Server.Main;
+import org.glassfish.jersey.media.multipart.FormDataParam;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
+@Path("processeddatas/")
 public class ProcessedDatasController {
     //SQL SELECT//
+
     public static void ShowProcessedDatas() {
         try {
             PreparedStatement ps = Main.db.prepareStatement("SELECT KeywordID, Keyword, TimeFrom, TimeTo FROM ProcessedDatas");
@@ -36,17 +43,25 @@ public class ProcessedDatasController {
             System.out.println("Database error "+exception.getMessage());
         }
     }
+///delete//
 
-    public static void deleteUser (int KeywordID){
+    @POST
+    @Path("deleteprocesseddatas")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String DeleteData (@FormDataParam("KeywordID")Integer KeywordID){
         try {
-
+            if(KeywordID==null){
+                throw new Exception("One or more form data parameters are missing in the HTTP request.");
+            }
+            System.out.println("users/deleteuser id=" + KeywordID);
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM ProcessedDatas WHERE KeywordID= ?");
             ps.setInt(1, KeywordID);
-            ps.executeUpdate();
-            System.out.println("Keyword Entry Removed");
-
-        } catch (Exception e) {
-            System.out.println("Database error "+e.getMessage());
+            ps.execute();
+            return "{\"status\"; \"OK\"}";
+        } catch (Exception exception) {
+            System.out.println("Database Error "+exception.getMessage());
+            return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
         }
     }
 }

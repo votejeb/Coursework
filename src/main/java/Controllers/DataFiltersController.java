@@ -1,7 +1,13 @@
 package Controllers;
 
 import Server.Main;
+import org.glassfish.jersey.media.multipart.FormDataParam;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -34,19 +40,26 @@ public class DataFiltersController {
             System.out.println("Database error "+exception.getMessage());
         }
     }
+//delete//
 
-    public static void DeleteFilter (int DataFilterID){
+    @POST
+    @Path("deletefilter")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String DeleteFilter (@FormDataParam("filterID")Integer filterID){
         try {
-
+            if(filterID==null){
+                throw new Exception("One or more form data parameters are missing in the HTTP request.");
+            }
+            System.out.println("users/deletefilter id=" + filterID);
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM DataFilters WHERE DataFilterID= ?");
-            ps.setInt(1, DataFilterID);
-            ps.executeUpdate();
-            System.out.println("Filter Deleted");
-
-        } catch (Exception e) {
-            System.out.println("Database error "+e.getMessage());
+            ps.setInt(1, filterID);
+            ps.execute();
+            return "{\"status\"; \"OK\"}";
+        } catch (Exception exception) {
+            System.out.println("Database Error "+exception.getMessage());
+            return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
         }
-
     }
 }
 

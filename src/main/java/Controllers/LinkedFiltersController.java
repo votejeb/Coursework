@@ -14,10 +14,10 @@ import java.sql.ResultSet;
 
 public class LinkedFiltersController {
 
-    public static void CreateTable(String filterID) {
+    public static void CreateTable(Integer filterID) {
         try {
-            PreparedStatement ps = Main.db.prepareStatement("CREATE TABLE IF NOT EXISTS LinkedFilters" + filterID + " (\n"
-                    + "Words String ,\n"
+            PreparedStatement ps = Main.db.prepareStatement("CREATE TABLE IF NOT EXISTS LinkedFilters"+filterID+" (\n"
+                    + "Words String\n"
                     + ");");
             ps.execute();
         } catch (Exception exception) {
@@ -95,7 +95,7 @@ public class LinkedFiltersController {
         }
     }
     //delete whole table
-    public static void DeleteTable(String filterID) {
+    public static void DeleteTable(Integer filterID) {
         try {
             PreparedStatement ps = Main.db.prepareStatement("DELETE LinkedFilters" + filterID);
             ps.execute();

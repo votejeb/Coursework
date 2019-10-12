@@ -1,5 +1,6 @@
 package Controllers;
 
+import Util.ConvertUtilToSQL;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
@@ -30,14 +31,15 @@ public class Twitter4jController {
         return tweetFilterQuery;
     }
 //initialises the stream
-    public static void runStream(String ConsumerKey, String ConsumerSecret, String AccessKey, String AccessSecret, String filterCond, String filterLang){
+    public static void runStream(String ConsumerKey, String ConsumerSecret, String AccessKey, String AccessSecret, String filterCond, String filterLang,int RawDataID){
         TwitterStream twitterStream = configAuth(ConsumerKey,ConsumerSecret,AccessKey,AccessSecret);
         FilterQuery tweetFilterQuery=setFilter(filterCond,filterLang);
-        //here StatusAdapter or StatusListener can be used, however StatusAdapter automatically creates the unwritten public void parameters that are not added to the .addListener for us
+        //here StatusAdapter or StatusListener can be used, however StatusAdapter automatically creates the unwritten public void methods that are not added to the .addListener for us
         twitterStream.addListener(new StatusAdapter() {
             public void onStatus(Status status) {
                 //prints data to terminal, still working on way to correctly implement with database API
-                System.out.println(status.getText());
+                RawDatasController.InsertRawData(status.getText(), ConvertUtilToSQL.convert(status.getCreatedAt()),RawDataID);
+                System.out.println ("successfully added");
             }
         });
         //filters data

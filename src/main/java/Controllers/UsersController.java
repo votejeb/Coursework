@@ -88,7 +88,6 @@ public class UsersController {
             ps.setString(2, UserName);
             ps.setString(3, Password);
             ps.setInt(4,450);
-            ps.setInt(5,180);
             ps.execute();
             return "{\"status\"; \"OK\"}";
         } catch (Exception exception) {
@@ -118,7 +117,7 @@ public class UsersController {
                 throw new Exception("One or more data parameters are missing in the HTTP request");
             }
             System.out.println("users/updateuser id="+ UserID);
-            PreparedStatement ps = Main.db.prepareStatement("UPDATE Users SET UserName = ?, Password = ?,  ConsumerKey = ?, ConsumerSecret = ?, AccessToken = ?, AccessSecret = ?, ProcessRestrictionStream = ?, ProcessRestrictionQuery = ? WHERE UserID = ?");
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE Users SET UserName = ?, Password = ?,  ConsumerKey = ?, ConsumerSecret = ?, AccessToken = ?, AccessSecret = ?, ProcessRestrictionStream = ?, WHERE UserID = ?");
             ps.setString(1, UserName);
             ps.setString(2, Password);
             ps.setString(3, ConsumerKey);
@@ -126,8 +125,7 @@ public class UsersController {
             ps.setString(5, AccessToken);
             ps.setString(6, AccessSecret);
             ps.setInt(7, ProcessRestrictionStream);
-            ps.setInt(8, ProcessRestrictionQuery);
-            ps.setInt(9, UserID);
+            ps.setInt(8, UserID);
             ps.execute();
             return "{\"status\"; \"OK\"}";
         } catch (Exception exception) {

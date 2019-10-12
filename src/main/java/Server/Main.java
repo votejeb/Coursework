@@ -1,5 +1,6 @@
 package Server;
 
+import Controllers.LinkedFiltersController;
 import Controllers.LinkedKeywordController;
 import Controllers.Twitter4jController;
 import org.eclipse.jetty.server.Server;
@@ -21,9 +22,7 @@ public class Main {
 
     public static void main(String[] args) {
         openDatabase("Database1.db");
-        //Twitter4jController.runStream("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs","trump","en");
-        LinkedKeywordController.createTable("1");
-        closeDatabase();
+        Twitter4jController.runStream("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs","trump","en",1);
     }
 
 

@@ -1,11 +1,13 @@
 package Controllers;
 
 import Server.Main;
-import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import javax.ws.rs.*;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +16,7 @@ import java.sql.ResultSet;
 
 public class LinkedKeywordController {
 
-    public static void CreateTable(String keywordID){
+    public static void CreateTable(Integer keywordID){
         try {
 
             PreparedStatement ps = Main.db.prepareStatement("CREATE TABLE IF NOT EXISTS LinkedKeywords"+keywordID+" (\n"
@@ -40,7 +42,7 @@ public class LinkedKeywordController {
         System.out.println("linkedkeywords/readkeywords");
         JSONArray list = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT Words, OccurenceCount, LikeCount FROM LinkedKeywords" + keywordID + "");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT Words, OccurenceCount, LikeCount FROM LinkedKeywords" + keywordID);
             ResultSet results = ps.executeQuery();
             while (results.next()) {
                 JSONObject item = new JSONObject();
@@ -56,7 +58,7 @@ public class LinkedKeywordController {
         }
     }
     //delete whole table
-    public static void DeleteTable(String keywordID) {
+    public static void DeleteTable(Integer keywordID) {
         try {
             PreparedStatement ps = Main.db.prepareStatement("DELETE LinkedKeywords" + keywordID);
             ps.execute();
