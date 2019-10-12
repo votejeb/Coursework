@@ -39,6 +39,7 @@ public class Twitter4jController {
             public void onStatus(Status status) {
                 //prints data to terminal, still working on way to correctly implement with database API
                 RawDatasController.InsertRawData(status.getText(), ConvertUtilToSQL.convert(status.getCreatedAt()),RawDataID);
+                System.out.println(status.getCreatedAt());
                 System.out.println ("successfully added");
             }
         });
