@@ -34,7 +34,6 @@ public class UsersController {
         } catch (Exception exception) {
             System.out.println("Database error: " + exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
-
         }
     }
     //SQL SELECT//
@@ -66,7 +65,6 @@ public class UsersController {
         } catch (Exception exception) {
             System.out.println("Database error: " + exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
-
         }
     }
 
@@ -76,7 +74,7 @@ public class UsersController {
     @Path("newuser")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String insertUser(
+    public String InsertUser(
             @FormDataParam("UserID") Integer UserID,
             @FormDataParam("UserName")String UserName,
             @FormDataParam("Password")String Password){
@@ -105,7 +103,7 @@ public class UsersController {
     @Path("updateuser")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String updateUser (
+    public String UpdateUser (
             @FormDataParam("UserID")Integer UserID,
             @FormDataParam("UserName")String UserName,
             @FormDataParam("Password")String Password,
@@ -142,7 +140,7 @@ public class UsersController {
     @Path("deleteuser")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String deleteUser (@FormDataParam("UserID")Integer UserID){
+    public String DeleteUser (@FormDataParam("UserID")Integer UserID){
         try {
             if(UserID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
@@ -157,6 +155,5 @@ public class UsersController {
             System.out.println("Database Error "+exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
         }
-
     }
 }

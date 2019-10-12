@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="21008e26-92d2-433a-b782-ffef4e1ff52e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LinkedKeywordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LinkedKeywordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +51,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="play.paths.configuration" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -125,7 +133,8 @@
       <workItem from="1570659330148" duration="3132000" />
       <workItem from="1570724933003" duration="2530000" />
       <workItem from="1570798817905" duration="13659000" />
-      <workItem from="1570822587801" duration="7738000" />
+      <workItem from="1570822587801" duration="8068000" />
+      <workItem from="1570880033863" duration="12807000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -225,7 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570833132106</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="subcontrollers begun coeding, userscontroller is api ready">
+      <created>1570833205168</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570833205168</updated>
+    </task>
+    <task id="LOCAL-00016" summary="subcontrollers begun coeding, userscontroller is api ready">
+      <created>1570833249314</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1570833249314</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +275,7 @@
     <MESSAGE value="sql statement tests complete having trouble with classes" />
     <MESSAGE value="kermit and push" />
     <MESSAGE value="streamhandling api implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="streamhandling api implemented" />
+    <MESSAGE value="subcontrollers begun coeding, userscontroller is api ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="subcontrollers begun coeding, userscontroller is api ready" />
   </component>
 </project>

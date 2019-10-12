@@ -16,7 +16,6 @@ public class ProcessedDatasController {
                 String Keyword = results.getString(2);
                 System.out.println(KeywordID + " " + Keyword);
             }
-
         } catch (Exception exception) {
             System.out.println("Database error: " + exception.getMessage());
         }
@@ -48,8 +47,6 @@ public class ProcessedDatasController {
 
         } catch (Exception e) {
             System.out.println("Database error "+e.getMessage());
-
         }
-
     }
 }

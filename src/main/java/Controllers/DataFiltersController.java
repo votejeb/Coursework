@@ -16,7 +16,6 @@ public class DataFiltersController {
                 String DataFilterName = results.getString(1);
                 System.out.println(DataFilterName);
             }
-
         } catch (Exception exception) {
             System.out.println("Database error: " + exception.getMessage());
         }
@@ -31,7 +30,6 @@ public class DataFiltersController {
             ps.setBoolean(3,WhitelistBlacklist);
             ps.executeUpdate();
             System.out.println("Filter Added");
-
         } catch (Exception exception) {
             System.out.println("Database error "+exception.getMessage());
         }
@@ -47,7 +45,6 @@ public class DataFiltersController {
 
         } catch (Exception e) {
             System.out.println("Database error "+e.getMessage());
-
         }
 
     }
