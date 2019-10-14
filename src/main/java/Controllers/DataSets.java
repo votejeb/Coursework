@@ -10,13 +10,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-@Path("processeddatas/")
-public class ProcessedDatasController {
+@Path("DataSets/")
+public class DataSets {
     //SQL SELECT//
 
     public static void ShowProcessedDatas() {
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT KeywordID, Keyword, TimeFrom, TimeTo FROM ProcessedDatas");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT SetID, Keyword, TimeFrom, TimeTo FROM ProcessedDatas");
             ResultSet results  = ps.executeQuery();
             while (results.next()) {
                 int KeywordID = results.getInt(1);
@@ -31,7 +31,7 @@ public class ProcessedDatasController {
 
     public static void InsertData(int KeywordID, String Keyword, int TimeFrom, int TimeTo){
         try {
-            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO ProcessedDatas(KeywordID, Keyword, TimeFrom, TimeTo)VALUES(?,?,?,?)");
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO DataSets(KeywordID, Keyword, TimeFrom, TimeTo)VALUES(?,?,?,?)");
             ps.setInt(1, KeywordID);
             ps.setString(2, Keyword);
             ps.setInt(3, TimeFrom);
@@ -55,7 +55,7 @@ public class ProcessedDatasController {
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
             System.out.println("users/deleteuser id=" + KeywordID);
-            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM ProcessedDatas WHERE KeywordID= ?");
+            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM DataSets WHERE KeywordID= ?");
             ps.setInt(1, KeywordID);
             ps.execute();
             return "{\"status\"; \"OK\"}";

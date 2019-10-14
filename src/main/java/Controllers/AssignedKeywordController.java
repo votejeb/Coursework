@@ -14,7 +14,7 @@ import java.sql.ResultSet;
 
 @Path("linkedkeywords/")
 
-public class LinkedKeywordController {
+public class AssignedKeywordController {
 
     public static void CreateTable(Integer keywordID){
         try {
