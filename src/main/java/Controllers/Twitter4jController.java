@@ -1,8 +1,12 @@
 package Controllers;
 
 import Util.ConvertUtilToSQL;
+import Util.GetDateTime;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
+
+import java.time.LocalDateTime;
+import java.util.Timer;
 
 public class Twitter4jController {
 // Creates new object configuration builder and returns an of of TwitterStreamfactory, Conficguration builder is
@@ -31,19 +35,23 @@ public class Twitter4jController {
         return tweetFilterQuery;
     }
 //initialises the stream
-    public static void runStream(String ConsumerKey, String ConsumerSecret, String AccessKey, String AccessSecret, String filterCond, String filterLang,int RawDataID){
+    public static void runStream(String ConsumerKey, String ConsumerSecret, String AccessKey, String AccessSecret, String filterCond, String filterLang, int runtime) throws InterruptedException {
         TwitterStream twitterStream = configAuth(ConsumerKey,ConsumerSecret,AccessKey,AccessSecret);
         FilterQuery tweetFilterQuery=setFilter(filterCond,filterLang);
+        String ldt=GetDateTime.getCurrentTime();
+        RawDatasController.CreateTable(ldt);
         //here StatusAdapter or StatusListener can be used, however StatusAdapter automatically creates the unwritten public void methods that are not added to the .addListener for us
         twitterStream.addListener(new StatusAdapter() {
             public void onStatus(Status status) {
-                //prints data to terminal, still working on way to correctly implement with database API
-                RawDatasController.InsertRawData(status.getText(), ConvertUtilToSQL.convert(status.getCreatedAt()),RawDataID);
-                System.out.println(status.getCreatedAt());
-                System.out.println ("successfully added");
+                //inserts data to table
+                RawDatasController.InsertRawData(status.getText(),ldt);
             }
+
         });
         //filters data
         twitterStream.filter(tweetFilterQuery);
+        Thread.sleep(runtime*1000);
+        twitterStream.cleanUp();
+        twitterStream.shutdown();
     }
 }
