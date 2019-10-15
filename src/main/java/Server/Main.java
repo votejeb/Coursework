@@ -1,5 +1,6 @@
 package Server;
 
+import Controllers.RawDatasController;
 import Controllers.Twitter4jController;
 import org.sqlite.SQLiteConfig;
 
@@ -13,7 +14,8 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
         openDatabase("Database1.db");
-        Twitter4jController.runStream("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs","trump","en",5);
+        RawDatasController.CreateTable("1");
+        Twitter4jController.runStream("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs","trump","en","1",5);
     }
 
 

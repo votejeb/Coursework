@@ -14,7 +14,7 @@ import java.sql.ResultSet;
 public class DataSetsController {
     //SQL SELECT//
 
-    public static void ShowDataSet() {
+    public static void ShowDataSets() {
         try {
             PreparedStatement ps = Main.db.prepareStatement("SELECT SetID, Keyword, TimeFrom, TimeTo FROM ProcessedDatas");
             ResultSet results  = ps.executeQuery();
@@ -29,19 +29,21 @@ public class DataSetsController {
     }
 //insert//
 
-    public static void InsertDataSet(int KeywordID, String Keyword, int TimeFrom, int TimeTo){
+    public static void InsertDataSet(int SetID, String Keyword, int StartTime, int RunTime){
         try {
-            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO DataSets(KeywordID, Keyword, TimeFrom, TimeTo)VALUES(?,?,?,?)");
-            ps.setInt(1, KeywordID);
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO DataSets(KeywordID, Keyword, StartTime, RunTime,PublicPrivate)VALUES(?,?,?,?,?)");
+            ps.setInt(1, SetID);
             ps.setString(2, Keyword);
-            ps.setInt(3, TimeFrom);
-            ps.setInt(4,TimeTo);
-            ps.executeUpdate();
+            ps.setInt(3, StartTime);
+            ps.setInt(4,RunTime);
+            ps.setBoolean(5,true);
+            ps.execute();
             System.out.println("Keyword Entry Added");
 
         } catch (Exception exception) {
             System.out.println("Database error "+exception.getMessage());
         }
+        RawDatasController.CreateTable(Integer.toString(SetID));
     }
 ///delete//
 
@@ -54,7 +56,6 @@ public class DataSetsController {
             if(KeywordID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            System.out.println("users/deleteuser id=" + KeywordID);
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM DataSets WHERE SetID= ?");
             ps.setInt(1, KeywordID);
             ps.execute();

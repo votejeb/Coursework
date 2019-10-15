@@ -33,7 +33,6 @@ public class LinkedFiltersController {
         if(filterID==null){
             throw new Exception("One or more form data parameters are missing in the HTTP request.");
         }
-        System.out.println("linkedfilters/readfilter");
         JSONArray list = new JSONArray();
         try {
             PreparedStatement ps = Main.db.prepareStatement("SELECT Words FROM LinkedFilters" + filterID + "");
@@ -62,7 +61,6 @@ public class LinkedFiltersController {
             if (filter == null||filterID == null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            System.out.println("linkedfilter/newfilter ="+ filter);
             PreparedStatement ps = Main.db.prepareStatement("INSERT INTO LinkedFilters" + filterID + " (Words)VALUES(?)");
             ps.setString(1, filter);
             ps.execute();
@@ -84,7 +82,6 @@ public class LinkedFiltersController {
             if(Words==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            System.out.println("users/deleteuser id=" + Words);
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM LinkedFilters" + filterID + " WHERE Words ?");
             ps.setString(1, Words);
             ps.execute();
@@ -95,9 +92,9 @@ public class LinkedFiltersController {
         }
     }
     //delete whole table
-    public static void DeleteTable(Integer filterID) {
+    public static void DeleteTable(Integer DataFilterID) {
         try {
-            PreparedStatement ps = Main.db.prepareStatement("DELETE LinkedFilters" + filterID);
+            PreparedStatement ps = Main.db.prepareStatement("DELETE LinkedFilters" + DataFilterID);
             ps.execute();
         } catch (Exception exception) {
             System.out.println("Database error " + exception.getMessage());

@@ -1,13 +1,13 @@
 package Util;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
-import java.util.Calendar;
 
-public class GetDateTime {
+public class customUtil {
 
-    public static String getCurrentTime(){
-        Date date = Calendar.getInstance().getTime();
+    public static String SqlToStr(Date takenDate){
+        Date date = takenDate;
         DateFormat dateFormat = new SimpleDateFormat("YYYY_MM_dd_hh_mm_ss");
         String strDate = dateFormat.format(date);
         return (strDate);

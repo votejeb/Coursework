@@ -3,10 +3,7 @@ package Controllers;
 import Server.Main;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,6 +33,7 @@ public class DataFiltersController {
             ps.setBoolean(3,WhitelistBlacklist);
             ps.executeUpdate();
             System.out.println("Filter Added");
+            LinkedFiltersController.CreateTable(DataFilterID);
         } catch (Exception exception) {
             System.out.println("Database error "+exception.getMessage());
         }
@@ -43,18 +41,19 @@ public class DataFiltersController {
 //delete//
 
     @POST
-    @Path("deletefilter")
+    @Path("deletefilter{datafilterID}")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String DeleteFilter (@FormDataParam("filterID")Integer filterID){
+    public String DeleteFilter (@PathParam("datafilterID") Integer DataFilterID){
         try {
-            if(filterID==null){
+            if(DataFilterID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            System.out.println("users/deletefilter id=" + filterID);
+            System.out.println("users/deletefilter id=" + DataFilterID);
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM DataFilters WHERE DataFilterID= ?");
-            ps.setInt(1, filterID);
+            ps.setInt(1, DataFilterID);
             ps.execute();
+            LinkedFiltersController.DeleteTable(DataFilterID);
             return "{\"status\"; \"OK\"}";
         } catch (Exception exception) {
             System.out.println("Database Error "+exception.getMessage());

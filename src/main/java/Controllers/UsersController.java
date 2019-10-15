@@ -18,7 +18,6 @@ public class UsersController {
     @Path("listusers")
     @Produces(MediaType.APPLICATION_JSON)
     public String ShowUserInfo() {
-        System.out.println("users/listall");
         JSONArray list = new JSONArray();
         try {
             PreparedStatement ps = Main.db.prepareStatement("SELECT UserID, UserName, Password FROM Users");
@@ -44,10 +43,9 @@ public class UsersController {
         if(UserID==null){
             throw new Exception("One or more form data parameters are missing in the HTTP request.");
         }
-        System.out.println("users/listone");
         JSONObject item = new JSONObject();
         try {
-            PreparedStatement ps = Server.Main.db.prepareStatement("SELECT UserName, Password, ConsumerKey, ConsumerSecret, AccessToken, AccessSecret, ProcessRestrictionStream, ProcessRestrictionQuery FROM Users WHERE USERID=?");
+            PreparedStatement ps = Server.Main.db.prepareStatement("SELECT UserName, Password, ConsumerKey, ConsumerSecret, AccessToken, AccessSecret FROM Users WHERE USERID=?");
             ps.setInt(1,UserID);
             ResultSet results  = ps.executeQuery();
             if (results.next()) {
@@ -58,8 +56,6 @@ public class UsersController {
                 item.put("ConsumerSecret",results.getString(4));
                 item.put("AccessToken",results.getString(5));
                 item.put("AccessSecret",results.getString(6));
-                item.put("ProcessRestrictionStream",results.getString(7));
-                item.put("ProcessRestrictionQuery",results.getString(8));
             }
             return item.toString();
         } catch (Exception exception) {
@@ -82,12 +78,10 @@ public class UsersController {
             if (UserID == null || UserName == null ||Password==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            System.out.println("users/newuser id="+ UserID);
-            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO Users(UserID, UserName, Password, ProcessRestrictionStream, ProcessRestrictionQuery)VALUES(?,?,?,?,?)");
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO Users(UserID, UserName, Password)VALUES(?,?,?,?,?)");
             ps.setInt(1, UserID);
             ps.setString(2, UserName);
             ps.setString(3, Password);
-            ps.setInt(4,450);
             ps.execute();
             return "{\"status\"; \"OK\"}";
         } catch (Exception exception) {
@@ -109,14 +103,11 @@ public class UsersController {
             @FormDataParam("ConsumerKey")String ConsumerKey,
             @FormDataParam("ConsumerSecret")String ConsumerSecret,
             @FormDataParam("AccessToken")String AccessToken,
-            @FormDataParam("AccessSecret")String AccessSecret,
-            @FormDataParam("ProcessRestrictionStream")Integer ProcessRestrictionStream,
-            @FormDataParam("ProcessRestrictionQuery")Integer ProcessRestrictionQuery){
+            @FormDataParam("AccessSecret")String AccessSecret){
         try {
-            if (UserID == null || UserName == null || Password == null|| ProcessRestrictionStream == null || ProcessRestrictionQuery == null){
+            if (UserID == null || UserName == null || Password == null){
                 throw new Exception("One or more data parameters are missing in the HTTP request");
             }
-            System.out.println("users/updateuser id="+ UserID);
             PreparedStatement ps = Main.db.prepareStatement("UPDATE Users SET UserName = ?, Password = ?,  ConsumerKey = ?, ConsumerSecret = ?, AccessToken = ?, AccessSecret = ?, ProcessRestrictionStream = ?, WHERE UserID = ?");
             ps.setString(1, UserName);
             ps.setString(2, Password);
@@ -124,7 +115,6 @@ public class UsersController {
             ps.setString(4, ConsumerSecret);
             ps.setString(5, AccessToken);
             ps.setString(6, AccessSecret);
-            ps.setInt(7, ProcessRestrictionStream);
             ps.setInt(8, UserID);
             ps.execute();
             return "{\"status\"; \"OK\"}";
@@ -143,7 +133,6 @@ public class UsersController {
             if(UserID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            System.out.println("users/deleteuser id=" + UserID);
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM Users WHERE UserID= ?");
             ps.setInt(1, UserID);
             ps.execute();
