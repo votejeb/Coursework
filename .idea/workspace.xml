@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21008e26-92d2-433a-b782-ffef4e1ff52e" name="Default Changelist" comment="">
+    <list default="true" id="21008e26-92d2-433a-b782-ffef4e1ff52e" name="Default Changelist" comment="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LinkedKeywordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LinkedKeywordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RawDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RawDatasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Util/ConvertSQLToUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Util/ConvertUtilToSQL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Util/GetDateTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Util/customUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/ConvertUtilToSQL.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +146,10 @@
       <workItem from="1570724933003" duration="2530000" />
       <workItem from="1570798817905" duration="13659000" />
       <workItem from="1570822587801" duration="8068000" />
-      <workItem from="1570880033863" duration="12807000" />
+      <workItem from="1570880033863" duration="32756000" />
+      <workItem from="1571062605741" duration="8451000" />
+      <workItem from="1571156299202" duration="291000" />
+      <workItem from="1571171285736" duration="6962000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -248,7 +263,35 @@
       <option name="project" value="LOCAL" />
       <updated>1570833249314</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="LinkedFilters Finished, continued work on LinkedKeywords">
+      <created>1570893976652</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1570893976652</updated>
+    </task>
+    <task id="LOCAL-00018" summary="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad">
+      <created>1570919183551</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1570919183551</updated>
+    </task>
+    <task id="LOCAL-00019" summary="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad">
+      <created>1570923807882</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1570923807882</updated>
+    </task>
+    <task id="LOCAL-00020" summary="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad">
+      <created>1571071024414</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1571071024414</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +319,8 @@
     <MESSAGE value="kermit and push" />
     <MESSAGE value="streamhandling api implemented" />
     <MESSAGE value="subcontrollers begun coeding, userscontroller is api ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="subcontrollers begun coeding, userscontroller is api ready" />
+    <MESSAGE value="LinkedFilters Finished, continued work on LinkedKeywords" />
+    <MESSAGE value="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad" />
+    <option name="LAST_COMMIT_MESSAGE" value="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad" />
   </component>
 </project>
