@@ -7,6 +7,8 @@ import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 @Path("rawdata/")
 public class RawDatasController{
+
+    //create whole table
     public static void CreateTable(String TableID) {
         try {
             PreparedStatement ps = Main.db.prepareStatement("CREATE TABLE IF NOT EXISTS RawDatas_"+TableID+" (\n"
@@ -18,6 +20,8 @@ public class RawDatasController{
             System.out.println("Database error " + exception.getMessage());
         }
     }
+
+    //insert data
     public static void InsertRawData(String TweetContents,String CreatedAt, String TableID ){
         try {
             PreparedStatement ps = Main.db.prepareStatement("INSERT INTO RawDatas_"+TableID+" (TweetContents,CreatedAt)VALUES(?,?)");
