@@ -14,9 +14,9 @@ import java.sql.ResultSet;
 
 public class LinkedFiltersController {
 
-    public static void CreateTable(Integer filterID) {
+    public static void CreateTable(Integer TableID) {
         try {
-            PreparedStatement ps = Main.db.prepareStatement("CREATE TABLE IF NOT EXISTS LinkedFilters"+filterID+" (\n"
+            PreparedStatement ps = Main.db.prepareStatement("CREATE TABLE IF NOT EXISTS LinkedFilters_"+TableID+" (\n"
                     + "Words String\n"
                     + ");");
             ps.execute();
@@ -29,13 +29,13 @@ public class LinkedFiltersController {
     @GET
     @Path("readfilter{filterID}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String SelectTable(@PathParam("filterID")Integer filterID) throws Exception {
-        if(filterID==null){
+    public String SelectTable(@PathParam("filterID")Integer TableID) throws Exception {
+        if(TableID==null){
             throw new Exception("One or more form data parameters are missing in the HTTP request.");
         }
         JSONArray list = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT Words FROM LinkedFilters" + filterID + "");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT Words FROM LinkedFilters_" + TableID + "");
             ResultSet results = ps.executeQuery();
             while (results.next()) {
                 JSONObject item = new JSONObject();
@@ -51,17 +51,17 @@ public class LinkedFiltersController {
 
     //insert//
     @POST
-    @Path("newfilter{filterID}")
+    @Path("newfilter")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String InsertToTable(
-            @PathParam("filterID")Integer filterID,
+            @FormDataParam("filterID")Integer TableID,
             @FormDataParam("newFilter") String filter){
         try {
-            if (filter == null||filterID == null){
+            if (filter == null||TableID == null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO LinkedFilters" + filterID + " (Words)VALUES(?)");
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO LinkedFilters_" + TableID + " (Words)VALUES(?)");
             ps.setString(1, filter);
             ps.execute();
             return "{\"status\"; \"OK\"}";
@@ -72,17 +72,17 @@ public class LinkedFiltersController {
     }
     //delete
     @POST
-    @Path("deletefilter{filterID}")
+    @Path("deletefilter")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String DeleteFromTable (
-            @PathParam("filterID")Integer filterID,
+            @FormDataParam("filterID")Integer TableID,
             @FormDataParam("Words")String Words){
         try {
             if(Words==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM LinkedFilters" + filterID + " WHERE Words ?");
+            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM LinkedFilters_" + TableID + " WHERE Words ?");
             ps.setString(1, Words);
             ps.execute();
             return "{\"status\"; \"OK\"}";
@@ -92,9 +92,9 @@ public class LinkedFiltersController {
         }
     }
     //delete whole table
-    public static void DeleteTable(Integer DataFilterID) {
+    public static void DeleteTable(Integer TableID) {
         try {
-            PreparedStatement ps = Main.db.prepareStatement("DELETE LinkedFilters" + DataFilterID);
+            PreparedStatement ps = Main.db.prepareStatement("DELETE LinkedFilters_" + TableID);
             ps.execute();
         } catch (Exception exception) {
             System.out.println("Database error " + exception.getMessage());

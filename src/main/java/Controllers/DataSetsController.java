@@ -43,24 +43,50 @@ public class DataSetsController {
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String InsertDataSet(
-            @FormDataParam("KeywordID") Integer SetID,
+            @FormDataParam("SetID") Integer SetID,
             @FormDataParam("Keyword")String Keyword,
             @FormDataParam("StartTime")Integer StartTime,
-            @FormDataParam("RunTime")Integer RunTime){
+            @FormDataParam("RunTime")Integer RunTime,
+            @FormDataParam("OriginUser")Integer OriginUser){
         try {
             if (SetID == null || Keyword == null || StartTime==null || RunTime==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO DataSets(SetID, Keyword, StartTime, RunTime,PublicPrivate)VALUES(?,?,?,?,?)");
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO DataSets(SetID, Keyword, StartTime, RunTime, PublicPrivate, OriginUser)VALUES(?,?,?,?,?,?)");
             ps.setInt(1, SetID);
             ps.setString(2, Keyword);
             ps.setInt(3, StartTime);
             ps.setInt(4,RunTime);
             ps.setBoolean(5,true);
+            ps.setInt(6,OriginUser);
             ps.execute();
             return "{\"status\"; \"OK\"}";
         } catch (Exception exception) {
             System.out.println("Database error " + exception.getMessage());
+            return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
+        }
+    }
+
+    //Update//
+
+    @POST
+    @Path("updateset")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String UpdateUser (
+            @FormDataParam("SetID") Integer SetID,
+            @FormDataParam("PublicPrivate")Boolean PublicPrivate){
+        try {
+            if (SetID == null || PublicPrivate == null){
+                throw new Exception("One or more data parameters are missing in the HTTP request");
+            }
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE DataSets SET PublicPrivate = ? WHERE SetID = ?");
+            ps.setBoolean(1, PublicPrivate);
+            ps.setInt(2, SetID);
+            ps.execute();
+            return "{\"status\"; \"OK\"}";
+        } catch (Exception exception) {
+            System.out.println("Database Error "+exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
         }
     }
@@ -70,13 +96,13 @@ public class DataSetsController {
     @Path("deletedataset")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String DeleteDataSet (@FormDataParam("KeywordID")Integer KeywordID){
+    public String DeleteDataSet (@FormDataParam("SetID")Integer SetID){
         try {
-            if(KeywordID==null){
+            if(SetID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM DataSets WHERE SetID= ?");
-            ps.setInt(1, KeywordID);
+            ps.setInt(1, SetID);
             ps.execute();
             return "{\"status\"; \"OK\"}";
         } catch (Exception exception) {

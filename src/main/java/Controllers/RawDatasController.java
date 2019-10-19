@@ -1,6 +1,7 @@
 package Controllers;
 
 import Server.Main;
+import org.glassfish.jersey.media.multipart.FormDataParam;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -22,9 +23,9 @@ public class RawDatasController{
     }
 
     //insert data
-    public static void InsertRawData(String TweetContents,String CreatedAt, String TableID ){
+    public static void InsertToTable(String TweetContents, String CreatedAt, String TableID ){
         try {
-            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO RawDatas_"+TableID+" (TweetContents,CreatedAt)VALUES(?,?)");
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO RawDatas_"+TableID+" (TweetContents, CreatedAt)VALUES(?,?)");
             ps.setString(1, TweetContents);
             ps.setString(2, CreatedAt);
             ps.execute();
@@ -35,15 +36,15 @@ public class RawDatasController{
 
     //delete whole table
     @POST
-    @Path("deleterawdata{rawdataID}")
+    @Path("deleterawdata")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String DeleteTable(@PathParam("rawdataID")String TableID) {
+    public String DeleteTable(@FormDataParam("rawdataID") String TableID) {
         try {
             if(TableID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            PreparedStatement ps = Main.db.prepareStatement("DELETE LinkedFilters" + TableID);
+            PreparedStatement ps = Main.db.prepareStatement("DELETE RawDatas_" + TableID);
             ps.execute();
             return "{\"status\"; \"OK\"}";
         } catch (Exception exception) {

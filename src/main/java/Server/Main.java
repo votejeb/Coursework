@@ -2,26 +2,28 @@ package Server;
 
 import Controllers.RawDatasController;
 import Controllers.Twitter4jController;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
+import org.glassfish.jersey.media.multipart.MultiPartFeature;
+import org.glassfish.jersey.server.ResourceConfig;
+import org.glassfish.jersey.servlet.ServletContainer;
 import org.sqlite.SQLiteConfig;
 
+import javax.ws.rs.Path;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-
 public class Main {
-
     public static Connection db = null;
-
+/*
     public static void main(String[] args) throws InterruptedException {
         openDatabase("Database1.db");
         RawDatasController.CreateTable("1");
-        Twitter4jController.runStream("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs","trump","en","1",5);
+        Twitter4jController.runStream("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs","trump","en","1",500);
     }
-
-
-/*
+*/
     public static void main(String[] args) {
-
         openDatabase("Database1.db");
         ResourceConfig config = new ResourceConfig();
         config.packages("Controllers");
@@ -36,15 +38,11 @@ public class Main {
             server.start();
             System.out.println("Server successfully started.");
             server.join();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
     }
-*/
+
 //This subroutine opens the database connection, outputs any errors with try catch statement
     private static void openDatabase(String dbFile) {
         try  {
@@ -60,7 +58,7 @@ public class Main {
     }
 
 //This subroutine closes the database connection, outputs any errors with try catch statement
-    private static void closeDatabase(){
+    public static void closeDatabase(){
         try {
             db.close();
             System.out.println("Disconnected from database.");
