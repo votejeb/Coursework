@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21008e26-92d2-433a-b782-ffef4e1ff52e" name="Default Changelist" comment="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad">
+    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/client/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/client/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$I design.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RawDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RawDatasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Util/ConvertSQLToUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Util/ConvertUtilToSQL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Util/GetDateTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Util/customUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Util/ConvertUtilToSQL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Coursework.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/customUtil.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,9 +22,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -40,6 +49,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="U:\Computer Science\Coursework\.idea" />
+      </set>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -54,10 +70,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/New folder/storm-twitter-workshop-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -67,6 +85,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="U:\Computer Science\Coursework\resources\Client\css" />
       <recent name="U:\Computer Science\Project\" />
     </key>
   </component>
@@ -123,7 +142,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="21008e26-92d2-433a-b782-ffef4e1ff52e" name="Default Changelist" comment="" />
+      <changelist id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="" />
       <created>1560413996278</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -150,6 +169,12 @@
       <workItem from="1571062605741" duration="8451000" />
       <workItem from="1571156299202" duration="291000" />
       <workItem from="1571171285736" duration="6962000" />
+      <workItem from="1571651444977" duration="1800000" />
+      <workItem from="1571749392158" duration="1442000" />
+      <workItem from="1573137640927" duration="1281000" />
+      <workItem from="1573742901581" duration="1503000" />
+      <workItem from="1574347742383" duration="21000" />
+      <workItem from="1574954276674" duration="2032000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
