@@ -31,6 +31,7 @@ public class Twitter4jController {
             return ((TwitterStream)exception);
         }
     }
+
     //creates new instance of Filterquery, more conditions can be given to filterQuery if needed
     public static FilterQuery setFilter(String filterCond, String filterLang){
         FilterQuery tweetFilterQuery = new FilterQuery();

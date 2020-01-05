@@ -47,7 +47,11 @@ public class DataSetsController {
             @FormDataParam("Keyword")String Keyword,
             @FormDataParam("StartTime")Integer StartTime,
             @FormDataParam("RunTime")Integer RunTime,
-            @FormDataParam("OriginUser")Integer OriginUser){
+            @FormDataParam("OriginUser")Integer OriginUser,
+            @CookieParam("token") String token) throws Exception {
+        if (!UsersController.validToken(token)) {
+            return "{\"error\": \"You don't appear to be logged in.\"}";
+        }
         try {
             if (SetID == null || Keyword == null || StartTime==null || RunTime==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
@@ -75,7 +79,11 @@ public class DataSetsController {
     @Produces(MediaType.APPLICATION_JSON)
     public String UpdateUser (
             @FormDataParam("SetID") Integer SetID,
-            @FormDataParam("PublicPrivate")Boolean PublicPrivate){
+            @FormDataParam("PublicPrivate")Boolean PublicPrivate,
+            @CookieParam("token") String token) throws Exception {
+        if (!UsersController.validToken(token)) {
+            return "{\"error\": \"You don't appear to be logged in.\"}";
+        }
         try {
             if (SetID == null || PublicPrivate == null){
                 throw new Exception("One or more data parameters are missing in the HTTP request");
@@ -91,12 +99,17 @@ public class DataSetsController {
         }
     }
 
+
 ///delete//
     @POST
     @Path("deletedataset")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String DeleteDataSet (@FormDataParam("SetID")Integer SetID){
+    public String DeleteDataSet (@FormDataParam("SetID")Integer SetID,
+                                 @CookieParam("token") String token) throws Exception {
+        if (!UsersController.validToken(token)) {
+            return "{\"error\": \"You don't appear to be logged in.\"}";
+        }
         try {
             if(SetID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");

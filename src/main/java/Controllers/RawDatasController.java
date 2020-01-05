@@ -6,6 +6,8 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 @Path("rawdata/")
 public class RawDatasController{
 
@@ -22,6 +24,23 @@ public class RawDatasController{
         }
     }
 
+/*
+    public String ShowTableInfo(String TableID) {
+        try {
+            PreparedStatement ps = Main.db.prepareStatement("TweetContents, CreatedAt FROM RawDatas_"+TableID);
+            ResultSet results  = ps.executeQuery();
+            while (results.next()) {
+                String TweetContents = results.getString(1);
+                String CreatedAt = results.getString(2);
+                String RawResults = TweetContents +" "+ CreatedAt;
+                return RawResults;
+            }
+        } catch (Exception exception) {
+            System.out.println("Database error " + exception.getMessage());
+            return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
+        }
+    }
+*/
     //insert data
     public static void InsertToTable(String TweetContents, String CreatedAt, String TableID ){
         try {

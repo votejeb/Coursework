@@ -68,6 +68,7 @@ public class ProcessedDatasController {
         }
     }
 
+
     //Update//
     public static void UpdateTable (int WordCount, String Words, int TableID){
         try {

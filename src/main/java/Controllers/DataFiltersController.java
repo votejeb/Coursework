@@ -37,6 +37,7 @@ public class DataFiltersController {
         }
     }
 
+
     //insert
     @POST
     @Path("newfilter")
@@ -45,7 +46,11 @@ public class DataFiltersController {
     public String InsertFilter(
             @FormDataParam("DataFilterID") Integer DataFilterID,
             @FormDataParam("DataFilterName")String DataFilterName,
-            @FormDataParam("OriginUser")Integer OriginUser){
+            @FormDataParam("OriginUser")Integer OriginUser,
+            @CookieParam("token") String token) throws Exception {
+        if (!UsersController.validToken(token)) {
+            return "{\"error\": \"You don't appear to be logged in.\"}";
+        }
         try {
             if (DataFilterID == null || DataFilterName == null || OriginUser==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
@@ -68,17 +73,21 @@ public class DataFiltersController {
     //Update//
 
     @POST
-    @Path("updateset")
+    @Path("updatefilter")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String UpdateUser (
             @FormDataParam("SetID") Integer SetID,
-            @FormDataParam("PublicPrivate")Boolean PublicPrivate){
+            @FormDataParam("PublicPrivate")Boolean PublicPrivate,
+            @CookieParam("token") String token) throws Exception {
+        if (!UsersController.validToken(token)) {
+            return "{\"error\": \"You don't appear to be logged in.\"}";
+        }
         try {
             if (SetID == null || PublicPrivate == null){
                 throw new Exception("One or more data parameters are missing in the HTTP request");
             }
-            PreparedStatement ps = Main.db.prepareStatement("UPDATE DataSets SET PublicPrivate = ? WHERE SetID = ?");
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE DataFitlers SET PublicPrivate = ? WHERE SetID = ?");
             ps.setBoolean(1, PublicPrivate);
             ps.setInt(2, SetID);
             ps.execute();
@@ -94,7 +103,11 @@ public class DataFiltersController {
     @Path("deletefilter")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String DeleteFilter (@FormDataParam("datafilterID") Integer DataFilterID){
+    public String DeleteFilter (@FormDataParam("datafilterID") Integer DataFilterID,
+                                @CookieParam("token") String token) throws Exception {
+        if (!UsersController.validToken(token)) {
+            return "{\"error\": \"You don't appear to be logged in.\"}";
+        }
         try {
             if(DataFilterID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");

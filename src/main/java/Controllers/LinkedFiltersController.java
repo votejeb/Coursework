@@ -25,6 +25,7 @@ public class LinkedFiltersController {
         }
     }
 
+
     //SQL SELECTALL//
     @GET
     @Path("readfilter{filterID}")
@@ -35,7 +36,7 @@ public class LinkedFiltersController {
         }
         JSONArray list = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT Words FROM LinkedFilters_" + TableID + "");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT Words FROM LinkedFilters_" + TableID);
             ResultSet results = ps.executeQuery();
             while (results.next()) {
                 JSONObject item = new JSONObject();
