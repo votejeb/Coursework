@@ -36,3 +36,7 @@ function checkLogin() {
     document.getElementById("loggedInDetails").innerHTML = logInHTML;
 
 }
+function login(event) {
+    const form = document.getElementById("loginForm");
+    window.location.href = '/client/index.html';
+}
