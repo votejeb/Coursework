@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/client/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/client/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/~$I design.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database Backup.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Database2.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Coursework.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Util/customUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +76,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="play.paths.configuration" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -175,6 +170,13 @@
       <workItem from="1573742901581" duration="1503000" />
       <workItem from="1574347742383" duration="21000" />
       <workItem from="1574954276674" duration="2032000" />
+      <workItem from="1575283304366" duration="840000" />
+      <workItem from="1575559247333" duration="599000" />
+      <workItem from="1575986936306" duration="52000" />
+      <workItem from="1576495607093" duration="77000" />
+      <workItem from="1576495754756" duration="65000" />
+      <workItem from="1576495943906" duration="1945000" />
+      <workItem from="1578307522539" duration="4360000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>

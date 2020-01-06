@@ -16,7 +16,7 @@ function login(event) {
     const form = document.getElementById("loginForm");
     const formData = new FormData(form);
 
-    fetch("/user/login", {method: 'post', body: formData}
+    fetch("/users/login", {method: 'post', body: formData}
     ).then(response => response.json()
     ).then(responseData => {
 
@@ -33,7 +33,7 @@ function login(event) {
 
 function logout() {
 
-    fetch("/user/logout", {method: 'post'}
+    fetch("/users/logout", {method: 'post'}
     ).then(response => response.json()
     ).then(responseData => {
         if (responseData.hasOwnProperty('error')) {

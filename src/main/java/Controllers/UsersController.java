@@ -190,7 +190,7 @@ public class UsersController {
 
         try {
 
-            System.out.println("user/login");
+            System.out.println("users/login");
 
             PreparedStatement ps1 = Main.db.prepareStatement("SELECT Password FROM Users WHERE UserName = ?");
             ps1.setString(1, username);
@@ -234,7 +234,7 @@ public class UsersController {
 
         try {
 
-            System.out.println("user/logout");
+            System.out.println("users/logout");
 
             PreparedStatement ps1 = Main.db.prepareStatement("SELECT UserID FROM Users WHERE Token = ?");
             ps1.setString(1, token);

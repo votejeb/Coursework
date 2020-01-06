@@ -1,3 +1,8 @@
+function pageLoad(){
+    checkLogin()
+}
+
+
 function checkLogin() {
 
     let username = Cookies.get("username");
