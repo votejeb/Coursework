@@ -1,5 +1,6 @@
 function pageLoad(){
     checkLogin()
+    redirect()
 }
 
 
@@ -44,4 +45,8 @@ function checkLogin() {
 function login(event) {
     const form = document.getElementById("loginForm");
     window.location.href = '/client/index.html';
+}
+
+function redirect() {
+    document.getElementById("redirect").addEventListener("click",window.location.href = '/client/admin.html');
 }

@@ -9,12 +9,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 @Path("rawdata/")
-public class RawDatasController{
+public class RawDatasController {
 
     //create whole table
     public static void CreateTable(String TableID) {
         try {
-            PreparedStatement ps = Main.db.prepareStatement("CREATE TABLE IF NOT EXISTS RawDatas_"+TableID+" (\n"
+            PreparedStatement ps = Main.db.prepareStatement("CREATE TABLE IF NOT EXISTS RawDatas_" + TableID + " (\n"
                     + "TweetContents String, \n"
                     + "CreatedAt String \n"
                     + ");");
@@ -24,15 +24,15 @@ public class RawDatasController{
         }
     }
 
-/*
+
     public String ShowTableInfo(String TableID) {
         try {
-            PreparedStatement ps = Main.db.prepareStatement("TweetContents, CreatedAt FROM RawDatas_"+TableID);
-            ResultSet results  = ps.executeQuery();
+            PreparedStatement ps = Main.db.prepareStatement("TweetContents, CreatedAt FROM RawDatas_" + TableID);
+            ResultSet results = ps.executeQuery();
             while (results.next()) {
                 String TweetContents = results.getString(1);
                 String CreatedAt = results.getString(2);
-                String RawResults = TweetContents +" "+ CreatedAt;
+                String RawResults = TweetContents + " " + CreatedAt;
                 return RawResults;
             }
         } catch (Exception exception) {
@@ -40,7 +40,7 @@ public class RawDatasController{
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
         }
     }
-*/
+
     //insert data
     public static void InsertToTable(String TweetContents, String CreatedAt, String TableID ){
         try {
