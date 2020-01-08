@@ -1,19 +1,22 @@
 package Server;
 
 
+import Controllers.SearchandSort;
 import org.sqlite.SQLiteConfig;
 
 import java.sql.Connection;
 
-import static Controllers.SearchandSort.SearchandSort;
+import static Controllers.ProcessedDatasController.CreateTable;
+import static Controllers.SearchandSort.CreateHash;
 import static java.sql.DriverManager.getConnection;
 
 public class Main {
     public static Connection db = null;
 
     public static void main(String[] args) {
-        SearchandSort("my naem is jeff");
-        ShowTableInfo();
+        openDatabase("Database1.db");
+        CreateHash("1");
+        closeDatabase();
     }
 /*
     public static void main(String[] args) throws InterruptedException {
