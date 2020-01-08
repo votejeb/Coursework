@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RawDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RawDatasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Main.class" afterDir="false" />
-    </list>
+    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +168,7 @@
       <workItem from="1576495754756" duration="65000" />
       <workItem from="1576495943906" duration="1945000" />
       <workItem from="1578307522539" duration="4360000" />
-      <workItem from="1578432556483" duration="826000" />
+      <workItem from="1578432556483" duration="2714000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -321,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571071024414</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="started search and sort">
+      <created>1578439199176</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1578439199176</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +347,7 @@
     <MESSAGE value="subcontrollers begun coeding, userscontroller is api ready" />
     <MESSAGE value="LinkedFilters Finished, continued work on LinkedKeywords" />
     <MESSAGE value="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad" />
-    <option name="LAST_COMMIT_MESSAGE" value="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad" />
+    <MESSAGE value="started search and sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="started search and sort" />
   </component>
 </project>
