@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
+    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="Finished Search and Sort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RawDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RawDatasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ProcessedDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ProcessedDatasController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Main.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -181,7 +174,7 @@
       <workItem from="1576495943906" duration="1945000" />
       <workItem from="1578307522539" duration="4360000" />
       <workItem from="1578432556483" duration="3320000" />
-      <workItem from="1578495125210" duration="8984000" />
+      <workItem from="1578495125210" duration="9938000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -344,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578495160783</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Finished Search and Sort">
+      <created>1578526087653</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1578526087684</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +375,7 @@
     <MESSAGE value="LinkedFilters Finished, continued work on LinkedKeywords" />
     <MESSAGE value="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad" />
     <MESSAGE value="started search and sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="started search and sort" />
+    <MESSAGE value="Finished Search and Sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Search and Sort" />
   </component>
 </project>
