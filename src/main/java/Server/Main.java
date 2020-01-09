@@ -4,12 +4,18 @@ package Server;
 import Controllers.RawDatasController;
 import Controllers.SearchandSort;
 import Controllers.Twitter4jController;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
+import org.glassfish.jersey.media.multipart.MultiPartFeature;
+import org.glassfish.jersey.server.ResourceConfig;
+import org.glassfish.jersey.servlet.ServletContainer;
 import org.sqlite.SQLiteConfig;
 
 import java.sql.Connection;
 
 import static Controllers.ProcessedDatasController.CreateTable;
-import static Controllers.SearchandSort.CreateHash;
+import static Controllers.SearchandSort.SortData;
 import static java.sql.DriverManager.getConnection;
 
 public class Main {
@@ -21,13 +27,15 @@ public class Main {
         closeDatabase();
     }
 */
+/*
     public static void main(String[] args) throws InterruptedException {
         openDatabase("Database1.db");
-        RawDatasController.CreateTable("1");
-        Twitter4jController.runStream("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs","trump","en","1",300);
-    }
+        //Twitter4jController.runStream("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs","trump","en","1",300);
 
-/*
+        closeDatabase();
+    }
+*/
+
     public static void main(String[] args) {
         openDatabase("Database1.db");
         ResourceConfig config = new ResourceConfig();

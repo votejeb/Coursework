@@ -54,6 +54,7 @@ public class Twitter4jController {
                                  @FormDataParam("runtime") Integer runtime) throws InterruptedException {
         TwitterStream twitterStream = configAuth(ConsumerKey,ConsumerSecret,AccessKey,AccessSecret);
         FilterQuery tweetFilterQuery=setFilter(filterCond,filterLang);
+        RawDatasController.CreateTable(TableID);
         //here StatusAdapter or StatusListener can be used, however StatusAdapter automatically creates the unwritten public void methods that are not added to the .addListener for us
         twitterStream.addListener(new StatusAdapter() {
             public void onStatus(Status status) {

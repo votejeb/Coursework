@@ -1,7 +1,12 @@
 package Controllers;
 
 import Server.Main;
+import org.glassfish.jersey.media.multipart.FormDataParam;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
@@ -9,10 +14,13 @@ import java.util.*;
 import static Controllers.ProcessedDatasController.CreateTable;
 import static Controllers.ProcessedDatasController.InsertToTable;
 
+@Path("searchandsort/")
 //creates hash table for raw data
 public class SearchandSort {
-
-    public static void CreateHash(String TableID) {
+    @POST
+    @Path("streamdata")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    public static void SortData(@FormDataParam("tableid")String TableID) {
         //creates hashmap
         HashMap<String, Integer> wordCount = new HashMap<String, Integer>();
         try {
