@@ -21,7 +21,7 @@ h1 {
     margin-left: 15px;
 }
 
-#username, #password  {
+#username, #password, #consumerkey, consumersecret, #accesskey, #accesssecret  {
     margin-left: 20px;
     font-size: 14pt;
 }
@@ -44,16 +44,10 @@ h1 {
 #loginButton:hover {    background-color: dodgerblue;
 }
 
-.editButton, .deleteButton, #saveButton, #cancelButton,{
+.editButton, .deleteButton, #saveButton, #cancelButton {
     color: black;
     font-size: 14px;
     border: none;
     padding: 8px;
     border-radius: 8px;
-
-
-
-#filtersButton, #processButton, #streamButton, #archivesButton, #settingsButton, #adminButton  {
-    width: 200px;
-    background-color: cornflowerblue;
 }

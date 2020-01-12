@@ -9,6 +9,37 @@
 </head>
 <body>
 <div id="content">
+
+    <form id="applySettingsForm">
+        <div class="loginDiv">
+            <label for="UserName">Username: </label>
+            <input type="text" name="UserName" id="UserName">
+        </div>
+        <div class="loginDiv">
+            <label for="Password">Password: </label>
+            <input type="password" name="Password" id="Password">
+        </div>
+        <div class="loginDiv">
+            <label for="ConsumerKey">Consumer Key: </label>
+            <input type="text" name="ConsumerKey" id="ConsumerKey">
+        </div>
+        <div class="loginDiv">
+            <label for="ConsumerSecret">Consumer Secret: </label>
+            <input type="text" name="ConsumerSecret" id="ConsumerSecret">
+        </div>
+        <div class="loginDiv">
+            <label for="AccessKey">Access Key: </label>
+            <input type="text" name="AccessKey" id="AccessKey">
+        </div>
+        <div class="loginDiv">
+            <label for="AccessSecret">Access Secret: </label>
+            <input type="text" name="AccessSecret" id="AccessSecret">
+        </div>
+        <div class="loginDiv">
+            <input type="submit" value="Apply Changes" id="applyChanges">
+        </div>
+    </form>
+
     <div class="genericDiv">
         <input type="button" value="Filters" id="filtersButton" onclick="window.location.href = '/client/filters.html'">
     </div>

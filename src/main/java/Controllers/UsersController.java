@@ -186,7 +186,7 @@ public class UsersController {
     @Path("login")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String loginUser(@FormDataParam("username") String username, @FormDataParam("password") String password) {
+    public String loginUser(@FormDataParam("UserName") String username, @FormDataParam("Password") String password) {
 
         try {
 
