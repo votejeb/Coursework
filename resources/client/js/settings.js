@@ -12,12 +12,13 @@ function applySettings(event) {
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
-            Cookies.set("UserName", responseData.username);
-            Cookies.set("Password", responseData.password);
-            Cookies.set("ConsumerKey", responseData.consumerkey);
-            Cookies.set("ConsumerSecret", responseData.consumersecret);
-            Cookies.set("AccessKey", responseData.accesskey);
-            Cookies.set("AccessSecret", responseData.accesssecret);
+            Cookies.set("UserID", responseData.UserID);
+            Cookies.set("UserName", responseData.UserName);
+            Cookies.set("Password", responseData.Password);
+            Cookies.set("ConsumerKey", responseData.ConsumerKey);
+            Cookies.set("ConsumerSecret", responseData.ConsumerSecret);
+            Cookies.set("AccessKey", responseData.AccessKey);
+            Cookies.set("AccessSecret", responseData.AccessSecret);
         }
     });
 }

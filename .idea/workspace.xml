@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
+    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="Finished Search and Sort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Database2.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,9 +32,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -72,14 +66,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Project-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Issue.Navigation" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -182,6 +176,8 @@
       <workItem from="1578307522539" duration="4360000" />
       <workItem from="1578432556483" duration="3320000" />
       <workItem from="1578495125210" duration="9938000" />
+      <workItem from="1578841738735" duration="6962000" />
+      <workItem from="1578849430105" duration="1813000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -351,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578526087684</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Finished Search and Sort">
+      <created>1578848954030</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1578848954030</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

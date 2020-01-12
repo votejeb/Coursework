@@ -5,7 +5,7 @@ function pageLoad(){
 
 function checkLogin() {
 
-    let username = Cookies.get("username");
+    let username = Cookies.get("UserName");
 
     let logInHTML = '';
 
