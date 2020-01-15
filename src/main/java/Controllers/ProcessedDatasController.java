@@ -40,7 +40,8 @@ public class ProcessedDatasController {
             ResultSet results = ps.executeQuery();
             while (results.next()) {
                 JSONObject item = new JSONObject();
-                item.put(results.getString(1) ,results.getInt(2));
+                item.put("Words", results.getString(1));
+                item.put("WordCount",results.getInt(2));
                 list.add(item);
             }
             return list.toString();

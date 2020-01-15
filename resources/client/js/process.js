@@ -8,10 +8,6 @@ function drawgraph() {
         const canvas = document.getElementById('chartCanvas');
         const context = canvas.getContext('2d');
 
-        var arr = Object.keys(responseData).map((key) => [key, responseData[key]]);
-
-        console.log(arr);
-
         let myChart = new Chart(context, {
             type: 'line',
             data: {
@@ -28,22 +24,19 @@ function drawgraph() {
                 responsive: false
             }
         });
-        adddata(arr);
+        adddata(myChart,responseData);
     })
 }
 
 function adddata(myChart,arr) {
     var i;
     for (i = 0; i < arr.length; i++) {
-        var j;
-        for (j = 0; j < arr[i].length; i++) {
-            myChart.data.datasets.push({
-                label: arr[i][j],
-                backgroundColor: getRandomColour(),
-                data: arr[i][j]
-            });
-            myChart.update();
-        }
+        myChart.data.datasets.push({
+            label: arr[i].Words,
+            data: [arr[i].WordCount],
+            backgroundColor: getRandomColour()
+        });
+        myChart.update();
     }
 }
 function getRandomColour() {

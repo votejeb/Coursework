@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="Finished Search and Sort">
+    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/js/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/process.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/process.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/process.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ProcessedDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ProcessedDatasController.class" afterDir="false" />
     </list>
@@ -361,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578848954030</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Finished Search and Sort">
+      <created>1579127634904</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1579127634904</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
