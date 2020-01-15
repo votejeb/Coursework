@@ -20,7 +20,7 @@ public class SearchandSort {
     @POST
     @Path("streamdata")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
-    public static void SortData(@FormDataParam("tableid")String TableID) {
+    public static void SortData(@FormDataParam("tableid")String TableID, @FormDataParam("mincount")Integer MinCount) {
         //creates hashmap
         HashMap<String, Integer> wordCount = new HashMap<String, Integer>();
         try {
@@ -49,7 +49,9 @@ public class SearchandSort {
         }
         CreateTable(TableID);
         wordCount.entrySet().forEach(entry -> {
-            InsertToTable(entry.getKey(),  entry.getValue(),TableID);
+            if (entry.getValue()> MinCount) {
+                InsertToTable(entry.getKey(), entry.getValue(), TableID);
+            }
         });
     }
 }

@@ -1,21 +1,25 @@
-function processdata(event) {
 
-    event.preventDefault();
+function drawgraph() {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        data: {
+            labels: ['January'],
 
-    const form = document.getElementById("loginForm");
-    const formData = new FormData(form);
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [69]
+            }, {
+                label: "test",
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [21]
+            }]
 
-    fetch("/users/login", {method: 'post', body: formData}
-    ).then(response => response.json()
-    ).then(responseData => {
+        },
 
-        if (responseData.hasOwnProperty('error')) {
-            alert(responseData.error);
-        } else {
-            Cookies.set("username", responseData.username);
-            Cookies.set("token", responseData.token);
-
-            window.location.href = '/client/index.html';
-        }
+        // Configuration options go here
+        options: {}
     });
 }

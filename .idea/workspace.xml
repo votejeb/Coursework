@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="Finished Search and Sort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/process.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/process.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/process.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Coursework.kotlin_module" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +54,12 @@
     </option>
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="U:\.m2\repository" />
+        <option name="userSettingsFile" value="U:\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -73,7 +83,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Issue.Navigation" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -178,6 +188,7 @@
       <workItem from="1578495125210" duration="9938000" />
       <workItem from="1578841738735" duration="6962000" />
       <workItem from="1578849430105" duration="1813000" />
+      <workItem from="1579093643137" duration="7896000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>

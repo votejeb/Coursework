@@ -23,7 +23,7 @@ public class Main {
 /*
     public static void main(String[] args) {
         openDatabase("Database1.db");
-        CreateHash("1");
+        SortData("1",10);
         closeDatabase();
     }
 */
@@ -61,8 +61,8 @@ public class Main {
         }
     }
 
- /*
-*/
+
+
 //This subroutine opens the database connection, outputs any errors with try catch statement
     private static void openDatabase(String dbFile) {
         try  {
