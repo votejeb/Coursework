@@ -28,20 +28,19 @@ public class ProcessedDatasController {
     }
     //SQL SELECTALL//
     @GET
-    @Path("readkeywords{SetID}")
+    @Path("readkeywords/{SetID}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String SelectTable(@PathParam("SetID")Integer TableID) throws Exception {
+    public String SelectTable(@PathParam("SetID")String TableID) throws Exception {
         if(TableID==null){
             throw new Exception("One or more form data parameters are missing in the HTTP request.");
         }
         JSONArray list = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT Words, WordCount, FROM ProcessedDatas_" + TableID);
+            PreparedStatement ps = Main.db.prepareStatement("SELECT Words, WordCount FROM ProcessedDatas_" + TableID);
             ResultSet results = ps.executeQuery();
             while (results.next()) {
                 JSONObject item = new JSONObject();
-                item.put("Words", results.getString(1));
-                item.put("WordCount", results.getInt(2));
+                item.put(results.getString(1) ,results.getInt(2));
                 list.add(item);
             }
             return list.toString();

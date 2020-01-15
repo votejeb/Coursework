@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="Finished Search and Sort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/js/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/process.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/process.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/process.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Coursework.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ProcessedDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ProcessedDatasController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
