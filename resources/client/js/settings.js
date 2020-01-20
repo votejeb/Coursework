@@ -12,7 +12,6 @@ function applySettings(event) {
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
-            Cookies.set("UserID", responseData.UserID);
             Cookies.set("UserName", responseData.UserName);
             Cookies.set("Password", responseData.Password);
             Cookies.set("ConsumerKey", responseData.ConsumerKey);
