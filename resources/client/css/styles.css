@@ -21,7 +21,7 @@ h1 {
     margin-left: 15px;
 }
 
-#username, #password, #consumerkey, consumersecret, #accesskey, #accesssecret  {
+#username, #password, #consumerkey, #consumersecret, #accesstoken, #accesssecret  {
     margin-left: 20px;
     font-size: 14pt;
 }

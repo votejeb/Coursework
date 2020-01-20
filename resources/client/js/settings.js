@@ -12,12 +12,14 @@ function applySettings(event) {
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
+            Cookies.get("UserID")
             Cookies.set("UserName", responseData.UserName);
             Cookies.set("Password", responseData.Password);
             Cookies.set("ConsumerKey", responseData.ConsumerKey);
             Cookies.set("ConsumerSecret", responseData.ConsumerSecret);
-            Cookies.set("AccessKey", responseData.AccessKey);
+            Cookies.set("AccessToken", responseData.AccessToken);
             Cookies.set("AccessSecret", responseData.AccessSecret);
+
         }
     });
 }
