@@ -1,44 +1,92 @@
+var config={
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [{
+            label: [],
+            data: [],
+            backgroundColor: [],
+            borderColor: [],
+            fill:false
+        }]
+    },
+    options: {
+        legend: {
+            display: false
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        responsive: false
+    }
+}
 
-function drawgraph() {
-
-    fetch("/processeddatas/readkeywords/1", {method: 'get'}
+window.onload = function() {
+    var tableID="2";
+    var RawSets="2020_01_19_20_34_14-2020_01_19_20_39_15";
+    var ctx = document.getElementById('chartCanvas').getContext('2d');
+    window.myLine = new Chart(ctx, config);
+    fetch("/processeddatas/readkeywords/"+tableID+"/"+RawSets, {method: 'get'}
     ).then(response => response.json()
     ).then(responseData => {
 
-        const canvas = document.getElementById('chartCanvas');
-        const context = canvas.getContext('2d');
+        var RawSets1=RawSets.split("-");
+        for (var index3 = 0; index3 < RawSets1.length; index3++) {
+            config.data.labels.push(RawSets1[index3]);
+        }
 
-        let myChart = new Chart(context, {
-            type: 'line',
-            data: {
-                labels: ['1'],
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                responsive: false
+        for (var index2 = 0; index2 < responseData.length; index2++) {
+            var datas=responseData[index2];
+            var newDataset = {
+                label: [],
+                backgroundColor: getRandomColour(),
+                borderColor: getRandomColour(),
+                data: [],
+                fill: false
+            };
+            newDataset.label.push(datas.Words);
+            var jeff=datas.WordCount.substring(1, datas.WordCount.length-1).split(", " ).map(function(item) {
+                return parseInt(item, 10);
+            });
+            for (var index = 0; index < jeff.length; index++) {
+                newDataset.data.push(jeff[index]);
             }
-        });
-        adddata(myChart,responseData);
+            console.log(jeff);
+            config.data.datasets.push(newDataset);
+        }
+        window.myLine.update();
     })
 }
 
-function adddata(myChart,arr) {
-    var i;
-    for (i = 0; i < arr.length; i++) {
-        myChart.data.datasets.push({
-            label: arr[i].Words,
-            data: [arr[i].WordCount],
-            backgroundColor: getRandomColour()
-        });
-        myChart.update();
+function addDataSet(datas,RawSets) {
+    var newDataset = {
+        label: [],
+        backgroundColor: getRandomColour(),
+        borderColor: getRandomColour(),
+        data: [],
+        fill: false
+    };
+
+    for (var index = 1; index < datas.length; ++index) {
+        newDataset.data.push(datas[RawSets]);
     }
+    config.data.datasets.push(newDataset);
+    window.myLine.update();
 }
+
+function addData(fetchList){
+    var fetcho = fetchList[config.data.labels.length % fetchList.length];
+    config.data.labels.push(fetcho);
+    config.data.datasets.forEach(function(dataset) {
+        dataset.data.push();
+    });
+    window.myLine.update();
+}
+
 function getRandomColour() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -46,4 +94,8 @@ function getRandomColour() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+}
+
+function getData(tableID, RawSets){
+
 }

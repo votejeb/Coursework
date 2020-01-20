@@ -23,15 +23,14 @@ public class Main {
 /*
     public static void main(String[] args) {
         openDatabase("Database1.db");
-        SortData("1",10);
+        SortData("2", "2020_01_19_20_34_14-2020_01_19_20_39_15", 100);
         closeDatabase();
     }
 */
 /*
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws Exception {
         openDatabase("Database1.db");
-        //Twitter4jController.runStream("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs","trump","en","1",300);
-
+        Twitter4jController.runStream("aNH2A2u6c1Hu4Q9VLo8tZhcdP", "MR5HLztZOE8X5DP6Voouh5z2nAFtHWEheg47TIFhMaPnv839by", "942163284245049350-LZASvUsl8Pvs66sxagrBxY2tPr1WxeG", "U36APPf6w23HdrJJPtugEMsKiGTOETfrBqOy13bdZNbHs","trump","en","2",true, "71fa0ae8-9314-4da0-a455-1648ca7f6d4e",2);
         closeDatabase();
     }
 */
@@ -60,8 +59,6 @@ public class Main {
             e.printStackTrace();
         }
     }
-
-
 
 //This subroutine opens the database connection, outputs any errors with try catch statement
     private static void openDatabase(String dbFile) {

@@ -77,20 +77,24 @@ public class DataSetsController {
     @Path("updateset")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String UpdateUser (
+    public static String UpdateSet (
             @FormDataParam("SetID") Integer SetID,
+            @FormDataParam("RunTime") Integer RunTime,
             @FormDataParam("PublicPrivate")Boolean PublicPrivate,
+            @FormDataParam("RawSets")String RawSets,
             @CookieParam("token") String token) throws Exception {
         if (!UsersController.validToken(token)) {
             return "{\"error\": \"You don't appear to be logged in.\"}";
         }
         try {
-            if (SetID == null || PublicPrivate == null){
+            if (SetID == null || PublicPrivate == null || RawSets == null){
                 throw new Exception("One or more data parameters are missing in the HTTP request");
             }
-            PreparedStatement ps = Main.db.prepareStatement("UPDATE DataSets SET PublicPrivate = ? WHERE SetID = ?");
-            ps.setBoolean(1, PublicPrivate);
-            ps.setInt(2, SetID);
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE DataSets SET RawSets=?, RunTime=?, PublicPrivate = ? WHERE SetID = ?");
+            ps.setString(1, RawSets);
+            ps.setInt(2, RunTime);
+            ps.setBoolean(3, PublicPrivate);
+            ps.setInt(4, SetID);
             ps.execute();
             return "{\"status\"; \"OK\"}";
         } catch (Exception exception) {

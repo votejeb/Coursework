@@ -2,10 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/js/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/process.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/process.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/process.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/RawDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/RawDatasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Util/customUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Util/customUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ProcessedDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ProcessedDatasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/customUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/customUtil.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +42,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Coursework" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -184,6 +203,9 @@
       <workItem from="1578841738735" duration="6962000" />
       <workItem from="1578849430105" duration="1813000" />
       <workItem from="1579093643137" duration="7896000" />
+      <workItem from="1579196409596" duration="1278000" />
+      <workItem from="1579197737002" duration="12379000" />
+      <workItem from="1579448077302" duration="29972000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -367,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579127634904</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Finished Search and Sort">
+      <created>1579131510819</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1579131510819</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

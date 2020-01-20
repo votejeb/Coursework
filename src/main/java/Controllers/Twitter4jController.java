@@ -1,6 +1,5 @@
 package Controllers;
 
-import Util.customUtil;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
@@ -8,8 +7,15 @@ import twitter4j.conf.ConfigurationBuilder;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
+import java.util.List;
+
+import static Controllers.DataSetsController.UpdateSet;
+import static Controllers.RawDatasController.CreateTable;
+import static Controllers.RawDatasController.InsertToTable;
+import static Util.customUtil.getTime;
+import static Util.customUtil.listToString;
 
 @Path("twitter4j/")
 public class Twitter4jController {
@@ -51,24 +57,33 @@ public class Twitter4jController {
                                  @FormDataParam("filterCond") String filterCond,
                                  @FormDataParam("filterlang") String filterLang,
                                  @FormDataParam("TableID") String TableID,
-                                 @FormDataParam("runtime") Integer runtime) throws InterruptedException {
-        TwitterStream twitterStream = configAuth(ConsumerKey,ConsumerSecret,AccessKey,AccessSecret);
-        FilterQuery tweetFilterQuery=setFilter(filterCond,filterLang);
-        RawDatasController.CreateTable(TableID);
-        //here StatusAdapter or StatusListener can be used, however StatusAdapter automatically creates the unwritten public void methods that are not added to the .addListener for us
-        twitterStream.addListener(new StatusAdapter() {
-            public void onStatus(Status status) {
-                //inserts data to table, retweet data is essentially useless
-                if (!status.isRetweet()){
-                    RawDatasController.InsertToTable(status.getText(), customUtil.SqlToStr(status.getCreatedAt()), TableID);
+                                 @FormDataParam("PublicPrivate")Boolean PublicPrivate,
+                                 @FormDataParam("token") String token,
+                                 @FormDataParam("runtime") Integer runtime) throws Exception {
+        List<String> RawSets = new ArrayList<>();
+        for (int i = 0; i < runtime; ++i) {
+            TwitterStream twitterStream = configAuth(ConsumerKey,ConsumerSecret,AccessKey,AccessSecret);
+            FilterQuery tweetFilterQuery=setFilter(filterCond,filterLang);
+            //here StatusAdapter or StatusListener can be used, however StatusAdapter automatically creates the unwritten public void methods that are not added to the .addListener for us
+            String TimeID=getTime();
+            RawSets.add(TimeID);
+            CreateTable(TimeID);
+            twitterStream.addListener(new StatusAdapter() {
+                public void onStatus(Status status) {
+                    //inserts data to table, retweet data is essentially useless
+                    if (!status.isRetweet()){
+                        InsertToTable(status.getText(),TimeID);
+                    }
                 }
-            }
 
-        });
+            });
         //filters data
-        twitterStream.filter(tweetFilterQuery);
-        Thread.sleep(runtime*1000);
-        twitterStream.cleanUp();
-        twitterStream.shutdown();
+            twitterStream.filter(tweetFilterQuery);
+            Thread.sleep(300000);
+            twitterStream.cleanUp();
+            twitterStream.shutdown();
+        }
+        String RawSets1 =listToString(RawSets);
+        UpdateSet(Integer.parseInt(TableID), runtime, PublicPrivate, RawSets1, token);
     }
 }
