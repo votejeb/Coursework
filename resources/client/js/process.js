@@ -26,6 +26,7 @@ var config={
 }
 
 window.onload = function() {
+    viewTable("1");
     var tableID="2";
     var RawSets="2020_01_19_20_34_14-2020_01_19_20_39_15";
     var ctx = document.getElementById('chartCanvas').getContext('2d');
@@ -55,7 +56,6 @@ window.onload = function() {
             for (var index = 0; index < jeff.length; index++) {
                 newDataset.data.push(jeff[index]);
             }
-            console.log(jeff);
             config.data.datasets.push(newDataset);
         }
         window.myLine.update();
@@ -96,6 +96,25 @@ function getRandomColour() {
     return color;
 }
 
-function getData(tableID, RawSets){
+function viewTable(UserID){
+    let tableHTML = '<table>' +
+        '<tr>' +
+        '<th>Keyword</th>' +
+        '</tr>';
+    fetch("/datasets/listone/"+UserID,{method:'get'}
+    ).then(response=>response.json()
+    ).then(responseData=> {
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        } else {
+            for (var i=0; i<responseData.length; i++){
+                tableHTML += `<tr>` +
+                    `<td>${responseData[i].KeyWord}</td>` +
+                    `</tr>`;
+            }
+            tableHTML += '</table>'
+        }
+        document.getElementById("tableHTML").innerHTML = tableHTML;
 
+    })
 }

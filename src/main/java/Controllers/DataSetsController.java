@@ -2,6 +2,7 @@ package Controllers;
 
 import Server.Main;
 import org.glassfish.jersey.media.multipart.FormDataParam;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import javax.ws.rs.*;
@@ -18,19 +19,21 @@ public class DataSetsController {
         if(OriginUser==null){
             throw new Exception("One or more form data parameters are missing in the HTTP request.");
         }
-        JSONObject item = new JSONObject();
+        JSONArray list = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT SetID, Keyword, StartTime, Runtime, PublicPrivate FROM DataSets Where PublicPrivate=true OR OriginUser=?");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT SetID, Keyword, RawSets, Runtime, PublicPrivate FROM DataSets Where PublicPrivate=true OR OriginUser=?");
             ps.setInt(1,OriginUser);
             ResultSet results  = ps.executeQuery();
-            if (results.next()) {
-                item.put("SetID",results.getInt(1));
-                item.put("KeyWord",results.getString(2));
-                item.put("StartTime",results.getString(3));
-                item.put("RunTime",results.getInt(4));
-                item.put("PublicPrivate",results.getBoolean(5));
+            while (results.next()) {
+                JSONObject item = new JSONObject();
+                item.put("SetID", results.getInt(1));
+                item.put("KeyWord", results.getString(2));
+                item.put("RawSets", results.getString(3));
+                item.put("RunTime", results.getInt(4));
+                item.put("PublicPrivate", results.getBoolean(5));
+                list.add(item);
             }
-            return item.toString();
+            return list.toString();
         } catch (Exception exception) {
             System.out.println("Database error: " + exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";

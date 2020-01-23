@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/process.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/process.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/process.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +192,8 @@
       <workItem from="1579196409596" duration="1278000" />
       <workItem from="1579197737002" duration="12379000" />
       <workItem from="1579448077302" duration="29972000" />
-      <workItem from="1579517258297" duration="4620000" />
+      <workItem from="1579517258297" duration="4734000" />
+      <workItem from="1579790692192" duration="3758000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -388,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579521846855</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="charts js workds">
+      <created>1579522455676</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1579522455676</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
