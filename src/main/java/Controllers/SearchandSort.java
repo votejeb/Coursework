@@ -34,8 +34,8 @@ public class SearchandSort {
                 while (results.next()) {
                     String TweetContents = results.getString(1);
                     //converrts string to word array using .split
-                    String TweetContentsLower=TweetContents.toLowerCase();
-                    String[] crr_array = TweetContentsLower.split(" ");
+
+                    String[] crr_array = TweetContents.split(" ");
 
                     for (int i = 0; i < crr_array.length; ++i) {
                         String item = crr_array[i];

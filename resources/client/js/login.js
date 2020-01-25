@@ -15,7 +15,6 @@ function login(event) {
 
     const form = document.getElementById("loginForm");
     const formData = new FormData(form);
-
     fetch("/users/login", {method: 'post', body: formData}
     ).then(response => response.json()
     ).then(responseData => {
@@ -23,8 +22,9 @@ function login(event) {
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
-            Cookies.set("UserName", responseData.UserName);
+            Cookies.set("UserName", responseData.username);
             Cookies.set("token", responseData.token);
+            Cookies.set("userid", responseData.userid);
 
             window.location.href = '/client/index.html';
         }
@@ -44,6 +44,7 @@ function logout() {
 
             Cookies.remove("UserName");
             Cookies.remove("token");
+            Cookies.remove("userid");
 
             window.location.href = '/client/index.html';
 

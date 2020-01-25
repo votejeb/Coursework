@@ -46,7 +46,7 @@ public class RawDatasController {
             }
             PreparedStatement ps = Main.db.prepareStatement("DELETE RawDatas_" + TimeID);
             ps.execute();
-            return "{\"status\"; \"OK\"}";
+            return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             System.out.println("Database error " + exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";

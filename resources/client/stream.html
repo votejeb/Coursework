@@ -2,31 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Site Index</title>
+    <title>Title</title>
     <link rel="stylesheet" type="text/css" href="/client/css/styles.css">
     <script src="/client/js/js.cookie.js"></script>
+    <script src="/client/js/stream.js"></script>
     <script src="/client/js/index.js"></script>
 </head>
-<body onload="pageLoad()">
+<body onload="pageLoadI();pageLoad()">
 <div id="content">
-    <div class="genericDiv">
-        <input type="button" value="Filters" id="filtersButton" onclick="window.location.href = '/client/filters.html'">
-    </div>
-    <div class="genericDiv">
-        <input type="button" value="Run a Stream" id="streamButton" onclick="window.location.href = '/client/stream.html'">
-    </div>
-    <div class="genericDiv">
-        <input type="button" value="Search Archives" id="archivesButton" onclick="window.location.href = '/client/archives.html'">
-    </div>
-    <div class="genericDiv">
-        <input type="button" value="Process some data" id="processButton" onclick="window.location.href = '/client/process.html'">
-    </div>
-    <div class="genericDiv">
-        <input type="button" value="Settings" id="settingsButton" onclick="window.location.href = '/client/settings.html'">
-    </div>
-    <div class="genericDiv">
-        <input type="button" value="Admin Options" id= "adminButton" onclick="window.location.href = '/client/admin.html'">
-    </div>
 </div>
+<form id="streamForm">
+    <div>
+        <label for="Keyword">Keyword: </label>
+        <input type="text" name="Keyword" id="Keyword">
+    </div>
+    <div>
+        <label for="Language">Language: </label>
+        <input type="text" name="Language" id="Language">
+    </div>
+    <div>
+        <label for="Runtime">Runtime: </label>
+        <input type="number" name="RunTime" id="Runtime">
+    </div>
+    <div>
+        <input type="submit" value="runStream" id="runStream">
+    </div>
+</form>
+<div class="genericDiv" id="loggedInDetails"></div>
 </body>
 </html>
+
+

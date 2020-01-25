@@ -4,9 +4,7 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,19 +48,23 @@ public class Twitter4jController {
     @POST
     @Path("streamdata")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
-    public static void runStream(@FormDataParam("ConsumerKey") String ConsumerKey,
-                                 @FormDataParam("ConsumerSecret") String ConsumerSecret,
-                                 @FormDataParam("AccessKey") String AccessKey,
-                                 @FormDataParam("AccessSecret") String AccessSecret,
-                                 @FormDataParam("filterCond") String filterCond,
-                                 @FormDataParam("filterlang") String filterLang,
-                                 @FormDataParam("TableID") String TableID,
-                                 @FormDataParam("PublicPrivate")Boolean PublicPrivate,
-                                 @FormDataParam("token") String token,
-                                 @FormDataParam("runtime") Integer runtime) throws Exception {
+    @Produces(MediaType.APPLICATION_JSON)
+    public String runStream(@FormDataParam("ConsumerKey") String ConsumerKey,
+                                   @FormDataParam("ConsumerSecret") String ConsumerSecret,
+                                   @FormDataParam("AccessToken") String AccessToken,
+                                   @FormDataParam("AccessSecret") String AccessSecret,
+                                   @FormDataParam("Keyword") String filterCond,
+                                   @FormDataParam("Language") String filterLang,
+                                   @FormDataParam("TableID") Integer TableID,
+                                   @FormDataParam("PublicPrivate")Boolean PublicPrivate,
+                                   @FormDataParam("RunTime") Integer runtime,
+                                   @CookieParam("token") String token) throws Exception {
+        if (!UsersController.validToken(token)) {
+            return "{\"error\": \"You don't appear to be logged in.\"}";
+        }
         List<String> RawSets = new ArrayList<>();
         for (int i = 0; i < runtime; ++i) {
-            TwitterStream twitterStream = configAuth(ConsumerKey,ConsumerSecret,AccessKey,AccessSecret);
+            TwitterStream twitterStream = configAuth(ConsumerKey,ConsumerSecret,AccessToken,AccessSecret);
             FilterQuery tweetFilterQuery=setFilter(filterCond,filterLang);
             //here StatusAdapter or StatusListener can be used, however StatusAdapter automatically creates the unwritten public void methods that are not added to the .addListener for us
             String TimeID=getTime();
@@ -72,7 +74,8 @@ public class Twitter4jController {
                 public void onStatus(Status status) {
                     //inserts data to table, retweet data is essentially useless
                     if (!status.isRetweet()){
-                        InsertToTable(status.getText(),TimeID);
+                        String TweetContentsLower=status.getText().toLowerCase();
+                        InsertToTable(TweetContentsLower,TimeID);
                     }
                 }
 
@@ -84,6 +87,7 @@ public class Twitter4jController {
             twitterStream.shutdown();
         }
         String RawSets1 =listToString(RawSets);
-        UpdateSet(Integer.parseInt(TableID), runtime, PublicPrivate, RawSets1, token);
+        UpdateSet(TableID, runtime, PublicPrivate, RawSets1, token);
+        return "{\"Success\": \"Stream Successful.\"}";
     }
 }

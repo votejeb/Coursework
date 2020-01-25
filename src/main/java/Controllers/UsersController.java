@@ -58,7 +58,7 @@ public class UsersController {
         JSONObject item = new JSONObject();
         //Creates JSON object and outputs results to it//
         try {
-            PreparedStatement ps = Server.Main.db.prepareStatement("SELECT UserName, Password, ConsumerKey, ConsumerSecret, AccessToken, AccessSecret FROM Users WHERE USERID=?");
+            PreparedStatement ps = Server.Main.db.prepareStatement("SELECT UserName, Password, ConsumerKey, ConsumerSecret, AccessToken, AccessSecret FROM Users WHERE UserID=?");
             ps.setInt(1,UserID);
             ResultSet results  = ps.executeQuery();
             if (results.next()) {
@@ -87,7 +87,6 @@ public class UsersController {
     @Produces(MediaType.APPLICATION_JSON)
     public String InsertUser(
             //takes input as form data paramater//
-            @FormDataParam("UserID") Integer UserID,
             @FormDataParam("UserName")String UserName,
             @FormDataParam("Password")String Password,
             @CookieParam("token") String token) throws Exception {
@@ -96,16 +95,15 @@ public class UsersController {
         }
         try {
             //data field not null verification//
-            if (UserID == null || UserName == null ||Password==null){
+            if (UserName == null ||Password==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
             //executes prepared statement//
-            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO Users(UserID, UserName, Password)VALUES(?,?,?)");
-            ps.setInt(1, UserID);
-            ps.setString(2, UserName);
-            ps.setString(3, Password);
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO Users(UserName, Password)VALUES(?,?)");
+            ps.setString(1, UserName);
+            ps.setString(2, Password);
             ps.execute();
-            return "{\"status\"; \"OK\"}";
+            return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             //returns exceptions//
             System.out.println("Database error " + exception.getMessage());
@@ -121,20 +119,20 @@ public class UsersController {
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String UpdateUser (
-            @FormDataParam("UserID")Integer UserID,
             @FormDataParam("UserName")String UserName,
             @FormDataParam("Password")String Password,
             @FormDataParam("ConsumerKey")String ConsumerKey,
             @FormDataParam("ConsumerSecret")String ConsumerSecret,
             @FormDataParam("AccessToken")String AccessToken,
             @FormDataParam("AccessSecret")String AccessSecret,
+            @CookieParam("userid") Integer UserID,
             @CookieParam("token") String token) throws Exception {
         if (!UsersController.validToken(token)) {
             return "{\"error\": \"You don't appear to be logged in.\"}";
         }
         try {
             //verifies parameter existence//
-            if (UserID == null || UserName == null || Password == null){
+            if (UserName == null || Password == null){
                 throw new Exception("One or more data parameters are missing in the HTTP request");
             }
             PreparedStatement ps = Main.db.prepareStatement("UPDATE Users SET UserName = ?, Password = ?,  ConsumerKey = ?, ConsumerSecret = ?, AccessToken = ?, AccessSecret = ? WHERE UserID = ?");
@@ -146,7 +144,7 @@ public class UsersController {
             ps.setString(6, AccessSecret);
             ps.setInt(7, UserID);
             ps.execute();
-            return "{\"status\"; \"OK\"}";
+            return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             //returns exceptions//
             System.out.println("Database Error "+exception.getMessage());
@@ -174,7 +172,7 @@ public class UsersController {
             ps.setInt(1, UserID);
             ps.execute();
 
-            return "{\"status\"; \"OK\"}";
+            return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             //returns exceptions//
             System.out.println("Database Error "+exception.getMessage());
@@ -192,12 +190,13 @@ public class UsersController {
 
             System.out.println("users/login");
 
-            PreparedStatement ps1 = Main.db.prepareStatement("SELECT Password FROM Users WHERE UserName = ?");
+            PreparedStatement ps1 = Main.db.prepareStatement("SELECT Password, UserID FROM Users WHERE UserName = ?");
             ps1.setString(1, username);
             ResultSet loginResults = ps1.executeQuery();
             if (loginResults.next()) {
 
                 String correctPassword = loginResults.getString(1);
+                int userid = loginResults.getInt(2);
                 if (password.equals(correctPassword)) {
 
                     String token = UUID.randomUUID().toString();
@@ -210,6 +209,7 @@ public class UsersController {
                     JSONObject userDetails = new JSONObject();
                     userDetails.put("username", username);
                     userDetails.put("token", token);
+                    userDetails.put("userid", userid);
                     return userDetails.toString();
 
                 } else {

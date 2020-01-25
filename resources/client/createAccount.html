@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Create Account</title>
     <link rel="stylesheet" type="text/css" href="/client/css/styles.css">
     <script src="/client/js/js.cookie.js"></script>
     <script src="/client/js/login.js"></script>
@@ -10,9 +10,9 @@
 </head>
 <body onload="pageLoad()">
 <div id="content">
-    <h1>Please log in to continue...</h1>
+    <h1>Time to create an account!</h1>
     <hr />
-    <form id="loginForm">
+    <form id="createForm">
         <div class="loginDiv">
             <label for="UserName">Username: </label>
             <input type="text" name="UserName" id="UserName">
@@ -22,10 +22,9 @@
             <input type="password" name="Password" id="Password">
         </div>
         <div class="loginDiv">
-            <input type="submit" value="Login" id="loginButton">
+            <input type="submit" value="Create Account" id="createButton">
         </div>
     </form>
-    <a href='/client/createAccount.html'>New User? Create account here!</a>
 </div>
 </body>
 

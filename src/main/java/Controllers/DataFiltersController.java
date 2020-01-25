@@ -63,7 +63,7 @@ public class DataFiltersController {
             ps.setBoolean(5,true);
             ps.execute();
             LinkedFiltersController.CreateTable(DataFilterID);
-            return "{\"status\"; \"OK\"}";
+            return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             System.out.println("Database error " + exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
@@ -91,7 +91,7 @@ public class DataFiltersController {
             ps.setBoolean(1, PublicPrivate);
             ps.setInt(2, SetID);
             ps.execute();
-            return "{\"status\"; \"OK\"}";
+            return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             System.out.println("Database Error "+exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
@@ -116,7 +116,7 @@ public class DataFiltersController {
             ps.setInt(1, DataFilterID);
             ps.execute();
             LinkedFiltersController.DeleteTable(DataFilterID);
-            return "{\"status\"; \"OK\"}";
+            return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             System.out.println("Database Error "+exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";

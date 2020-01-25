@@ -26,7 +26,8 @@ var config={
 }
 
 window.onload = function() {
-    viewTable("1");
+    pageLoad();
+    viewTable(Cookies.get("userid"));
     var tableID="2";
     var RawSets="2020_01_19_20_34_14-2020_01_19_20_39_15";
     var ctx = document.getElementById('chartCanvas').getContext('2d');
@@ -60,32 +61,7 @@ window.onload = function() {
         }
         window.myLine.update();
     })
-}
-
-function addDataSet(datas,RawSets) {
-    var newDataset = {
-        label: [],
-        backgroundColor: getRandomColour(),
-        borderColor: getRandomColour(),
-        data: [],
-        fill: false
-    };
-
-    for (var index = 1; index < datas.length; ++index) {
-        newDataset.data.push(datas[RawSets]);
-    }
-    config.data.datasets.push(newDataset);
-    window.myLine.update();
-}
-
-function addData(fetchList){
-    var fetcho = fetchList[config.data.labels.length % fetchList.length];
-    config.data.labels.push(fetcho);
-    config.data.datasets.forEach(function(dataset) {
-        dataset.data.push();
-    });
-    window.myLine.update();
-}
+};
 
 function getRandomColour() {
     var letters = '0123456789ABCDEF';
@@ -104,6 +80,7 @@ function viewTable(UserID){
     fetch("/datasets/listone/"+UserID,{method:'get'}
     ).then(response=>response.json()
     ).then(responseData=> {
+        console.log(responseData);
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
@@ -117,4 +94,43 @@ function viewTable(UserID){
         document.getElementById("tableHTML").innerHTML = tableHTML;
 
     })
+}
+function pageLoad(){
+    checkLogin();
+    document.getElementById("content").innerHTML = `<div class="genericDiv">` +
+        `<input type="button" value="Filters" id="filtersButton" onclick="window.location.href = '/client/filters.html'">` +
+        `</div>` +
+        `<div class="genericDiv">` +
+        `<input type="button" value="Run a Stream" id="streamButton" onclick="window.location.href = '/client/stream.html'">` +
+        `</div>` +
+        `<div class="genericDiv">` +
+        `<input type="button" value="Search Archives" id="archivesButton" onclick="window.location.href = '/client/archives.html'">` +
+        `</div>` +
+        `<div class="genericDiv">` +
+        `<input type="button" value="Process some data" id="processButton" onclick="window.location.href = '/client/process.html'">` +
+        `</div>` +
+        `<div class="genericDiv">` +
+        `<input type="button" value="Settings" id="settingsButton" onclick="window.location.href = '/client/settings.html'">` +
+        `</div>` +
+        `<div class="genericDiv">` +
+        `<input type="button" value="Admin Options" id="adminButton" onclick="window.location.href = '/client/admin.html'">` +
+        `</div>`;
+}
+
+
+function checkLogin() {
+
+    let username = Cookies.get("UserName");
+
+    let logInHTML = '';
+
+    if (username === undefined) {
+        logInHTML = "Not logged in. <a href='/client/login.html'>Log in</a>";
+    } else {
+        logInHTML = "Logged in as " + username + ". <a href='/client/login.html?logout'>Log out</a>";
+
+    }
+
+    document.getElementById("loggedInDetails").innerHTML = logInHTML;
+
 }

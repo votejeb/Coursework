@@ -104,7 +104,7 @@ public class ProcessedDatasController {
             }
             PreparedStatement ps = Main.db.prepareStatement("DELETE ProcessedDatas_" + TableID);
             ps.execute();
-            return "{\"status\"; \"OK\"}";
+            return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             System.out.println("Database error " + exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";

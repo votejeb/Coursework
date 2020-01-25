@@ -65,7 +65,7 @@ public class LinkedFiltersController {
             PreparedStatement ps = Main.db.prepareStatement("INSERT INTO LinkedFilters_" + TableID + " (Words)VALUES(?)");
             ps.setString(1, filter);
             ps.execute();
-            return "{\"status\"; \"OK\"}";
+            return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             System.out.println("Database error " + exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
@@ -86,7 +86,7 @@ public class LinkedFiltersController {
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM LinkedFilters_" + TableID + " WHERE Words ?");
             ps.setString(1, Words);
             ps.execute();
-            return "{\"status\"; \"OK\"}";
+            return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             System.out.println("Database Error "+exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
