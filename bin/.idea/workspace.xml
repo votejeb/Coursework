@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/createAccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/createAccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/createAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/createAccount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/process.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/process.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/process.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Coursework" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Class" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="U:\Computer Science\Coursework\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1R3fvOtofOCBNsWSHDoMCHUm5o2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="U:\Computer Science\Coursework\resources\Client\css" />
+      <recent name="U:\Computer Science\Project\" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.Main" />
+      <module name="Coursework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="" />
+      <created>1560413996278</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560413996278</updated>
+      <workItem from="1560413997715" duration="1941000" />
+      <workItem from="1560519803864" duration="67000" />
+      <workItem from="1560520023868" duration="4593000" />
+      <workItem from="1561017734301" duration="651000" />
+      <workItem from="1562162716798" duration="925000" />
+      <workItem from="1562227542204" duration="2491000" />
+      <workItem from="1562232589199" duration="124000" />
+      <workItem from="1568900931985" duration="2459000" />
+      <workItem from="1569776236468" duration="7803000" />
+      <workItem from="1569784986159" duration="511000" />
+      <workItem from="1569785667005" duration="3182000" />
+      <workItem from="1569790737386" duration="1218000" />
+      <workItem from="1570109998643" duration="4809000" />
+      <workItem from="1570649427493" duration="3329000" />
+      <workItem from="1570659330148" duration="3132000" />
+      <workItem from="1570724933003" duration="2530000" />
+      <workItem from="1570798817905" duration="13659000" />
+      <workItem from="1570822587801" duration="8068000" />
+      <workItem from="1570880033863" duration="32756000" />
+      <workItem from="1571062605741" duration="8451000" />
+      <workItem from="1571156299202" duration="291000" />
+      <workItem from="1571171285736" duration="6962000" />
+      <workItem from="1571651444977" duration="1800000" />
+      <workItem from="1571749392158" duration="1442000" />
+      <workItem from="1573137640927" duration="1281000" />
+      <workItem from="1573742901581" duration="1503000" />
+      <workItem from="1574347742383" duration="21000" />
+      <workItem from="1574954276674" duration="2032000" />
+      <workItem from="1575283304366" duration="840000" />
+      <workItem from="1575559247333" duration="599000" />
+      <workItem from="1575986936306" duration="52000" />
+      <workItem from="1576495607093" duration="77000" />
+      <workItem from="1576495754756" duration="65000" />
+      <workItem from="1576495943906" duration="1945000" />
+      <workItem from="1578307522539" duration="4360000" />
+      <workItem from="1578432556483" duration="3320000" />
+      <workItem from="1578495125210" duration="9938000" />
+      <workItem from="1578841738735" duration="6962000" />
+      <workItem from="1578849430105" duration="1813000" />
+      <workItem from="1579093643137" duration="7896000" />
+      <workItem from="1579196409596" duration="1278000" />
+      <workItem from="1579197737002" duration="12379000" />
+      <workItem from="1579448077302" duration="29972000" />
+      <workItem from="1579517258297" duration="4734000" />
+      <workItem from="1579790692192" duration="3758000" />
+      <workItem from="1579902158692" duration="10762000" />
+      <workItem from="1579974415267" duration="1270000" />
+      <workItem from="1579976388791" duration="29815000" />
+    </task>
+    <task id="LOCAL-00001" summary="epic commit">
+      <created>1560520628432</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560520628432</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Database access begun">
+      <created>1560524802856</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560524802856</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Database access begun">
+      <created>1562166512651</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562166512651</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Continued work on database">
+      <created>1562232514572</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562232514572</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Continued work on database">
+      <created>1562232694340</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562232694340</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Continued work on database">
+      <created>1569778939377</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569778939377</updated>
+    </task>
+    <task id="LOCAL-00007" summary="sql statement tests complete having trouble with classes">
+      <created>1569784204733</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569784204733</updated>
+    </task>
+    <task id="LOCAL-00008" summary="sql statement tests complete having trouble with classes">
+      <created>1569787648986</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569787648986</updated>
+    </task>
+    <task id="LOCAL-00009" summary="sql statement tests complete having trouble with classes">
+      <created>1569788564508</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569788564508</updated>
+    </task>
+    <task id="LOCAL-00010" summary="sql statement tests complete having trouble with classes">
+      <created>1569789391729</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569789391729</updated>
+    </task>
+    <task id="LOCAL-00011" summary="kermit and push">
+      <created>1570110334575</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570110334575</updated>
+    </task>
+    <task id="LOCAL-00012" summary="streamhandling api implemented">
+      <created>1570661333057</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570661333057</updated>
+    </task>
+    <task id="LOCAL-00013" summary="streamhandling api implemented">
+      <created>1570663553063</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570663553063</updated>
+    </task>
+    <task id="LOCAL-00014" summary="streamhandling api implemented">
+      <created>1570833132106</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570833132106</updated>
+    </task>
+    <task id="LOCAL-00015" summary="subcontrollers begun coeding, userscontroller is api ready">
+      <created>1570833205168</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570833205168</updated>
+    </task>
+    <task id="LOCAL-00016" summary="subcontrollers begun coeding, userscontroller is api ready">
+      <created>1570833249314</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1570833249314</updated>
+    </task>
+    <task id="LOCAL-00017" summary="LinkedFilters Finished, continued work on LinkedKeywords">
+      <created>1570893976652</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1570893976652</updated>
+    </task>
+    <task id="LOCAL-00018" summary="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad">
+      <created>1570919183551</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1570919183551</updated>
+    </task>
+    <task id="LOCAL-00019" summary="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad">
+      <created>1570923807882</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1570923807882</updated>
+    </task>
+    <task id="LOCAL-00020" summary="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad">
+      <created>1571071024414</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1571071024414</updated>
+    </task>
+    <task id="LOCAL-00021" summary="started search and sort">
+      <created>1578439199176</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1578439199176</updated>
+    </task>
+    <task id="LOCAL-00022" summary="started search and sort">
+      <created>1578446020161</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1578446020161</updated>
+    </task>
+    <task id="LOCAL-00023" summary="started search and sort">
+      <created>1578495160783</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1578495160783</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Finished Search and Sort">
+      <created>1578526087653</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1578526087684</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Finished Search and Sort">
+      <created>1578848954030</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1578848954030</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Finished Search and Sort">
+      <created>1579127634904</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1579127634904</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Finished Search and Sort">
+      <created>1579131510819</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1579131510819</updated>
+    </task>
+    <task id="LOCAL-00028" summary="charts js workds">
+      <created>1579521846855</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1579521846855</updated>
+    </task>
+    <task id="LOCAL-00029" summary="charts js workds">
+      <created>1579522455676</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1579522455676</updated>
+    </task>
+    <task id="LOCAL-00030" summary="charts js workds">
+      <created>1579993674857</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1579993674857</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="epic commit" />
+    <MESSAGE value="Database access begun" />
+    <MESSAGE value="Continued work on database" />
+    <MESSAGE value="sql statement tests complete having trouble with classes" />
+    <MESSAGE value="kermit and push" />
+    <MESSAGE value="streamhandling api implemented" />
+    <MESSAGE value="subcontrollers begun coeding, userscontroller is api ready" />
+    <MESSAGE value="LinkedFilters Finished, continued work on LinkedKeywords" />
+    <MESSAGE value="stream subroutine now writes to database, this is good, date data types conversion broken, this is bad" />
+    <MESSAGE value="started search and sort" />
+    <MESSAGE value="Finished Search and Sort" />
+    <MESSAGE value="charts js workds" />
+    <option name="LAST_COMMIT_MESSAGE" value="charts js workds" />
+  </component>
+</project>

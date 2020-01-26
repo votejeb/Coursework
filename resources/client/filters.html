@@ -11,6 +11,52 @@
 <body onload="pageLoadI();pageLoad()">
 <div id="content">
 </div>
+
+<form id="createForm">
+    <div class="loginDiv">
+        <label for="FilterID">Filter name to Create: </label>
+        <input type="text" name="FilterID" id="FilterName">
+    </div>
+    <div class="loginDiv">
+        <input type="submit" value="Create Filter" id="createFilter">
+    </div>
+</form>
+
+<form id="updateForm">
+    <div class="loginDiv">
+        <label for="FilterID">Filter ID to Update: </label>
+        <input type="text" name="FilterID" id="FilterID">
+    </div>
+    <div class="loginDiv">
+        <label for="FilterName">Filter Name to Update: </label>
+        <input type="text" name="FilterName" id="FilterName">
+    </div>
+    <div class="loginDiv">
+        <label for="WhitelistBlacklist">Filter Whitelist Status to Update: </label>
+        <input type="text" name="WhitelistBlacklist" id="WhiteListBlacklist">
+    </div>
+    <div class="loginDiv">
+        <label for="PublicPrivate">Filter PublicPrivate Status to Update: </label>
+        <input type="text" name="PublicPrivate" id="PublicPrivate">
+    </div>
+    <div class="loginDiv">
+        <input type="submit" value="Update Filter" id="updateFilter">
+    </div>
+</form>
+
+<form id="deleteForm">
+    <div class="loginDiv">
+        <label for="FilterID">Filter ID to Delete: </label>
+        <input type="text" name="FilterID" id="FilterID">
+    </div>
+    <div class="loginDiv">
+        <input type="submit" value="Delete Filter" id="deleteFilter">
+    </div>
+</form>
+
+<div class="genericDiv">
+    <div id="filterHTML"> </div>
+</div>
 <div class="genericDiv" id="loggedInDetails"></div>
 </body>
 </html>

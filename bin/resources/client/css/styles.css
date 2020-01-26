@@ -1,0 +1,53 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+    font-family: 'Arial', serif;
+}
+
+h1 {
+    margin-top:0;
+}
+
+}
+.loginDiv {
+    font-size: 14pt;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.genericDiv {
+    font-size: 14pt;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+#username, #password, #consumerkey, #consumersecret, #accesstoken, #accesssecret  {
+    margin-left: 20px;
+    font-size: 14pt;
+}
+
+#filtersButton, #processButton, #streamButton, #archivesButton, #settingsButton, #adminButton  {
+    margin-left: 30px;
+    font-size: 20pt;
+}
+
+#loginButton {
+    width: 200px;
+    background-color: cornflowerblue;
+}
+
+#filtersButton, #processButton, #streamButton, #archivesButton, #settingsButton, #adminButton  {
+    width: 250px;
+    background-color: cornflowerblue;
+}
+
+#loginButton:hover {    background-color: dodgerblue;
+}
+
+.editButton, .deleteButton, #saveButton, #cancelButton {
+    color: black;
+    font-size: 14px;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}

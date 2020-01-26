@@ -6,14 +6,31 @@
     <link rel="stylesheet" type="text/css" href="/client/css/styles.css">
     <script src="/client/js/js.cookie.js"></script>
     <script src="/client/js/process.js"></script>
+    <script src="/client/js/index.js"></script>
     <script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
 </head>
-<body>
+<body onload="pageLoadI();pageLoad()">
 <div id="content">
 </div>
+
+<div class="genericDiv">
+    <div id="filterHTML"> </div>
+</div>
+
 <div class="genericDiv">
     <div id="tableHTML"> </div>
 </div>
+
+<form id="graphForm">
+    <div class="loginDiv">
+        <label for="SetID">Graph ID to draw: </label>
+        <input type="text" name="SetID" id="SetID">
+    </div>
+    <div class="loginDiv">
+        <input type="submit" value="Draw Graph" id="drawGraph">
+    </div>
+</form>
+
 <div>
     <canvas id="chartCanvas" style="width:1000px; height:1000px;"></canvas>
 </div>

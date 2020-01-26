@@ -87,6 +87,7 @@ public class Twitter4jController {
             twitterStream.shutdown();
         }
         String RawSets1 =listToString(RawSets);
+        System.out.println(RawSets1);
         UpdateSet(TableID, runtime, PublicPrivate, RawSets1, token);
         return "{\"Success\": \"Stream Successful.\"}";
     }

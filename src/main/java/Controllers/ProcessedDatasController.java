@@ -46,6 +46,7 @@ public class ProcessedDatasController {
             throw new Exception("One or more form data parameters are missing in the HTTP request.");
         }
         JSONArray list = new JSONArray();
+        System.out.println(RawSets);
         try {
             PreparedStatement ps = Main.db.prepareStatement("SELECT * FROM ProcessedDatas_" + TableID);
             ResultSet results = ps.executeQuery();

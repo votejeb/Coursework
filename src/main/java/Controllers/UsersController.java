@@ -88,11 +88,7 @@ public class UsersController {
     public String InsertUser(
             //takes input as form data paramater//
             @FormDataParam("UserName")String UserName,
-            @FormDataParam("Password")String Password,
-            @CookieParam("token") String token) throws Exception {
-        if (!UsersController.validToken(token)) {
-            return "{\"error\": \"You don't appear to be logged in.\"}";
-        }
+            @FormDataParam("Password")String Password) throws Exception {
         try {
             //data field not null verification//
             if (UserName == null ||Password==null){
