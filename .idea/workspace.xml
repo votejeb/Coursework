@@ -2,22 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/client/js/testEnv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/client/testEnv.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Database1.db-journal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/filters.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/process.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/process.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/process.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Util/customUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/customUtil.class" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +95,18 @@
       <recent name="U:\Computer Science\Coursework\resources\Client\css" />
       <recent name="U:\Computer Science\Project\" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -194,6 +204,7 @@
       <workItem from="1579976388791" duration="34699000" />
       <workItem from="1580060995863" duration="127000" />
       <workItem from="1580067137319" duration="8554000" />
+      <workItem from="1580123388911" duration="3957000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
