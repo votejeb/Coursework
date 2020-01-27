@@ -30,3 +30,43 @@ function viewFilterTable(UserID){
         document.getElementById("filterHTML").innerHTML = filterHTML;
     })
 }
+
+function createFilter(){
+    fetch("/datafilters/newfilter", {method: 'post', body: formData}
+    ).then(response => response.json()
+    ).then(responseData => {
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        }
+    });
+}
+
+function addFilter(){
+    fetch("/datafilters/updatefilter", {method: 'post', body: formData}
+    ).then(response => response.json()
+    ).then(responseData => {
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        }
+    });
+}
+
+function updateFilter(){
+    fetch("/datafilters/updatefilter", {method: 'post', body: formData}
+    ).then(response => response.json()
+    ).then(responseData => {
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        }
+    });
+}
+
+function deleteFilter(){
+    fetch("/datafilters/updatefilter", {method: 'post', body: formData}
+    ).then(response => response.json()
+    ).then(responseData => {
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        }
+    });
+}

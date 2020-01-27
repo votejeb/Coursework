@@ -84,6 +84,7 @@ public class DataFiltersController {
     @Produces(MediaType.APPLICATION_JSON)
     public String UpdateUser (
             @FormDataParam("SetID") Integer SetID,
+            @FormDataParam("WhitelistBlacklist")Boolean WhitelistBlacklist,
             @FormDataParam("PublicPrivate")Boolean PublicPrivate,
             @CookieParam("token") String token) throws Exception {
         if (!UsersController.validToken(token)) {
@@ -93,9 +94,10 @@ public class DataFiltersController {
             if (SetID == null || PublicPrivate == null){
                 throw new Exception("One or more data parameters are missing in the HTTP request");
             }
-            PreparedStatement ps = Main.db.prepareStatement("UPDATE DataFilters SET PublicPrivate = ? WHERE SetID = ?");
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE DataFilters SET WhitelistBlacklist = ? PublicPrivate = ? WHERE SetID = ?");
             ps.setBoolean(1, PublicPrivate);
-            ps.setInt(2, SetID);
+            ps.setBoolean(2, WhitelistBlacklist);
+            ps.setInt(3, SetID);
             ps.execute();
             return "{\"status\": \"OK\"}";
         } catch (Exception exception) {

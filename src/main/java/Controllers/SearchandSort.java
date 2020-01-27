@@ -56,10 +56,12 @@ public class SearchandSort {
                 }
 
             });
+            //calls alter table from processeddatas
             AlterTable(TableID, TimeID[j]);
             String finalJ = TimeID[j];
             wordCount.entrySet().forEach(entry -> {
                 if (entry.getValue()> MinCount) {
+                    //updates DataSet
                     UpdateTable(entry.getValue(), entry.getKey(), TableID, finalJ);
                 }
 

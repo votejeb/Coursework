@@ -2,85 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/Coursework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Cover Page.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Database Backup.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ER-Diagram.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Great game idea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/TwitterTestData.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/Database1.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/archives.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/createAccount.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/filters.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/js/createAccount.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/js/filters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/js/js.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/js/process.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/js/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/js/stream.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/process.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/resources/client/stream.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Controllers/Client.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Controllers/DataFiltersController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Controllers/DataSetsController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Controllers/LinkedFiltersController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Controllers/ProcessedDatasController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Controllers/RawDatasController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Controllers/SearchandSort.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Controllers/Twitter4jController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Controllers/UsersController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Server/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/Util/customUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/~$I design.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/client/js/testEnv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/client/testEnv.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/createAccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/createAccount.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/filters.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/js/createAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/createAccount.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/js/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/process.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/process.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/process.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProcessedDatasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Twitter4jController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ProcessedDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ProcessedDatasController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Twitter4jController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Util/customUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/customUtil.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,6 +72,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -155,18 +97,6 @@
       <recent name="U:\Computer Science\Coursework\resources\Client\css" />
       <recent name="U:\Computer Science\Project\" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -261,7 +191,9 @@
       <workItem from="1579790692192" duration="3758000" />
       <workItem from="1579902158692" duration="10762000" />
       <workItem from="1579974415267" duration="1270000" />
-      <workItem from="1579976388791" duration="34531000" />
+      <workItem from="1579976388791" duration="34699000" />
+      <workItem from="1580060995863" duration="127000" />
+      <workItem from="1580067137319" duration="8554000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -473,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579993674857</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="charts js workds">
+      <created>1580060818165</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1580060818165</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,5 +446,11 @@
     <MESSAGE value="Finished Search and Sort" />
     <MESSAGE value="charts js workds" />
     <option name="LAST_COMMIT_MESSAGE" value="charts js workds" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="4525" y="91" width="1583" height="1050" key="dock-window-1" timestamp="1580069977642">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state x="4525" y="91" width="1583" height="1050" key="dock-window-1/75.0.5865.1080@75.0.5865.1080" timestamp="1580069977642" />
   </component>
 </project>
