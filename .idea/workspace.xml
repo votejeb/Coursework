@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="" />
+    <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/createAccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/createAccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/filters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/process.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/testEnv.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/testEnv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/process.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/process.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/testEnv.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/testEnv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataSetsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,18 +96,6 @@
       <recent name="U:\Computer Science\Coursework\resources\Client\css" />
       <recent name="U:\Computer Science\Project\" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -464,22 +467,22 @@
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
     <state x="2595" y="135" key="CommitChangelistDialog2/75.0.5865.1080@75.0.5865.1080" timestamp="1580184977591" />
-    <state width="1861" height="2" key="GridCell.Tab.0.bottom" timestamp="1580085417600">
+    <state width="1861" height="288" key="GridCell.Tab.0.bottom" timestamp="1580246998430">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state width="1861" height="2" key="GridCell.Tab.0.bottom/75.0.5865.1080@75.0.5865.1080" timestamp="1580085417600" />
-    <state width="1861" height="2" key="GridCell.Tab.0.center" timestamp="1580085417600">
+    <state width="1861" height="288" key="GridCell.Tab.0.bottom/75.0.5865.1080@75.0.5865.1080" timestamp="1580246998430" />
+    <state width="1861" height="288" key="GridCell.Tab.0.center" timestamp="1580246998430">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state width="1861" height="2" key="GridCell.Tab.0.center/75.0.5865.1080@75.0.5865.1080" timestamp="1580085417600" />
-    <state width="1861" height="2" key="GridCell.Tab.0.left" timestamp="1580085417600">
+    <state width="1861" height="288" key="GridCell.Tab.0.center/75.0.5865.1080@75.0.5865.1080" timestamp="1580246998430" />
+    <state width="1861" height="288" key="GridCell.Tab.0.left" timestamp="1580246998430">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state width="1861" height="2" key="GridCell.Tab.0.left/75.0.5865.1080@75.0.5865.1080" timestamp="1580085417600" />
-    <state width="1861" height="2" key="GridCell.Tab.0.right" timestamp="1580085417600">
+    <state width="1861" height="288" key="GridCell.Tab.0.left/75.0.5865.1080@75.0.5865.1080" timestamp="1580246998430" />
+    <state width="1861" height="288" key="GridCell.Tab.0.right" timestamp="1580246998430">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state width="1861" height="2" key="GridCell.Tab.0.right/75.0.5865.1080@75.0.5865.1080" timestamp="1580085417600" />
+    <state width="1861" height="288" key="GridCell.Tab.0.right/75.0.5865.1080@75.0.5865.1080" timestamp="1580246998430" />
     <state x="2682" y="256" key="MultipleFileMergeDialog" timestamp="1580185019305">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
@@ -488,14 +491,18 @@
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
     <state x="2562" y="273" key="Vcs.Push.Dialog.v2/75.0.5865.1080@75.0.5865.1080" timestamp="1580184984543" />
-    <state x="4263" y="0" width="1577" height="1020" key="dock-window-1" timestamp="1580182746503">
+    <state x="279" y="166" width="1315" height="734" key="dock-window-1" timestamp="1580237454962">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state x="4263" y="0" width="1577" height="1020" key="dock-window-1/75.0.5865.1080@75.0.5865.1080" timestamp="1580182746503" />
-    <state x="258" y="28" width="1577" height="1020" key="dock-window-2" timestamp="1580184700089">
+    <state x="279" y="166" width="1315" height="734" key="dock-window-1/75.0.5865.1080@75.0.5865.1080" timestamp="1580237454962" />
+    <state x="3011" y="0" width="929" height="1087" key="dock-window-2" timestamp="1580247091706">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state x="258" y="28" width="1577" height="1020" key="dock-window-2/75.0.5865.1080@75.0.5865.1080" timestamp="1580184700089" />
+    <state x="3011" y="0" width="929" height="1087" key="dock-window-2/75.0.5865.1080@75.0.5865.1080" timestamp="1580247091706" />
+    <state x="2694" y="332" key="git4idea.merge.GitPullDialog" timestamp="1580230291187">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state x="2694" y="332" key="git4idea.merge.GitPullDialog/75.0.5865.1080@75.0.5865.1080" timestamp="1580230291187" />
     <state x="2352" y="161" key="new project wizard" timestamp="1580178154630">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>

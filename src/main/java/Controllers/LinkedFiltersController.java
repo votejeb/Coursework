@@ -28,9 +28,9 @@ public class LinkedFiltersController {
 
     //SQL SELECTALL//
     @GET
-    @Path("readfilter{filterID}")
+    @Path("readfilter/{DataFilterID}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String SelectTable(@PathParam("filterID")Integer TableID) throws Exception {
+    public String SelectTable(@PathParam("DataFilterID")Integer TableID) throws Exception {
         if(TableID==null){
             throw new Exception("One or more form data parameters are missing in the HTTP request.");
         }
@@ -78,12 +78,12 @@ public class LinkedFiltersController {
     @Produces(MediaType.APPLICATION_JSON)
     public String DeleteFromTable (
             @FormDataParam("FilterID")Integer TableID,
-            @FormDataParam("FitlerWord")String Words){
+            @FormDataParam("FilterWord")String Words){
         try {
             if(Words==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM LinkedFilters_" + TableID + " WHERE Words ?");
+            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM LinkedFilters_" + TableID + " WHERE Words = ?");
             ps.setString(1, Words);
             ps.execute();
             return "{\"status\": \"OK\"}";

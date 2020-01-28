@@ -7,9 +7,6 @@ function pageLoadI(){
         `<input type="button" value="Run a Stream" id="streamButton" onclick="window.location.href = '/client/stream.html'">` +
         `</div>` +
         `<div class="genericDiv">` +
-        `<input type="button" value="Search Archives" id="archivesButton" onclick="window.location.href = '/client/archives.html'">` +
-        `</div>` +
-        `<div class="genericDiv">` +
         `<input type="button" value="Process some data" id="processButton" onclick="window.location.href = '/client/process.html'">` +
         `</div>` +
         `<div class="genericDiv">` +
@@ -22,7 +19,7 @@ function pageLoadI(){
 
 
 function checkLogin() {
-
+1
     let username = Cookies.get("UserName");
 
     let logInHTML = '';
@@ -36,8 +33,4 @@ function checkLogin() {
 
     document.getElementById("loggedInDetails").innerHTML = logInHTML;
 
-}
-function login(event) {
-    const form = document.getElementById("loginForm");
-    window.location.href = '/client/index.html';
 }

@@ -5,7 +5,8 @@ function pageLoad(){
     // draw graph event listener
     document.getElementById("drawGraph").addEventListener("click", drawGraph);
 }
-
+window.value = checkList=["","a"];
+var loadedFilters=[];
 function drawGraph(event) {
 //configuration constructor for graph
     var config={
@@ -44,11 +45,11 @@ function drawGraph(event) {
     //fetches dataset information from the server to search through
     fetch("/datasets/listone/"+Cookies.get("userid"),{method:'get'}
     ).then(response=>response.json()
-    ).then(responseData=> {
-        for (var index4 = 0; index4 < responseData.length; index4++) {
+    ).then(responseData1=> {
+        for (var index4 = 0; index4 < responseData1.length; index4++) {
             //fetches rawset data
-            if (responseData[index4].SetID===parseInt(tableID,10)){
-                var RawSets=responseData[index4].RawSets;
+            if (responseData1[index4].SetID===parseInt(tableID,10)){
+                var RawSets=responseData1[index4].RawSets;
                 //builds mychart object
                 var ctx = document.getElementById('chartCanvas').getContext('2d');
                 var myChart = new Chart(ctx, config);
@@ -57,7 +58,20 @@ function drawGraph(event) {
                 fetch("/processeddatas/readkeywords/"+tableID.toString()+"/"+RawSets, {method: 'get'}
                 ).then(response => response.json()
                 ).then(responseData => {
-                    //converts sttring to arrayand iteates over each one t ogive x axis values
+                    console.log(responseData);
+                    for (var index5 = 0; index5 < checkList.length; index5++) {
+                        for (var index6 = 0; index6 < responseData.length; index6++) {
+                            if (checkList[index5]===responseData[index6].Words){
+                                if (index6 > -1) {
+                                    responseData.splice(index6, 1);
+                                }
+                                break;
+                            }
+                        }
+                    }
+
+                    console.log(responseData);
+                    //converts string to array and iterates over each one to give x axis values
                     var RawSets1=RawSets.split("-");
                     for (var index3 = 0; index3 < RawSets1.length; index3++) {
                         config.data.labels.push(RawSets1[index3]);
@@ -108,8 +122,8 @@ function viewDataTable(UserID){
     //builds table layout
     let tableHTML = '<table>' +
         '<tr>' +
-        '<th>SetID|</th>' +
-        '<th>Keyword</th>' +
+        '<th>SetID</th>' +
+        '<th>|Keyword</th>' +
         '</tr>';
     //fetches data from dataset
     fetch("/datasets/listone/"+UserID,{method:'get'}
@@ -122,8 +136,8 @@ function viewDataTable(UserID){
             //HTML constructor
             for (var i=0; i<responseData.length; i++){
                 tableHTML += `<tr>` +
-                    `<td>${responseData[i].SetID}|</td>` +
-                    `<td>${responseData[i].KeyWord}</td>` +
+                    `<td>${responseData[i].SetID}</td>` +
+                    `<td>|${responseData[i].KeyWord}</td>` +
                     `</tr>`;
             }
             tableHTML += '</table>'
@@ -161,5 +175,24 @@ function viewFilterTable(UserID){
             filterHTML += '</table>'
         }
         document.getElementById("filterHTML").innerHTML = filterHTML;
+    })
+}
+
+function read1Filter(){
+    debugger;
+    const form = document.getElementById("viewFilterForm");
+    const formData = new FormData(form);
+    fetch("/linkedfilters/readfilter/"+formData.get("DataFilterID"),{method:'get'}
+    ).then(response=>response.json()
+    ).then(responseData=> {
+        console.log(responseData);
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        } else {
+            for (var i=0; i<responseData.length; i++){
+                checkList.append(responseData[i].Words);
+            }
+        }
+        document.getElementById("viewFilterHTML").innerHTML = viewFilterHTML;
     })
 }

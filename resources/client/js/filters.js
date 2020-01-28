@@ -11,27 +11,25 @@ function pageLoad(){
 function viewFilterTable(){
     let filterHTML = '<table>' +
         '<tr>' +
-        '<th>Data Filter ID|</th>' +
-        '<th>Data Filter Name|</th>' +
-        '<th>Whitelist Status|</th>' +
-        '<th>Public Status</th>' +
+        '<th>Data Filter ID</th>' +
+        '<th>|Data Filter Name</th>' +
+        '<th>|Whitelist Status</th>' +
+        '<th>|Public Status</th>' +
         '</tr>';
 
     let UserID=Cookies.get("userid");
     fetch("/datafilters/listone/"+UserID,{method:'get'}
     ).then(response=>response.json()
     ).then(responseData=> {
-        console.log(responseData);
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
             for (var i=0; i<responseData.length; i++){
-                console.log(responseData[i].DataFilterName);
                 filterHTML += `<tr>` +
-                    `<td>${responseData[i].DataFilterID}|</td>` +
-                    `<td>${responseData[i].DataFilterName}|</td>` +
-                    `<td>${responseData[i].WhitelistBlacklist}|</td>` +
-                    `<td>${responseData[i].PublicPrivate}</td>` +
+                    `<td>${responseData[i].DataFilterID}</td>` +
+                    `<td>|${responseData[i].DataFilterName}</td>` +
+                    `<td>|${responseData[i].WhitelistBlacklist}</td>` +
+                    `<td>|${responseData[i].PublicPrivate}</td>` +
                     `</tr>`;
             }
             filterHTML += '</table>'
@@ -81,7 +79,7 @@ function deleteFilter(){
 function add1Filter(){
     const form = document.getElementById("modifyFilterForm");
     const formData = new FormData(form);
-    fetch("/linkedfilter/readfilter/"+formData.get("TableID"), {method: 'post', body: formData}
+    fetch("/linkedfilters/newfilter", {method: 'post', body: formData}
     ).then(response => response.json()
     ).then(responseData => {
         if (responseData.hasOwnProperty('error')) {
@@ -91,26 +89,30 @@ function add1Filter(){
 }
 
 function read1Filter(){
-    const form = document.getElementById("viewFilterform");
+    debugger;
+    const form = document.getElementById("viewFilterForm");
     const formData = new FormData(form);
-    let viewfilterHTML = '<table>' +
+    let FilterID = formData.get("DataFilterID");
+    console.log(FilterID);
+    let viewFilterHTML = '<table>' +
         '<tr>' +
         '<th>Filter Contents</th>' +
         '</tr>';
-    fetch("/datafilters/listone/"+formData.get("FilterID"),{method:'get'}
+    fetch("/linkedfilters/readfilter/"+FilterID,{method:'get'}
     ).then(response=>response.json()
     ).then(responseData=> {
+        console.log(responseData);
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
             for (var i=0; i<responseData.length; i++){
-                viewfilterHTML += `<tr>` +
+                viewFilterHTML += `<tr>` +
                     `<td>${responseData[i].Words}</td>` +
                     `</tr>`;
             }
-            viewfilterHTML += '</table>'
+            viewFilterHTML += '</table>'
         }
-        document.getElementById("filterHTML").innerHTML = viewfilterHTML;
+        document.getElementById("viewFilterHTML").innerHTML = viewFilterHTML;
     })
 }
 
