@@ -2,6 +2,7 @@ package Controllers;
 
 import Server.Main;
 import org.glassfish.jersey.media.multipart.FormDataParam;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import javax.ws.rs.*;
@@ -18,18 +19,21 @@ public class DataFiltersController {
         if(UserID==null){
             throw new Exception("One or more form data parameters are missing in the HTTP request.");
         }
-        JSONObject item = new JSONObject();
+        JSONArray list = new JSONArray();
+
         try {
             PreparedStatement ps = Main.db.prepareStatement("SELECT DataFilterID, DataFilterName, WhitelistBlacklist, PublicPrivate FROM DataFilters Where PublicPrivate=true OR DataFilterID IN (SELECT DataFilterID FROM UserFilterLink Where UserID = ?)");
-            ps.setInt(1,UserID);
-            ResultSet results  = ps.executeQuery();
-            if (results.next()) {
-                item.put("DataFilterID",results.getInt(1));
-                item.put("DataFilterName",results.getString(2));
-                item.put("WhitelistBlacklist",results.getString(3));
-                item.put("PublicPrivate",results.getBoolean(4));
+            ps.setInt(1, UserID);
+            ResultSet results = ps.executeQuery();
+            while (results.next()) {
+                JSONObject item = new JSONObject();
+                item.put("DataFilterID", results.getInt(1));
+                item.put("DataFilterName", results.getString(2));
+                item.put("WhitelistBlacklist", results.getString(3));
+                item.put("PublicPrivate", results.getBoolean(4));
+                list.add(item);
             }
-            return item.toString();
+        return list.toString();
         } catch (Exception exception) {
             System.out.println("Database error: " + exception.getMessage());
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
@@ -52,7 +56,7 @@ public class DataFiltersController {
             if (DataFilterName == null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO DataFilters(DataFilterName, WhitelistBlacklist, PublicPrivate)VALUES(?,?,?,?)");
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO DataFilters(DataFilterName, WhitelistBlacklist, PublicPrivate)VALUES(?,?,?)");
             ps.setString(1, DataFilterName);
             ps.setBoolean(2,true);
             ps.setBoolean(3,true);
@@ -82,6 +86,7 @@ public class DataFiltersController {
     @Produces(MediaType.APPLICATION_JSON)
     public String UpdateUser (
             @FormDataParam("DataFilterID") Integer SetID,
+            @FormDataParam("DataFilterName") String DataFilterName,
             @FormDataParam("WhitelistBlacklist")Boolean WhitelistBlacklist,
             @FormDataParam("PublicPrivate")Boolean PublicPrivate,
             @CookieParam("token") String token) throws Exception {
@@ -92,10 +97,11 @@ public class DataFiltersController {
             if (SetID == null || PublicPrivate == null){
                 throw new Exception("One or more data parameters are missing in the HTTP request");
             }
-            PreparedStatement ps = Main.db.prepareStatement("UPDATE DataFilters SET WhitelistBlacklist = ? PublicPrivate = ? WHERE SetID = ?");
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE DataFilters SET WhitelistBlacklist = ?, PublicPrivate = ?, DataFilterName=? WHERE DataFilterID = ?");
             ps.setBoolean(1, PublicPrivate);
             ps.setBoolean(2, WhitelistBlacklist);
-            ps.setInt(3, SetID);
+            ps.setString(3, DataFilterName);
+            ps.setInt(4, SetID);
             ps.execute();
             return "{\"status\": \"OK\"}";
         } catch (Exception exception) {

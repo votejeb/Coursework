@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Database1.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Database1.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Database1.db-journal" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/filters.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/filters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +90,18 @@
       <recent name="U:\Computer Science\Coursework\resources\Client\css" />
       <recent name="U:\Computer Science\Project\" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

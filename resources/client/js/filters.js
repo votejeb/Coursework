@@ -1,5 +1,5 @@
 function pageLoad(){
-    viewFilterTable(Cookies.get("userid"));
+    viewFilterTable();
     document.getElementById("createFilter").addEventListener("click", createFilter);
     document.getElementById("updateFilter").addEventListener("click", updateFilter);
     document.getElementById("deleteFilter").addEventListener("click", deleteFilter);
@@ -8,7 +8,7 @@ function pageLoad(){
     document.getElementById("deleteFilterWord").addEventListener("click", delete1Filter);
 }
 
-function viewFilterTable(UserID){
+function viewFilterTable(){
     let filterHTML = '<table>' +
         '<tr>' +
         '<th>Data Filter ID|</th>' +
@@ -16,6 +16,8 @@ function viewFilterTable(UserID){
         '<th>Whitelist Status|</th>' +
         '<th>Public Status</th>' +
         '</tr>';
+
+    let UserID=Cookies.get("userid");
     fetch("/datafilters/listone/"+UserID,{method:'get'}
     ).then(response=>response.json()
     ).then(responseData=> {
@@ -24,8 +26,9 @@ function viewFilterTable(UserID){
             alert(responseData.error);
         } else {
             for (var i=0; i<responseData.length; i++){
+                console.log(responseData[i].DataFilterName);
                 filterHTML += `<tr>` +
-                    `<td>${responseData[i].DataFilterID|}</td>` +
+                    `<td>${responseData[i].DataFilterID}|</td>` +
                     `<td>${responseData[i].DataFilterName}|</td>` +
                     `<td>${responseData[i].WhitelistBlacklist}|</td>` +
                     `<td>${responseData[i].PublicPrivate}</td>` +
@@ -38,8 +41,10 @@ function viewFilterTable(UserID){
 }
 
 function createFilter(){
-    const form = document.getElementById("loginForm");
+    const form = document.getElementById("createForm");
     const formData = new FormData(form);
+    let UserID=Cookies.get("userid");
+    formData.append("UserID", UserID);
     fetch("/datafilters/newfilter", {method: 'post', body: formData}
     ).then(response => response.json()
     ).then(responseData => {
@@ -50,7 +55,7 @@ function createFilter(){
 }
 
 function updateFilter(){
-    const form = document.getElementById("loginForm");
+    const form = document.getElementById("updateForm");
     const formData = new FormData(form);
     fetch("/datafilters/updatefilter", {method: 'post', body: formData}
     ).then(response => response.json()
@@ -62,7 +67,7 @@ function updateFilter(){
 }
 
 function deleteFilter(){
-    const form = document.getElementById("loginForm");
+    const form = document.getElementById("deleteForm");
     const formData = new FormData(form);
     fetch("/datafilters/deletefilter", {method: 'post', body: formData}
     ).then(response => response.json()
@@ -74,9 +79,9 @@ function deleteFilter(){
 }
 
 function add1Filter(){
-    const form = document.getElementById("loginForm");
+    const form = document.getElementById("modifyFilterForm");
     const formData = new FormData(form);
-    fetch("/linkedfilter/readfilter/"+filterID, {method: 'post', body: formData}
+    fetch("/linkedfilter/readfilter/"+formData.get("TableID"), {method: 'post', body: formData}
     ).then(response => response.json()
     ).then(responseData => {
         if (responseData.hasOwnProperty('error')) {
@@ -86,17 +91,31 @@ function add1Filter(){
 }
 
 function read1Filter(){
-    const form = document.getElementById("loginForm");
+    const form = document.getElementById("viewFilterform");
     const formData = new FormData(form);
-    fetch("/datafilters/listone/"+FilterID,{method:'get'}
+    let viewfilterHTML = '<table>' +
+        '<tr>' +
+        '<th>Filter Contents</th>' +
+        '</tr>';
+    fetch("/datafilters/listone/"+formData.get("FilterID"),{method:'get'}
     ).then(response=>response.json()
     ).then(responseData=> {
-
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        } else {
+            for (var i=0; i<responseData.length; i++){
+                viewfilterHTML += `<tr>` +
+                    `<td>${responseData[i].Words}</td>` +
+                    `</tr>`;
+            }
+            viewfilterHTML += '</table>'
+        }
+        document.getElementById("filterHTML").innerHTML = viewfilterHTML;
     })
 }
 
 function delete1Filter(){
-    const form = document.getElementById("loginForm");
+    const form = document.getElementById("modifyFilterForm");
     const formData = new FormData(form);
     fetch("/linkedfilters/deletefilter", {method: 'post', body: formData}
     ).then(response => response.json()
