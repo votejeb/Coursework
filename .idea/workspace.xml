@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/client/js/testEnv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/client/testEnv.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/filters.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/filters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DataFiltersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SearchandSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataSetsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LinkedFiltersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/RawDatasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LinkedFiltersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DataFiltersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SearchandSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Util/customUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/customUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +185,9 @@
       <workItem from="1579974415267" duration="1270000" />
       <workItem from="1579976388791" duration="34699000" />
       <workItem from="1580060995863" duration="127000" />
-      <workItem from="1580067137319" duration="8554000" />
+      <workItem from="1580067137319" duration="8789000" />
+      <workItem from="1580178127770" duration="26000" />
+      <workItem from="1580182370887" duration="2449000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -412,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580060818165</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="charts js workds">
+      <created>1580085204770</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1580085204770</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,9 +449,41 @@
     <option name="LAST_COMMIT_MESSAGE" value="charts js workds" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="4525" y="91" width="1583" height="1050" key="dock-window-1" timestamp="1580069977642">
+    <state x="2595" y="135" key="CommitChangelistDialog2" timestamp="1580085201723">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state x="4525" y="91" width="1583" height="1050" key="dock-window-1/75.0.5865.1080@75.0.5865.1080" timestamp="1580069977642" />
+    <state x="2595" y="135" key="CommitChangelistDialog2/75.0.5865.1080@75.0.5865.1080" timestamp="1580085201723" />
+    <state width="1861" height="2" key="GridCell.Tab.0.bottom" timestamp="1580085417600">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state width="1861" height="2" key="GridCell.Tab.0.bottom/75.0.5865.1080@75.0.5865.1080" timestamp="1580085417600" />
+    <state width="1861" height="2" key="GridCell.Tab.0.center" timestamp="1580085417600">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state width="1861" height="2" key="GridCell.Tab.0.center/75.0.5865.1080@75.0.5865.1080" timestamp="1580085417600" />
+    <state width="1861" height="2" key="GridCell.Tab.0.left" timestamp="1580085417600">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state width="1861" height="2" key="GridCell.Tab.0.left/75.0.5865.1080@75.0.5865.1080" timestamp="1580085417600" />
+    <state width="1861" height="2" key="GridCell.Tab.0.right" timestamp="1580085417600">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state width="1861" height="2" key="GridCell.Tab.0.right/75.0.5865.1080@75.0.5865.1080" timestamp="1580085417600" />
+    <state x="2562" y="273" key="Vcs.Push.Dialog.v2" timestamp="1580085219862">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state x="2562" y="273" key="Vcs.Push.Dialog.v2/75.0.5865.1080@75.0.5865.1080" timestamp="1580085219862" />
+    <state x="4263" y="0" width="1577" height="1020" key="dock-window-1" timestamp="1580182746503">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state x="4263" y="0" width="1577" height="1020" key="dock-window-1/75.0.5865.1080@75.0.5865.1080" timestamp="1580182746503" />
+    <state x="258" y="28" width="1577" height="1020" key="dock-window-2" timestamp="1580184700089">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state x="258" y="28" width="1577" height="1020" key="dock-window-2/75.0.5865.1080@75.0.5865.1080" timestamp="1580184700089" />
+    <state x="2352" y="161" key="new project wizard" timestamp="1580178154630">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state x="2352" y="161" key="new project wizard/75.0.5865.1080@75.0.5865.1080" timestamp="1580178154630" />
   </component>
 </project>

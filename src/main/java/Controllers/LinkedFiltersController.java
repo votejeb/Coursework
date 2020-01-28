@@ -56,8 +56,8 @@ public class LinkedFiltersController {
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String InsertToTable(
-            @FormDataParam("filterID")Integer TableID,
-            @FormDataParam("newFilter") String filter){
+            @FormDataParam("FilterID")Integer TableID,
+            @FormDataParam("FilterWord") String filter){
         try {
             if (filter == null||TableID == null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
@@ -77,8 +77,8 @@ public class LinkedFiltersController {
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String DeleteFromTable (
-            @FormDataParam("filterID")Integer TableID,
-            @FormDataParam("Words")String Words){
+            @FormDataParam("FilterID")Integer TableID,
+            @FormDataParam("FitlerWord")String Words){
         try {
             if(Words==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");

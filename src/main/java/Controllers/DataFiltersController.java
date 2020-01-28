@@ -36,7 +36,6 @@ public class DataFiltersController {
         }
     }
 
-
     //insert
     @POST
     @Path("newfilter")
@@ -77,13 +76,12 @@ public class DataFiltersController {
     }
 
     //Update//
-
     @POST
     @Path("updatefilter")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String UpdateUser (
-            @FormDataParam("SetID") Integer SetID,
+            @FormDataParam("DataFilterID") Integer SetID,
             @FormDataParam("WhitelistBlacklist")Boolean WhitelistBlacklist,
             @FormDataParam("PublicPrivate")Boolean PublicPrivate,
             @CookieParam("token") String token) throws Exception {
@@ -111,7 +109,7 @@ public class DataFiltersController {
     @Path("deletefilter")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String DeleteFilter (@FormDataParam("datafilterID") Integer DataFilterID,
+    public String DeleteFilter (@FormDataParam("DataFilterID") Integer DataFilterID,
                                 @CookieParam("token") String token) throws Exception {
         if (!UsersController.validToken(token)) {
             return "{\"error\": \"You don't appear to be logged in.\"}";
