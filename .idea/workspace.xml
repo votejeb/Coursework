@@ -449,10 +449,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="charts js workds" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2595" y="135" key="CommitChangelistDialog2" timestamp="1580085201723">
+    <state x="2595" y="135" key="CommitChangelistDialog2" timestamp="1580184977591">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state x="2595" y="135" key="CommitChangelistDialog2/75.0.5865.1080@75.0.5865.1080" timestamp="1580085201723" />
+    <state x="2595" y="135" key="CommitChangelistDialog2/75.0.5865.1080@75.0.5865.1080" timestamp="1580184977591" />
     <state width="1861" height="2" key="GridCell.Tab.0.bottom" timestamp="1580085417600">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
@@ -469,10 +469,14 @@
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
     <state width="1861" height="2" key="GridCell.Tab.0.right/75.0.5865.1080@75.0.5865.1080" timestamp="1580085417600" />
-    <state x="2562" y="273" key="Vcs.Push.Dialog.v2" timestamp="1580085219862">
+    <state x="2682" y="256" key="MultipleFileMergeDialog" timestamp="1580185019305">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state x="2562" y="273" key="Vcs.Push.Dialog.v2/75.0.5865.1080@75.0.5865.1080" timestamp="1580085219862" />
+    <state x="2682" y="256" key="MultipleFileMergeDialog/75.0.5865.1080@75.0.5865.1080" timestamp="1580185019305" />
+    <state x="2562" y="273" key="Vcs.Push.Dialog.v2" timestamp="1580184984543">
+      <screen x="75" y="0" width="5865" height="1080" />
+    </state>
+    <state x="2562" y="273" key="Vcs.Push.Dialog.v2/75.0.5865.1080@75.0.5865.1080" timestamp="1580184984543" />
     <state x="4263" y="0" width="1577" height="1020" key="dock-window-1" timestamp="1580182746503">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
