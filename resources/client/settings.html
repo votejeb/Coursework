@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--imports javascript-->
     <link rel="stylesheet" type="text/css" href="/client/css/styles.css">
     <script src="/client/js/js.cookie.js"></script>
     <script src="/client/js/index.js"></script>
     <script src="/client/js/settings.js"></script>
 </head>
+<!--imports javascript pageload-->
 <body onload="pageLoadI();pageLoad()">
 <div id="content"></div>
+<!--creates form to submit-->
 <form id="applySettingsForm">
     <div class="loginDiv">
         <label for="UserName">Username: </label>
@@ -39,6 +42,7 @@
         <input type="submit" value="Apply Changes" id="applyChanges">
     </div>
 </form>
+<!--checks login details-->
 <div class="genericDiv" id="loggedInDetails"></div>
 </body>
 </html>

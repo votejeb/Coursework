@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Process</title>
+    <!--imports relevant files-->
     <link rel="stylesheet" type="text/css" href="/client/css/styles.css">
     <script src="/client/js/js.cookie.js"></script>
     <script src="/client/js/process.js"></script>
     <script src="/client/js/index.js"></script>
     <script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
 </head>
+<!--calls pageload functions-->
 <body onload="pageLoadI();pageLoad()">
 <div id="content">
 </div>
-
+<!--displays filter html-->
 <div class="genericDiv">
     <div id="filterHTML"> </div>
 </div>
-
+<!--displays datasets to load-->
 <div class="genericDiv">
     <div id="tableHTML"> </div>
 </div>
-
+<!--sets up form submission-->
 <form id="graphForm">
     <div class="loginDiv">
         <label for="SetID">Graph ID to draw: </label>
@@ -30,11 +32,11 @@
         <input type="submit" value="Draw Graph" id="drawGraph">
     </div>
 </form>
-
+<!--constructs graph-->
 <div>
     <canvas id="chartCanvas" style="width:1000px; height:1000px;"></canvas>
 </div>
-
+<!--checks login status-->
 <div class="genericDiv" id="loggedInDetails"></div>
 </body>
 </html>
