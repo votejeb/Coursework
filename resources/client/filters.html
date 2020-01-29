@@ -9,84 +9,90 @@
     <script src="/client/js/filters.js"></script>
 </head>
 <body onload="pageLoadI();pageLoad()">
-<div id="content">
+<div id="margin">
+    <nav><div id="content">
+    </div><div class="genericDiv" id="loggedInDetails"></div></nav>
+
+    <article>
+        <div class="filterTableDiv">
+            <div id="filterHTML"> </div>
+        </div>
+
+        <form id="createForm">
+            <div class="formDiv">
+                <label for="FilterID">Filter name to Create: </label>
+                <input type="text" name="DataFilterName" id="DataFilterName">
+            </div>
+            <div class="formDiv">
+                <input type="submit" value="Create Filter" id="createFilter">
+            </div>
+        </form>
+
+        <form id="updateForm">
+            <div class="formDiv">
+                <label for="DataFilterID">Filter ID to Update: </label>
+                <input type="text" name="DataFilterID" id="DataFilterID">
+            </div>
+            <div class="formDiv">
+                <label for="DataFilterName">Filter Name to Update: </label>
+                <input type="text" name="DataFilterName" id="DataFilterName">
+            </div>
+            <div class="formDiv">
+                <label for="WhitelistBlacklist">Filter Whitelist Status to Update: </label>
+                <input type="text" name="WhitelistBlacklist" id="WhiteListBlacklist">
+            </div>
+            <div class="formDiv">
+                <label for="PublicPrivate">Filter PublicPrivate Status to Update: </label>
+                <input type="text" name="PublicPrivate" id="PublicPrivate">
+            </div>
+            <div class="formDiv">
+                <input type="submit" value="Update Filter" id="updateFilter">
+            </div>
+        </form>
+
+        <form id="deleteForm">
+            <div class="formDiv">
+                <label for="DataFilterID">Filter ID to Delete: </label>
+                <input type="text" name="DataFilterID" id="DataFilterID">
+            </div>
+            <div class="formDiv">
+                <input type="submit" value="Delete Filter" id="deleteFilter">
+            </div>
+        </form>
+
+        <form id="modifyFilterForm">
+            <div class="formDiv">
+                <label for="FilterID">Filter ID to Add to or remove from: </label>
+                <input type="text" name="FilterID" id="FilterID">
+            </div>
+            <div class="formDiv">
+                <label for="FilterID">Filter Word to Add or Delete: </label>
+                <input type="text" name="FilterWord" id="FilterWord">
+            </div>
+            <div class="formDiv">
+                <input type="submit" value="Add Filter" id="addFilterWord">
+            </div>
+            <div class="formDiv">
+                <input type="submit" value="Delete Filter" id="deleteFilterWord">
+            </div>
+        </form>
+
+    </article>
+    <aside>
+        <form id="viewFilterForm">
+            <div class="formDiv">
+                <label for="DataFilterID">Filter ID to View: </label>
+                <input type="text" name="DataFilterID" id="DataFilterID">
+            </div>
+            <div class="formDiv">
+                <input type="submit" value="View Filter" id="viewFilter">
+            </div>
+        </form>
+        <div class="tableDiv" id="viewFilterHTML"></div>
+    </aside>
+
+
+
 </div>
-
-<div class="genericDiv">
-    <div id="filterHTML"> </div>
-</div>
-
-<form id="createForm">
-    <div class="formDiv">
-        <label for="FilterID">Filter name to Create: </label>
-        <input type="text" name="DataFilterName" id="DataFilterName">
-    </div>
-    <div class="formDiv">
-        <input type="submit" value="Create Filter" id="createFilter">
-    </div>
-</form>
-
-<form id="updateForm">
-    <div class="formDiv">
-        <label for="DataFilterID">Filter ID to Update: </label>
-        <input type="text" name="DataFilterID" id="DataFilterID">
-    </div>
-    <div class="formDiv">
-        <label for="DataFilterName">Filter Name to Update: </label>
-        <input type="text" name="DataFilterName" id="DataFilterName">
-    </div>
-    <div class="formDiv">
-        <label for="WhitelistBlacklist">Filter Whitelist Status to Update: </label>
-        <input type="text" name="WhitelistBlacklist" id="WhiteListBlacklist">
-    </div>
-    <div class="formDiv">
-        <label for="PublicPrivate">Filter PublicPrivate Status to Update: </label>
-        <input type="text" name="PublicPrivate" id="PublicPrivate">
-    </div>
-    <div class="formDiv">
-        <input type="submit" value="Update Filter" id="updateFilter">
-    </div>
-</form>
-
-<form id="deleteForm">
-    <div class="formDiv">
-        <label for="DataFilterID">Filter ID to Delete: </label>
-        <input type="text" name="DataFilterID" id="DataFilterID">
-    </div>
-    <div class="formDiv">
-        <input type="submit" value="Delete Filter" id="deleteFilter">
-    </div>
-</form>
-
-<form id="viewFilterForm">
-    <div class="formDiv">
-        <label for="DataFilterID">Filter ID to View: </label>
-        <input type="text" name="DataFilterID" id="DataFilterID">
-    </div>
-    <div class="formDiv">
-        <input type="submit" value="View Filter" id="viewFilter">
-    </div>
-</form>
-
-<form id="modifyFilterForm">
-    <div class="formDiv">
-        <label for="FilterID">Filter ID to Add to or remove from: </label>
-        <input type="text" name="FilterID" id="FilterID">
-    </div>
-    <div class="formDiv">
-        <label for="FilterID">Filter Word to Add or Delete: </label>
-        <input type="text" name="FilterWord" id="FilterWord">
-    </div>
-    <div class="formDiv">
-        <input type="submit" value="Add Filter" id="addFilterWord">
-    </div>
-    <div class="formDiv">
-        <input type="submit" value="Delete Filter" id="deleteFilterWord">
-    </div>
-</form>
-
-<div class="genericDiv" id="viewFilterHTML"></div>
-
-<div class="genericDiv" id="loggedInDetails"></div>
 </body>
 </html>

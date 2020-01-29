@@ -10,12 +10,6 @@ import java.util.stream.Collectors;
 
 public class customUtil {
 
-    public static String SqlToStr(Date takenDate){
-        Date date = takenDate;
-        DateFormat dateFormat = new SimpleDateFormat("YYYY_MM_dd_hh_mm_ss");
-        String strDate = dateFormat.format(date);
-        return (strDate);
-    }
     public static String getTime(){
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss");
         LocalDateTime now = LocalDateTime.now();
@@ -24,6 +18,12 @@ public class customUtil {
     public static String listToString(List list){
         String delim = "-";
         String res = String.join(delim, list);
+        return res;
+    }
+
+    public static String[] stringToList(String string){
+        String delim = "-";
+        String[] res = string.split(delim);
         return res;
     }
 }

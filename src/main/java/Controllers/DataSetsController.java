@@ -9,6 +9,9 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+import static Util.customUtil.stringToList;
+
 @Path("datasets/")
 public class DataSetsController {
     //SQL SELECT//
@@ -48,6 +51,7 @@ public class DataSetsController {
     public String InsertDataSet(
             @FormDataParam("Keyword")String Keyword,
             @FormDataParam("RunTime")Integer RunTime,
+            @CookieParam("userid") Integer UserID,
             @CookieParam("token") String token) throws Exception {
         if (!UsersController.validToken(token)) {
             return "{\"error\": \"You don't appear to be logged in.\"}";
@@ -61,9 +65,17 @@ public class DataSetsController {
             ps.setInt(2,RunTime);
             ps.setBoolean(3,true);
             ps.execute();
+
             PreparedStatement ps1 = Main.db.prepareStatement("SELECT last_insert_rowid() AS rowid FROM DataSets LIMIT 1");
             ResultSet results  = ps1.executeQuery();
             int results1 = results.getInt(1);
+
+            PreparedStatement ps2 = Main.db.prepareStatement("INSERT INTO UserFilterLink(UserID,SetID)VALUES(?,?)");
+            ps2.setInt(1, UserID);
+            ps2.setInt(2,results1);
+            ps2.execute();
+
+
             return "{\"status\": \"OK\",\"SetID\": \""+results1+"\",\"PublicPrivate\": \"true\"}";
         } catch (Exception exception) {
             System.out.println("Database error " + exception.getMessage());
@@ -72,7 +84,6 @@ public class DataSetsController {
     }
 
     //Update//
-
     @POST
     @Path("updateset")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
@@ -103,13 +114,12 @@ public class DataSetsController {
         }
     }
 
-
 ///delete//
     @POST
     @Path("deletedataset")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String DeleteDataSet (@FormDataParam("SetID")Integer SetID,
+    public static String DeleteDataSet (@FormDataParam("SetID")Integer SetID,
                                  @CookieParam("token") String token) throws Exception {
         if (!UsersController.validToken(token)) {
             return "{\"error\": \"You don't appear to be logged in.\"}";
@@ -118,6 +128,18 @@ public class DataSetsController {
             if(SetID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
+
+            PreparedStatement ps1 = Main.db.prepareStatement("Select RawSets FROM DataSets WHERE SetID = ?");
+            ps1.setInt(1,SetID);
+            ResultSet results  = ps1.executeQuery();
+            String[] iterator=stringToList(results.getString(1));
+
+            for (int i = 0; i < iterator.length; ++i) {
+                RawDatasController.DeleteTable(iterator[i]);
+            }
+
+            ProcessedDatasController.DeleteTable(SetID.toString());
+
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM DataSets WHERE SetID= ?");
             ps.setInt(1, SetID);
             ps.execute();
@@ -127,43 +149,5 @@ public class DataSetsController {
             return "{\"error\": \"Unable to list items, please see server console for more info.\"}";
         }
     }
-/*
-    @POST
-    @Path("deleteTask")
-    @Consumes(MediaType.MULTIPART_FORM_DATA)
-    @Produces(MediaType.APPLICATION_JSON)
-    public static String deleteTask(@FormDataParam("tasklist")String[] taskList) {
-
-        Integer[] newtasklist=stringToList(taskList);
-
-        for(int i=0;i<newtasklist.length; i++){
-            try {
-                if (taskList == null) {
-                    throw new Exception("One or more form data parameters are missing in the HTTP request.");
-                }
-                PreparedStatement ps = Main.db.prepareStatement("DELETE FROM Tasks WHERE TaskID = ?");
-                ps.setInt(1, newtasklist[i]);
-                ps.executeUpdate();
-                return "{\"status\": \"OK\"}";
-
-            } catch (Exception exception) {
-                System.out.println("Database disconnection error: " + exception.getMessage());
-                return "{\"error\": \"Unable to delete item, please see server console for more info.\"}";
-            }
-        }
-        return null;
-    }
-
-    public static Integer[] stringToList(String[] strings) {
-        Integer[] intarray=new Integer[strings.length];
-        int i=0;
-        for(String str:strings){
-            intarray[i]=Integer.parseInt(str.trim());//Exception in this line
-            i++;
-        }
-        return intarray;
-    }
-
- */
 }
 

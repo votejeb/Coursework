@@ -12,44 +12,49 @@
 </head>
 <!--calls pageload functions-->
 <body onload="pageLoadI();pageLoad()">
-<div id="content">
+<div id="margin">
+    <nav><div id="content">
+    </div>
+        <div class="genericDiv" id="loggedInDetails"></div></nav>
+    <article>
+        <!--displays filter html-->
+        <div class="filterTableDiv">
+            <div id="filterHTML"> </div>
+        </div>
+        <!--choose filter to apply-->
+        <form id="filterForm">
+            <div class="formDiv">
+                <label for="DataFilterID">Filter to Apply: </label>
+                <input type="text" name="DataFilterID" id="DataFilterID">
+            </div>
+            <div class="formDiv">
+                <input type="submit" value="Add Filter" id="addFilter">
+            </div>
+            <div class="formDiv">
+            <input type="submit" value="Remove Filter" id="removeFilter">
+            </div>
+        </form>
+    </article>
+    <!--sets up form submission-->
+    <aside>
+        <!--displays datasets to load-->
+        <div class="datasetTableDiv">
+            <div id="tableHTML"> </div>
+        </div>
+        <form id="graphForm">
+            <div class="formDiv">
+                <label for="SetID">Graph ID to draw: </label>
+                <input type="text" name="SetID" id="SetID">
+            </div>
+            <div class="formDiv">
+                <input type="submit" value="Draw Graph" id="drawGraph">
+            </div>
+        </form>
+    <!--constructs graph-->
+
+        <canvas id="chartCanvas" style="width:1000px; height:800px;"></canvas>
+    </aside>
+
 </div>
-<!--displays filter html-->
-<div class="genericDiv">
-    <div id="filterHTML"> </div>
-</div>
-<!--choose filter to apply-->
-<form id="filterForm">
-    <div class="formDiv">
-        <label for="DataFilterID">Filter to Apply: </label>
-        <input type="text" name="DataFilterID" id="DataFilterID">
-    </div>
-    <div class="formDiv">
-        <input type="submit" value="Add Filter" id="addFilter">
-    </div>
-    <div class="formDiv">
-    <input type="submit" value="Remove Filter" id="removeFilter">
-    </div>
-</form>
-<!--displays datasets to load-->
-<div class="genericDiv">
-    <div id="tableHTML"> </div>
-</div>
-<!--sets up form submission-->
-<form id="graphForm">
-    <div class="formDiv">
-        <label for="SetID">Graph ID to draw: </label>
-        <input type="text" name="SetID" id="SetID">
-    </div>
-    <div class="formDiv">
-        <input type="submit" value="Draw Graph" id="drawGraph">
-    </div>
-</form>
-<!--constructs graph-->
-<div>
-    <canvas id="chartCanvas" style="width:1000px; height:1000px;"></canvas>
-</div>
-<!--checks login status-->
-<div class="genericDiv" id="loggedInDetails"></div>
 </body>
 </html>

@@ -17,6 +17,7 @@ function pageLoadI(){
         `<div class="genericDiv">` +
         `<input type="button" value="Admin Options" id="adminButton" onclick="window.location.href = '/client/admin.html'">` +
         `</div>`;
+
 }
 //this function checks the login status and displays the relevant redirect at the bottom of the page
 function checkLogin() {
@@ -29,5 +30,6 @@ function checkLogin() {
         logInHTML = "Logged in as " + username + ". <a href='/client/login.html?logout'>Log out</a>";
 
     }
+    //html element assigner
     document.getElementById("loggedInDetails").innerHTML = logInHTML;
 }

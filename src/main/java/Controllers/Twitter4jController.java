@@ -12,6 +12,7 @@ import java.util.List;
 import static Controllers.DataSetsController.UpdateSet;
 import static Controllers.RawDatasController.CreateTable;
 import static Controllers.RawDatasController.InsertToTable;
+import static Controllers.SearchandSort.SortData;
 import static Util.customUtil.getTime;
 import static Util.customUtil.listToString;
 
@@ -82,12 +83,13 @@ public class Twitter4jController {
             });
         //filters data
             twitterStream.filter(tweetFilterQuery);
-            Thread.sleep(300000);
+            Thread.sleep(900000);
             twitterStream.cleanUp();
             twitterStream.shutdown();
         }
         String RawSets1 =listToString(RawSets);
         UpdateSet(TableID, runtime, PublicPrivate, RawSets1, token);
+        SortData(TableID.toString(),RawSets1,100);
         return "{\"Success\": \"Stream Successful.\"}";
     }
 }

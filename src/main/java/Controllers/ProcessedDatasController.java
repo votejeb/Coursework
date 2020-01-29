@@ -98,7 +98,7 @@ public class ProcessedDatasController {
     @Path("deleteprocesseddatas")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String DeleteTable(@FormDataParam("processeddataID") String TableID) {
+    public static String DeleteTable(@FormDataParam("processeddataID") String TableID) {
         try {
             if(TableID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");

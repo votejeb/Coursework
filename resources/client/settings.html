@@ -11,38 +11,45 @@
 </head>
 <!--imports javascript pageload-->
 <body onload="pageLoadI();pageLoad()">
-<div id="content"></div>
-<!--creates form to submit-->
-<form id="applySettingsForm">
-    <div class="loginDiv">
-        <label for="UserName">Username: </label>
-        <input type="text" name="UserName" id="UserName">
-    </div>
-    <div class="loginDiv">
-        <label for="Password">Password: </label>
-        <input type="password" name="Password" id="Password">
-    </div>
-    <div class="loginDiv">
-        <label for="ConsumerKey">Consumer Key: </label>
-        <input type="text" name="ConsumerKey" id="ConsumerKey">
-    </div>
-    <div class="loginDiv">
-        <label for="ConsumerSecret">Consumer Secret: </label>
-        <input type="text" name="ConsumerSecret" id="ConsumerSecret">
-    </div>
-    <div class="loginDiv">
-        <label for="AccessToken">Access Token: </label>
-        <input type="text" name="AccessToken" id="AccessToken">
-    </div>
-    <div class="loginDiv">
-        <label for="AccessSecret">Access Secret: </label>
-        <input type="text" name="AccessSecret" id="AccessSecret">
-    </div>
-    <div class="loginDiv">
-        <input type="submit" value="Apply Changes" id="applyChanges">
-    </div>
-</form>
-<!--checks login details-->
-<div class="genericDiv" id="loggedInDetails"></div>
+<div id="margin">
+    <nav><div id="content"></div>
+        <!--checks login details-->
+        <div class="genericDiv" id="loggedInDetails">
+        </div>
+    </nav>
+    <!--creates form to submit-->
+    <article>
+        <form id="applySettingsForm">
+            <div class="formDiv">
+                <label for="UserName">Username: </label>
+                <input type="text" name="UserName" id="UserName">
+            </div>
+            <div class="formDiv">
+                <label for="Password">Password: </label>
+                <input type="password" name="Password" id="Password">
+            </div>
+            <div class="formDiv">
+                <label for="ConsumerKey">Consumer Key: </label>
+                <input type="text" name="ConsumerKey" id="ConsumerKey">
+            </div>
+            <div class="formDiv">
+                <label for="ConsumerSecret">Consumer Secret: </label>
+                <input type="text" name="ConsumerSecret" id="ConsumerSecret">
+            </div>
+            <div class="formDiv">
+                <label for="AccessToken">Access Token: </label>
+                <input type="text" name="AccessToken" id="AccessToken">
+            </div>
+            <div class="formDiv">
+                <label for="AccessSecret">Access Secret: </label>
+                <input type="text" name="AccessSecret" id="AccessSecret">
+            </div>
+            <div class="formDiv">
+                <input type="submit" value="Apply Changes" id="applyChanges">
+            </div>
+        </form>
+    </article>
+
+</div>
 </body>
 </html>

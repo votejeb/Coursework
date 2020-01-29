@@ -45,11 +45,11 @@ function logout() {
             alert(responseData.error);
 
         } else {
-
+            //removal of cookies
             Cookies.remove("UserName");
             Cookies.remove("token");
             Cookies.remove("userid");
-
+            //page redirect
             window.location.href = '/client/index.html';
 
         }

@@ -1,6 +1,7 @@
 function pageLoad(){
     //adds event listener to to applyChanges button
     document.getElementById("applyChanges").addEventListener("click", applySettings);
+    document.getElementById("deleteUser").addEventListener("click", deleteUser);
 }
 
 function applySettings(event) {
@@ -13,6 +14,7 @@ function applySettings(event) {
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         }
+        //console logs to check correct data has been retrieved
         console.log(responseData);
 
         const formData = new FormData();
@@ -41,6 +43,14 @@ function applySettings(event) {
         });
 
     });
+}
 
-
+function deleteUser(){
+    fetch("/users/updateuser", {method: 'post', body: formData}
+    ).then(response => response.json()
+    ).then(responseData => {
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        }
+    });
 }

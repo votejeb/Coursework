@@ -12,6 +12,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.UUID;
 
+import static Controllers.DataSetsController.*;
+import static Util.customUtil.stringToList;
+
 @Path("users/")
 //The api path to call//
 public class UsersController {
@@ -164,6 +167,24 @@ public class UsersController {
             if(UserID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
+            //Deletes all associated datasets
+            PreparedStatement ps1 = Main.db.prepareStatement("SELECT SetID FROM UserDataLink Where UserID = ?");
+            ps1.setInt(1,UserID);
+            ResultSet results1  = ps1.executeQuery();
+            //iterator
+            while (results1.next()) {
+                DataSetsController.DeleteDataSet(results1.getInt(1),token);
+            }
+            //Deletes all associated filtersets
+            PreparedStatement ps2 = Main.db.prepareStatement("SELECT SetID FROM UserDataLink Where UserID = ?");
+            ps1.setInt(1,UserID);
+            ResultSet results2  = ps2.executeQuery();
+            //iterator
+            while (results1.next()) {
+                DataFiltersController.DeleteFilter(results2.getInt(1),token);
+            }
+
+            //deletes account
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM Users WHERE UserID= ?");
             ps.setInt(1, UserID);
             ps.execute();
@@ -190,32 +211,26 @@ public class UsersController {
             ps1.setString(1, username);
             ResultSet loginResults = ps1.executeQuery();
             if (loginResults.next()) {
-
                 String correctPassword = loginResults.getString(1);
                 int userid = loginResults.getInt(2);
+
                 if (password.equals(correctPassword)) {
-
                     String token = UUID.randomUUID().toString();
-
                     PreparedStatement ps2 = Main.db.prepareStatement("UPDATE Users SET Token = ? WHERE UserName = ?");
                     ps2.setString(1, token);
                     ps2.setString(2, username);
                     ps2.executeUpdate();
-
                     JSONObject userDetails = new JSONObject();
                     userDetails.put("username", username);
                     userDetails.put("token", token);
                     userDetails.put("userid", userid);
                     return userDetails.toString();
-
                 } else {
                     return "{\"error\": \"Incorrect password!\"}";
                 }
-
             } else {
                 return "{\"error\": \"Unknown user!\"}";
             }
-
         } catch (Exception exception) {
             System.out.println("Database error during /user/login: " + exception.getMessage());
             return "{\"error\": \"Server side error!\"}";
@@ -236,21 +251,14 @@ public class UsersController {
             ps1.setString(1, token);
             ResultSet logoutResults = ps1.executeQuery();
             if (logoutResults.next()) {
-
                 int id = logoutResults.getInt(1);
-
                 PreparedStatement ps2 = Main.db.prepareStatement("UPDATE Users SET Token = NULL WHERE UserID = ?");
                 ps2.setInt(1, id);
                 ps2.executeUpdate();
-
                 return "{\"status\": \"OK\"}";
-
             } else {
-
                 return "{\"error\": \"Invalid token!\"}";
-
             }
-
         } catch (Exception exception) {
             System.out.println("Database error during /user/logout: " + exception.getMessage());
             return "{\"error\": \"Server side error!\"}";

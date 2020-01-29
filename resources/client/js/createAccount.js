@@ -1,11 +1,14 @@
 function pageLoad(){
+    //set event listener to trigger account creation
     document.getElementById("createButton").addEventListener("click", createAccount);
 }
 
-function createAccount(){
+function createAccount(event){
+    event.preventDefault();
+    //formdata import
     const form = document.getElementById("createForm");
     const formData = new FormData(form);
-
+    //data retrieval
     fetch("/users/newuser", {method: 'post', body: formData}
     ).then(response => response.json()
     ).then(responseData => {

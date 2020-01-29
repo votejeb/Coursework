@@ -7,8 +7,8 @@ function pageLoad(){
     document.getElementById("removeFilter").addEventListener("click", remove1Filter);
     document.getElementById("addFilter").addEventListener("click", add1Filter);
 }
+//global variables to allow filters to work correctly
 window.value = checkList=[];
-var loadedFilters=[];
 function drawGraph(event) {
 //configuration constructor for graph
     var config={
@@ -52,7 +52,7 @@ function drawGraph(event) {
             //fetches rawset data
             if (responseData1[index4].SetID===parseInt(tableID,10)){
                 var RawSets=responseData1[index4].RawSets;
-                //builds mychart object
+                //builds mychart canvas object
                 const ctx = document.getElementById('chartCanvas').getContext('2d');
                 const myChart = new Chart(ctx, config);
                 console.log(RawSets);
@@ -60,7 +60,9 @@ function drawGraph(event) {
                 fetch("/processeddatas/readkeywords/"+tableID.toString()+"/"+RawSets, {method: 'get'}
                 ).then(response => response.json()
                 ).then(responseData => {
+                    //responsedata log for bugfixing and troubleshooting
                     console.log(responseData);
+                    //filter checker and remover-possibly could be more efficient
                     for (let index5 = 0; index5 < checkList.length; index5++) {
                         for (let index6 = 0; index6 < responseData.length; index6++) {
                             if (checkList[index5]===responseData[index6].Words){
@@ -71,16 +73,17 @@ function drawGraph(event) {
                             }
                         }
                     }
-
+                    //responsedata log for troubleshooing
                     console.log(responseData);
                     //converts string to array and iterates over each one to give x axis values
                     var RawSets1=RawSets.split("-");
                     for (let index3 = 0; index3 < RawSets1.length; index3++) {
                         config.data.labels.push(RawSets1[index3]);
                     }
-                    //iterates over each value of json lis and tehm to table in teh correct order
+                    //iterates over each value of json list and them to table in teh correct order
                     for (let index2 = 0; index2 < responseData.length; index2++) {
                         const datas = responseData[index2];
+                        //new dataset constructor
                         const newDataset = {
                             label: [],
                             backgroundColor: getRandomColour(),
@@ -88,14 +91,15 @@ function drawGraph(event) {
                             data: [],
                             fill: false
                         };
+                        //pushes label to new set
                         newDataset.label.push(datas.Words);
-                        //converts object to array
-                        const jeff = datas.WordCount.substring(1, datas.WordCount.length - 1).split(", ").map(function (item) {
+                        //converts javascript object string to array
+                        const je = datas.WordCount.substring(1, datas.WordCount.length - 1).split(", ").map(function (item) {
                             return parseInt(item, 10);
                         });
                         //pushes variable to config
-                        for (let index = 0; index < jeff.length; index++) {
-                            newDataset.data.push(jeff[index]);
+                        for (let index = 0; index < je.length; index++) {
+                            newDataset.data.push(je[index]);
                         }
                         //pushes new dataset
                         config.data.datasets.push(newDataset);
@@ -144,6 +148,7 @@ function viewDataTable(UserID){
             }
             tableHTML += '</table>'
         }
+        //html assigner
         document.getElementById("tableHTML").innerHTML = tableHTML;
     })
 }
@@ -152,10 +157,10 @@ function viewFilterTable(UserID){
     //builds table layout
     let filterHTML = '<table>' +
         '<tr>' +
-        '<th>Data Filter ID|</th>' +
-        '<th>Data Filter Name|</th>' +
-        '<th>Whitelist Status|</th>' +
-        '<th>Public Status</th>' +
+        '<th>Data Filter ID</th>' +
+        '<th>|Data Filter Name</th>' +
+        '<th>|Whitelist Status</th>' +
+        '<th>|Public Status</th>' +
         '</tr>';
     //fetches data from dataset
     fetch("/datafilters/listone/"+UserID,{method:'get'}
@@ -168,39 +173,46 @@ function viewFilterTable(UserID){
             for (let i=0; i<responseData.length; i++){
                 filterHTML += `<tr>` +
                     //HTML constructor
-                    `<td>${responseData[i].DataFilterID}|</td>` +
-                    `<td>${responseData[i].DataFilterName}|</td>` +
-                    `<td>${responseData[i].WhitelistBlacklist}|</td>` +
-                    `<td>${responseData[i].PublicPrivate}</td>` +
+                    `<td>${responseData[i].DataFilterID}</td>` +
+                    `<td>|${responseData[i].DataFilterName}</td>` +
+                    `<td>|${responseData[i].WhitelistBlacklist}</td>` +
+                    `<td>|${responseData[i].PublicPrivate}</td>` +
                     `</tr>`;
             }
             filterHTML += '</table>'
         }
+        //html assigner
         document.getElementById("filterHTML").innerHTML = filterHTML;
     })
 }
 
-function add1Filter(){
-    debugger;
+function add1Filter(event){
+    event.preventDefault();
+    //form constructor
     const form = document.getElementById("filterForm");
     const formData = new FormData(form);
+    //calls filter data
     fetch("/linkedfilters/readfilter/"+formData.get("DataFilterID"),{method:'get'}
     ).then(response=>response.json()
     ).then(responseData=> {
+        //responsedata log for bugfixing
         console.log(responseData);
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
             for (let i=0; i<responseData.length; i++){
-                checkList.append(responseData[i].Words);
+                //pushes response to global var
+                checkList.push(responseData[i].Words);
             }
         }
     });
+    //console logger for bugfixing purposes
     console.log(checkList);
 }
 
-function remove1Filter(){
-    debugger;
+function remove1Filter(event){
+    event.preventDefault();
+    //formdata constructor
     const form = document.getElementById("filterForm");
     const formData = new FormData(form);
     fetch("/linkedfilters/readfilter/"+formData.get("DataFilterID"),{method:'get'}
@@ -210,12 +222,14 @@ function remove1Filter(){
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
+            //removes words from filter list
             for (let i=0; i<responseData.length; i++){
-                if (index6 > -1) {
+                if (i > -1) {
                     checkList.splice(responseData[i].Words, 1);
                 }
             }
         }
     });
+    //console logger for bugfixing
     console.log(checkList);
 }

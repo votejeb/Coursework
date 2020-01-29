@@ -39,7 +39,7 @@ public class RawDatasController {
     @Path("deleterawdata")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String DeleteTable(@FormDataParam("rawdataID") String TimeID) {
+    public static String DeleteTable(@FormDataParam("rawdataID") String TimeID) {
         try {
             if(TimeID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");

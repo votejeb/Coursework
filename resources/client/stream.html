@@ -2,33 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Stream</title>
     <link rel="stylesheet" type="text/css" href="/client/css/styles.css">
     <script src="/client/js/js.cookie.js"></script>
     <script src="/client/js/stream.js"></script>
     <script src="/client/js/index.js"></script>
 </head>
 <body onload="pageLoadI();pageLoad()">
-<div id="content">
+<div class="margin">
+    <nav>
+        <div id="content">
+
+    </div><div class="genericDiv" id="loggedInDetails">
+
+    </div>
+    </nav>
+    <article>
+        <form id="streamForm">
+            <div class="formDiv">
+                <label for="Keyword">Keyword: </label>
+                <input type="text" name="Keyword" id="Keyword">
+            </div>
+            <div class="formDiv">
+                <label for="Language">Language: </label>
+                <input type="text" name="Language" id="Language">
+            </div>
+            <div class="formDiv">
+                <label for="Runtime">Runtime: </label>
+                <input type="number" name="RunTime" id="Runtime">
+            </div>
+            <div class="formDiv">
+                <input type="submit" value="runStream" id="runStream">
+            </div>
+        </form>
+    </article>
+
 </div>
-<form id="streamForm">
-    <div>
-        <label for="Keyword">Keyword: </label>
-        <input type="text" name="Keyword" id="Keyword">
-    </div>
-    <div>
-        <label for="Language">Language: </label>
-        <input type="text" name="Language" id="Language">
-    </div>
-    <div>
-        <label for="Runtime">Runtime: </label>
-        <input type="number" name="RunTime" id="Runtime">
-    </div>
-    <div>
-        <input type="submit" value="runStream" id="runStream">
-    </div>
-</form>
-<div class="genericDiv" id="loggedInDetails"></div>
 </body>
 </html>
 

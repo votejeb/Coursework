@@ -115,8 +115,8 @@ public class DataFiltersController {
     @Path("deletefilter")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public String DeleteFilter (@FormDataParam("DataFilterID") Integer DataFilterID,
-                                @CookieParam("token") String token) throws Exception {
+    public static String DeleteFilter(@FormDataParam("DataFilterID") Integer DataFilterID,
+                                      @CookieParam("token") String token) throws Exception {
         if (!UsersController.validToken(token)) {
             return "{\"error\": \"You don't appear to be logged in.\"}";
         }
@@ -124,10 +124,12 @@ public class DataFiltersController {
             if(DataFilterID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
+
+            LinkedFiltersController.DeleteTable(DataFilterID);
+
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM DataFilters WHERE DataFilterID= ?");
             ps.setInt(1, DataFilterID);
             ps.execute();
-            LinkedFiltersController.DeleteTable(DataFilterID);
             return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
             System.out.println("Database Error "+exception.getMessage());

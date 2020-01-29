@@ -43,6 +43,7 @@ public class LinkedFiltersController {
                 item.put("Words", results.getString(1));
                 list.add(item);
             }
+            System.out.println(list);
             return list.toString();
         } catch (Exception exception) {
             System.out.println("Database error: " + exception.getMessage());

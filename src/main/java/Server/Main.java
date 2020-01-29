@@ -13,6 +13,8 @@ import org.glassfish.jersey.servlet.ServletContainer;
 import org.sqlite.SQLiteConfig;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import static Controllers.ProcessedDatasController.CreateTable;
 import static Controllers.SearchandSort.SortData;
@@ -21,12 +23,18 @@ import static java.sql.DriverManager.getConnection;
 public class Main {
     public static Connection db = null;
 /*
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         openDatabase("Database1.db");
-        SortData("2", "2020_01_19_20_34_14-2020_01_19_20_39_15", 100);
+        String[] quickList ={"", "your", "would", "&", "-", "after", "a", "i", "the", "with", "have", "has", "it's", "you", "how", "just", "about", "all", "and", "are", "not", "was", "what", "more", "who", "an", "as", "at", "be", "do", "eu", "for", "if", "in", "is", "it", "that", "no", "of", "on", "so", "to", "but", "up", "us", "this", "we", "our", "can", "will", "done", "from", "most", "by", "get", "like", "some", "party", "he", "their", "could", "my", "or"};
+        for (int i = 0; i < quickList.length; ++i) {
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO LinkedFilters_" + 3 + " (Words)VALUES(?)");
+            ps.setString(1, quickList[i]);
+            ps.execute();
+        }
         closeDatabase();
     }
 */
+
 /*
     public static void main(String[] args) throws Exception {
         openDatabase("Database1.db");
