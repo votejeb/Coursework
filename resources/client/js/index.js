@@ -1,5 +1,7 @@
+//index pageload function, is called on every page
 function pageLoadI(){
     checkLogin();
+    //this chunk of code sets up the page redirection for each page. This layout saves developmnet time as this HTML layout only has to be written out once
     document.getElementById("content").innerHTML = `<div class="genericDiv">` +
         `<input type="button" value="Filters" id="filtersButton" onclick="window.location.href = '/client/filters.html'">` +
         `</div>` +
@@ -16,21 +18,16 @@ function pageLoadI(){
         `<input type="button" value="Admin Options" id="adminButton" onclick="window.location.href = '/client/admin.html'">` +
         `</div>`;
 }
-
-
+//this function checks the login status and displays the relevant redirect at the bottom of the page
 function checkLogin() {
-1
+
     let username = Cookies.get("UserName");
-
     let logInHTML = '';
-
     if (username === undefined) {
         logInHTML = "Not logged in. <a href='/client/login.html'>Log in</a>";
     } else {
         logInHTML = "Logged in as " + username + ". <a href='/client/login.html?logout'>Log out</a>";
 
     }
-
     document.getElementById("loggedInDetails").innerHTML = logInHTML;
-
 }

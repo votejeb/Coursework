@@ -39,10 +39,10 @@ function runStream(event) {
                 streamForm.append(pair[0], pair[1]);
             }
 
-            let jeff = parseInt(responseData1.SetID, 10);
+            let e = parseInt(responseData1.SetID, 10);
 
             streamForm.append("PublicPrivate", responseData1.PublicPrivate);
-            streamForm.append("TableID", jeff);
+            streamForm.append("TableID", e);
 
             var object = {};
             streamForm.forEach((value, key) => {object[key] = value});

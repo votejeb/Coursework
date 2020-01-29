@@ -98,6 +98,7 @@ function read1Filter(){
         '<tr>' +
         '<th>Filter Contents</th>' +
         '</tr>';
+
     fetch("/linkedfilters/readfilter/"+FilterID,{method:'get'}
     ).then(response=>response.json()
     ).then(responseData=> {

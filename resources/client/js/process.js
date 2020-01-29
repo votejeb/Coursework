@@ -4,8 +4,10 @@ function pageLoad(){
     viewDataTable(Cookies.get("userid"));
     // draw graph event listener
     document.getElementById("drawGraph").addEventListener("click", drawGraph);
+    document.getElementById("removeFilter").addEventListener("click", remove1Filter);
+    document.getElementById("addFilter").addEventListener("click", add1Filter);
 }
-window.value = checkList=["","a"];
+window.value = checkList=[];
 var loadedFilters=[];
 function drawGraph(event) {
 //configuration constructor for graph
@@ -41,26 +43,26 @@ function drawGraph(event) {
     const form = document.getElementById("graphForm");
     const formData = new FormData(form);
     //gets setid form formdata
-    var tableID = formData.get("SetID");
+    const tableID = formData.get("SetID");
     //fetches dataset information from the server to search through
     fetch("/datasets/listone/"+Cookies.get("userid"),{method:'get'}
     ).then(response=>response.json()
     ).then(responseData1=> {
-        for (var index4 = 0; index4 < responseData1.length; index4++) {
+        for (let index4 = 0; index4 < responseData1.length; index4++) {
             //fetches rawset data
             if (responseData1[index4].SetID===parseInt(tableID,10)){
                 var RawSets=responseData1[index4].RawSets;
                 //builds mychart object
-                var ctx = document.getElementById('chartCanvas').getContext('2d');
-                var myChart = new Chart(ctx, config);
+                const ctx = document.getElementById('chartCanvas').getContext('2d');
+                const myChart = new Chart(ctx, config);
                 console.log(RawSets);
                 //reads processed data table
                 fetch("/processeddatas/readkeywords/"+tableID.toString()+"/"+RawSets, {method: 'get'}
                 ).then(response => response.json()
                 ).then(responseData => {
                     console.log(responseData);
-                    for (var index5 = 0; index5 < checkList.length; index5++) {
-                        for (var index6 = 0; index6 < responseData.length; index6++) {
+                    for (let index5 = 0; index5 < checkList.length; index5++) {
+                        for (let index6 = 0; index6 < responseData.length; index6++) {
                             if (checkList[index5]===responseData[index6].Words){
                                 if (index6 > -1) {
                                     responseData.splice(index6, 1);
@@ -73,13 +75,13 @@ function drawGraph(event) {
                     console.log(responseData);
                     //converts string to array and iterates over each one to give x axis values
                     var RawSets1=RawSets.split("-");
-                    for (var index3 = 0; index3 < RawSets1.length; index3++) {
+                    for (let index3 = 0; index3 < RawSets1.length; index3++) {
                         config.data.labels.push(RawSets1[index3]);
                     }
                     //iterates over each value of json lis and tehm to table in teh correct order
-                    for (var index2 = 0; index2 < responseData.length; index2++) {
-                        var datas=responseData[index2];
-                        var newDataset = {
+                    for (let index2 = 0; index2 < responseData.length; index2++) {
+                        const datas = responseData[index2];
+                        const newDataset = {
                             label: [],
                             backgroundColor: getRandomColour(),
                             borderColor: getRandomColour(),
@@ -88,11 +90,11 @@ function drawGraph(event) {
                         };
                         newDataset.label.push(datas.Words);
                         //converts object to array
-                        var jeff=datas.WordCount.substring(1, datas.WordCount.length-1).split(", " ).map(function(item) {
+                        const jeff = datas.WordCount.substring(1, datas.WordCount.length - 1).split(", ").map(function (item) {
                             return parseInt(item, 10);
                         });
                         //pushes variable to config
-                        for (var index = 0; index < jeff.length; index++) {
+                        for (let index = 0; index < jeff.length; index++) {
                             newDataset.data.push(jeff[index]);
                         }
                         //pushes new dataset
@@ -112,7 +114,7 @@ function drawGraph(event) {
 function getRandomColour() {
     var letters = '0123456789ABCDEF';
     var color = '#';
-    for (var i = 0; i < 6; i++) {
+    for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
@@ -134,7 +136,7 @@ function viewDataTable(UserID){
             alert(responseData.error);
         } else {
             //HTML constructor
-            for (var i=0; i<responseData.length; i++){
+            for (let i=0; i<responseData.length; i++){
                 tableHTML += `<tr>` +
                     `<td>${responseData[i].SetID}</td>` +
                     `<td>|${responseData[i].KeyWord}</td>` +
@@ -163,7 +165,7 @@ function viewFilterTable(UserID){
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
-            for (var i=0; i<responseData.length; i++){
+            for (let i=0; i<responseData.length; i++){
                 filterHTML += `<tr>` +
                     //HTML constructor
                     `<td>${responseData[i].DataFilterID}|</td>` +
@@ -178,9 +180,9 @@ function viewFilterTable(UserID){
     })
 }
 
-function read1Filter(){
+function add1Filter(){
     debugger;
-    const form = document.getElementById("viewFilterForm");
+    const form = document.getElementById("filterForm");
     const formData = new FormData(form);
     fetch("/linkedfilters/readfilter/"+formData.get("DataFilterID"),{method:'get'}
     ).then(response=>response.json()
@@ -189,10 +191,31 @@ function read1Filter(){
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
         } else {
-            for (var i=0; i<responseData.length; i++){
+            for (let i=0; i<responseData.length; i++){
                 checkList.append(responseData[i].Words);
             }
         }
-        document.getElementById("viewFilterHTML").innerHTML = viewFilterHTML;
-    })
+    });
+    console.log(checkList);
+}
+
+function remove1Filter(){
+    debugger;
+    const form = document.getElementById("filterForm");
+    const formData = new FormData(form);
+    fetch("/linkedfilters/readfilter/"+formData.get("DataFilterID"),{method:'get'}
+    ).then(response=>response.json()
+    ).then(responseData=> {
+        console.log(responseData);
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        } else {
+            for (let i=0; i<responseData.length; i++){
+                if (index6 > -1) {
+                    checkList.splice(responseData[i].Words, 1);
+                }
+            }
+        }
+    });
+    console.log(checkList);
 }
