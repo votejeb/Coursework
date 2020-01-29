@@ -81,7 +81,7 @@ aside{
     font-size: 16pt;
 }
 
-#loginButton:hover {    background-color: dodgerblue;
+#loginButton:hover , #createButton:hover{    background-color: dodgerblue;
 }
 
 #loggedInDetails {
