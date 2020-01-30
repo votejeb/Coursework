@@ -159,6 +159,7 @@ public class UsersController {
     //takes data as a form data parameter//
     public String DeleteUser (@FormDataParam("UserID")Integer UserID,
                               @CookieParam("token") String token) throws Exception {
+        System.out.println(UserID);
         if (!UsersController.validToken(token)) {
             return "{\"error\": \"You don't appear to be logged in.\"}";
         }
@@ -175,15 +176,16 @@ public class UsersController {
             while (results1.next()) {
                 DataSetsController.DeleteDataSet(results1.getInt(1),token);
             }
+            System.out.println("works for UserDataLink");
             //Deletes all associated filtersets
-            PreparedStatement ps2 = Main.db.prepareStatement("SELECT SetID FROM UserDataLink Where UserID = ?");
-            ps1.setInt(1,UserID);
+            PreparedStatement ps2 = Main.db.prepareStatement("SELECT FilterID FROM UserFilterLink Where UserID = ?");
+            ps2.setInt(1,UserID);
             ResultSet results2  = ps2.executeQuery();
             //iterator
-            while (results1.next()) {
+            while (results2.next()) {
                 DataFiltersController.DeleteFilter(results2.getInt(1),token);
             }
-
+            System.out.println("works for UserFilterLink");
             //deletes account
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM Users WHERE UserID= ?");
             ps.setInt(1, UserID);

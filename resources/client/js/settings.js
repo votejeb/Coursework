@@ -45,12 +45,21 @@ function applySettings(event) {
     });
 }
 
-function deleteUser(){
-    fetch("/users/updateuser", {method: 'post', body: formData}
+function deleteUser(event){
+    event.preventDefault();
+    let formData = new FormData;
+    formData.append("UserID",parseInt(Cookies.get("userid"),10));
+    fetch("/users/deleteuser", {method: 'post', body: formData}
     ).then(response => response.json()
     ).then(responseData => {
         if (responseData.hasOwnProperty('error')) {
             alert(responseData.error);
+        } else {
+            Cookies.remove("UserName");
+            Cookies.remove("token");
+            Cookies.remove("userid");
+            window.location.href = '/client/index.html';
         }
-    });
+
+    })
 }

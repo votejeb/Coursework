@@ -4,6 +4,7 @@ function pageLoad(){
 }
 
 function createAccount(event){
+    debugger;
     event.preventDefault();
     //formdata import
     const form = document.getElementById("createForm");
