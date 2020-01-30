@@ -8,6 +8,7 @@ function pageLoad(){
     document.getElementById("addFilterWord").addEventListener("click", add1Filter);
     document.getElementById("viewFilter").addEventListener("click", read1Filter);
     document.getElementById("deleteFilterWord").addEventListener("click", delete1Filter);
+    document.getElementById("deleteFilter").addEventListener("click", deleteFilter);
 }
 //filter viewer
 function viewFilterTable(){
@@ -168,6 +169,21 @@ function delete1Filter(event){
     const form = document.getElementById("modifyFilterForm");
     const formData = new FormData(form);
     fetch("/linkedfilters/deletefilter", {method: 'post', body: formData}
+    ).then(response => response.json()
+    ).then(responseData => {
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        }
+    });
+}
+
+//delete whole filter filter
+function deleteFilter(event){
+    event.preventDefault();
+    //formdata constructor
+    const form = document.getElementById("deleteFilterForm");
+    const formData = new FormData(form);
+    fetch("/datafilters/deletefilter", {method: 'post', body: formData}
     ).then(response => response.json()
     ).then(responseData => {
         if (responseData.hasOwnProperty('error')) {

@@ -56,21 +56,22 @@ public class DataFiltersController {
             if (DataFilterName == null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
+            //created datafilter table
             PreparedStatement ps = Main.db.prepareStatement("INSERT INTO DataFilters(DataFilterName, WhitelistBlacklist, PublicPrivate)VALUES(?,?,?)");
             ps.setString(1, DataFilterName);
             ps.setBoolean(2,true);
             ps.setBoolean(3,true);
             ps.execute();
-
+            //gets last insertaed autoincrement table from dataset
             PreparedStatement ps1 = Main.db.prepareStatement("SELECT last_insert_rowid() AS rowid FROM DataFilters LIMIT 1");
             ResultSet results  = ps1.executeQuery();
             int results1 = results.getInt(1);
-
+            //inserts composite key into userfilter link
             PreparedStatement ps2 = Main.db.prepareStatement("INSERT INTO UserFilterLink(UserID,FilterID)VALUES(?,?)");
             ps2.setInt(1, UserID);
             ps2.setInt(2,results1);
             ps2.execute();
-
+            //creates linked filter controller
             LinkedFiltersController.CreateTable(results1);
             return "{\"status\": \"OK\"}";
         } catch (Exception exception) {

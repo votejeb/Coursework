@@ -1,31 +1,32 @@
+/*body colour and font formatting*/
 body {
     background-color: lightblue;
     font-family: 'Arial', serif;
 
 }
-
+/*heading styler*/
 h1 {
     margin-top:10;
 }
-
+/*nav tag styler and sizer*/
 nav{
     float: left;
     width: 12%;
 
 }
-
+/*article styler and sizer*/
 article{
     float: left;
     width: 38%;
     margin-top: 60px;
 }
-
+/*aside styler and sizer*/
 aside{
     margin-top: 60px;
     float: right;
     width: 50%
 }
-
+/*generic tablediv formatter*/
 .tableDiv {
     font-size: 14pt;
     margin-top: 20px;
@@ -35,7 +36,7 @@ aside{
     width: 400px;
     overflow-x:auto;
 }
-
+/*filter table div formatter*/
 .filterTableDiv {
     font-size: 12pt;
     margin-top: 20px;
@@ -45,7 +46,7 @@ aside{
     width: 500px;
     overflow-x:auto;
 }
-
+/*dataset table div formatter*/
 .datasetTableDiv {
     font-size: 12pt;
     margin-top: 20px;
@@ -55,26 +56,26 @@ aside{
     width: 200px;
     overflow-x:auto;
 }
-
+/*from div styler*/
 .formDiv {
     font-size: 14pt;
     margin-top: 20px;
     margin-left: 10px;
 }
-
+/*generic styler*/
 .genericDiv {
     font-size: 14pt;
     margin-top: 40px;
     display: block
 }
-
+/*buttons styler for nav tab*/
 #filtersButton, #processButton, #streamButton, #archivesButton, #settingsButton, #adminButton  {
     margin-left: 30px;
     font-size: 12pt;
     width: 150px;
     background-color: cornflowerblue;
 }
-
+/*account creation and login unique styling*/
 #loginButton, #createButton {
     width: 200px;
     background-color: cornflowerblue;
@@ -83,7 +84,7 @@ aside{
 
 #loginButton:hover , #createButton:hover{    background-color: dodgerblue;
 }
-
+/*logged in details styler*/
 #loggedInDetails {
     font-size: 12pt;
 }

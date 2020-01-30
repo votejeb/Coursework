@@ -51,8 +51,6 @@ function logout() {
             Cookies.remove("userid");
             //page redirect
             window.location.href = '/client/index.html';
-
         }
     });
-
 }

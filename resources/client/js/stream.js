@@ -57,5 +57,4 @@ function runStream(event) {
             startStream(streamForm);
         });
     });
-
 }

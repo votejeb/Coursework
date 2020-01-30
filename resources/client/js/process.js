@@ -6,6 +6,7 @@ function pageLoad(){
     document.getElementById("drawGraph").addEventListener("click", drawGraph);
     document.getElementById("removeFilter").addEventListener("click", remove1Filter);
     document.getElementById("addFilter").addEventListener("click", add1Filter);
+    document.getElementById("deleteDataSetForm").addEventListener("click", deleteDataSet);
 }
 //global variables to allow filters to work correctly
 window.value = checkList=[];
@@ -232,4 +233,18 @@ function remove1Filter(event){
     });
     //console logger for bugfixing
     console.log(checkList);
+}
+
+function deleteDataSet(event){
+    event.preventDefault();
+    //formdata constructor
+    const form = document.getElementById("deleteDataSetForm");
+    const formData = new FormData(form);
+    fetch("/datasets/deleteset", {method: 'post', body: formData}
+    ).then(response => response.json()
+    ).then(responseData => {
+        if (responseData.hasOwnProperty('error')) {
+            alert(responseData.error);
+        }
+    });
 }

@@ -49,6 +49,7 @@ public class DataSetsController {
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String InsertDataSet(
+            //gathers parameters
             @FormDataParam("Keyword")String Keyword,
             @FormDataParam("RunTime")Integer RunTime,
             @CookieParam("userid") Integer UserID,
@@ -60,22 +61,23 @@ public class DataSetsController {
             if (Keyword == null || RunTime==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
+            //inserts dataset table
             PreparedStatement ps = Main.db.prepareStatement("INSERT INTO DataSets(Keyword, RunTime, PublicPrivate)VALUES(?,?,?)");
             ps.setString(1, Keyword);
             ps.setInt(2,RunTime);
             ps.setBoolean(3,true);
             ps.execute();
-
+            //gathers last inserted table id from dataset
             PreparedStatement ps1 = Main.db.prepareStatement("SELECT last_insert_rowid() AS rowid FROM DataSets LIMIT 1");
             ResultSet results  = ps1.executeQuery();
             int results1 = results.getInt(1);
-
-            PreparedStatement ps2 = Main.db.prepareStatement("INSERT INTO UserFilterLink(UserID,SetID)VALUES(?,?)");
+            //adds composite key filter link table
+            PreparedStatement ps2 = Main.db.prepareStatement("INSERT INTO UserDataLink(UserID,SetID)VALUES(?,?)");
             ps2.setInt(1, UserID);
             ps2.setInt(2,results1);
             ps2.execute();
 
-
+            //returns created set to server for more processes
             return "{\"status\": \"OK\",\"SetID\": \""+results1+"\",\"PublicPrivate\": \"true\"}";
         } catch (Exception exception) {
             System.out.println("Database error " + exception.getMessage());
@@ -128,18 +130,18 @@ public class DataSetsController {
             if(SetID==null){
                 throw new Exception("One or more form data parameters are missing in the HTTP request.");
             }
-
+            //selects raw sets from database
             PreparedStatement ps1 = Main.db.prepareStatement("Select RawSets FROM DataSets WHERE SetID = ?");
             ps1.setInt(1,SetID);
             ResultSet results  = ps1.executeQuery();
             String[] iterator=stringToList(results.getString(1));
-
+            //iterates over rawsets and deletes relevant tables
             for (int i = 0; i < iterator.length; ++i) {
                 RawDatasController.DeleteTable(iterator[i]);
             }
-
+            //deletes associated processed data controller
             ProcessedDatasController.DeleteTable(SetID.toString());
-
+            //deletes dataset table
             PreparedStatement ps = Main.db.prepareStatement("DELETE FROM DataSets WHERE SetID= ?");
             ps.setInt(1, SetID);
             ps.execute();
