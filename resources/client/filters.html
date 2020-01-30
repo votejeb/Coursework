@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="/client/css/styles.css">
+    <!--css, js imports-->
     <script src="/client/js/js.cookie.js"></script>
     <script src="/client/js/index.js"></script>
     <script src="/client/js/filters.js"></script>
 </head>
+<!--pageload triggers-->
 <body onload="pageLoadI();pageLoad()">
+<!--This page uses a 3 seperairo style. The nav element is the leftmost part of the page, the more static content of the page is the article div and the
+aside div is dedicated to the more dynamic content of the page, see the css section for more information and exact configuration-->
 <div id="margin">
     <nav><div id="content">
     </div><div class="genericDiv" id="loggedInDetails"></div></nav>
 
     <article>
+        <!--filter table html-->
         <div class="filterTableDiv">
             <div id="filterHTML"> </div>
         </div>
-
+        <!--create filter-->
         <form id="createForm">
             <div class="formDiv">
                 <label for="FilterID">Filter name to Create: </label>
@@ -27,7 +32,7 @@
                 <input type="submit" value="Create Filter" id="createFilter">
             </div>
         </form>
-
+        <!--update form metadata-->
         <form id="updateForm">
             <div class="formDiv">
                 <label for="DataFilterID">Filter ID to Update: </label>
@@ -49,7 +54,7 @@
                 <input type="submit" value="Update Filter" id="updateFilter">
             </div>
         </form>
-
+        <!--delete filter form-->
         <form id="deleteForm">
             <div class="formDiv">
                 <label for="DataFilterID">Filter ID to Delete: </label>
@@ -59,7 +64,7 @@
                 <input type="submit" value="Delete Filter" id="deleteFilter">
             </div>
         </form>
-
+        <!--add or remove single word from table-->
         <form id="modifyFilterForm">
             <div class="formDiv">
                 <label for="FilterID">Filter ID to Add to or remove from: </label>
@@ -78,6 +83,7 @@
         </form>
 
     </article>
+    <!--fitler word viewer and form-->
     <aside>
         <form id="viewFilterForm">
             <div class="formDiv">
@@ -90,8 +96,6 @@
         </form>
         <div class="tableDiv" id="viewFilterHTML"></div>
     </aside>
-
-
 
 </div>
 </body>

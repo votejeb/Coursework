@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964accbb-4157-4e52-98f9-e806a54e2c60" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/createAccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/createAccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/filters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/stream.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/stream.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +186,7 @@
       <workItem from="1580178127770" duration="26000" />
       <workItem from="1580182370887" duration="2449000" />
       <workItem from="1580253374638" duration="2723000" />
-      <workItem from="1580299988763" duration="23320000" />
+      <workItem from="1580299988763" duration="24101000" />
     </task>
     <task id="LOCAL-00001" summary="epic commit">
       <created>1560520628432</created>
@@ -438,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580340190528</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="charts js workds">
+      <created>1580342178921</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1580342178921</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,10 +483,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="charts js workds" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2595" y="135" key="CommitChangelistDialog2" timestamp="1580340185443">
+    <state x="2595" y="135" key="CommitChangelistDialog2" timestamp="1580342177695">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state x="2595" y="135" key="CommitChangelistDialog2/75.0.5865.1080@75.0.5865.1080" timestamp="1580340185443" />
+    <state x="2595" y="135" key="CommitChangelistDialog2/75.0.5865.1080@75.0.5865.1080" timestamp="1580342177695" />
     <state width="1861" height="288" key="GridCell.Tab.0.bottom" timestamp="1580337614771">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
@@ -498,10 +507,10 @@
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
     <state x="2682" y="256" key="MultipleFileMergeDialog/75.0.5865.1080@75.0.5865.1080" timestamp="1580185019305" />
-    <state x="2562" y="273" key="Vcs.Push.Dialog.v2" timestamp="1580340219266">
+    <state x="2562" y="273" key="Vcs.Push.Dialog.v2" timestamp="1580342181990">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
-    <state x="2562" y="273" key="Vcs.Push.Dialog.v2/75.0.5865.1080@75.0.5865.1080" timestamp="1580340219266" />
+    <state x="2562" y="273" key="Vcs.Push.Dialog.v2/75.0.5865.1080@75.0.5865.1080" timestamp="1580342181990" />
     <state x="4270" y="83" width="784" height="1064" key="dock-window-1" timestamp="1580340726388">
       <screen x="75" y="0" width="5865" height="1080" />
     </state>
